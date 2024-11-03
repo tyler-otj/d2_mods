@@ -1,0 +1,27 @@
+{
+  "name": "Towns QoL Changes",
+  "description": "Moves Cain in A5, better entry points and tp locations",
+  "author": "night0wl117",
+  "website": "",
+  "version": "1.1",
+  "config": [
+    {
+      "id": "move_cain",
+      "type": "checkbox",
+      "name": "Move Cain in Act 5",
+      "description": "Moves Cain next to stash in Act 5"
+    },
+    {
+      "id": "act2",
+      "type": "checkbox",
+      "name": "Act 2 Town",
+      "description": "Entry point and TP next to Fara"
+    },
+    {
+      "id": "act3",
+      "type": "checkbox",
+      "name": "Act 3 Town",
+      "description": "Entry point close to stash"
+    }
+  ]
+}
