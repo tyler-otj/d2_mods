@@ -1,0 +1,32 @@
+{
+  "name": "Better Body Armors and Shields",
+  "description": "Medium and Heavy Body Armors/shields get Damage Reduction",
+  "author": "night0wl117",
+  "website": "",
+  "version": "1.0",
+  "config": [
+    {
+      "id": "medium_armor_dr",
+      "type": "number",
+      "name": "Damage Reduction on Medium Armors",
+      "defaultValue": 5,
+      "minValue": 1,
+      "maxValue": 100
+    },
+    {
+      "id": "heavy_armor_dr",
+      "type": "number",
+      "name": "Damage Reduction on Heavy Armors",
+      "defaultValue": 10,
+      "minValue": 1,
+      "maxValue": 100
+    },
+    {
+      "id": "shields",
+      "type": "checkbox",
+      "name": "Apply Damage Reduction on Shields too",
+      "description": "Medium / Heavy Shields will get the same amount of DR as armors",
+      "defaultValue": false
+    }
+  ]
+}

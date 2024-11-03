@@ -1,0 +1,60 @@
+{
+  "name": "Necromancer Balance",
+  "description": "Modifies and buffs certain Necromancer Skills",
+  "author": "night0wl117",
+  "website": "",
+  "version": "1.1",
+  "config": [
+    {
+      "id": "bone_spear",
+      "type": "checkbox",
+      "name": "Bone Spear",
+      "description": "Bone Spear gains extra missile(s)"
+    },
+    {
+      "id": "weaken",
+      "type": "checkbox",
+      "name": "Weaken",
+      "description": "Weaken applies minus enemy magic resistance"
+    },
+    {
+      "id": "poison_dagger",
+      "type": "checkbox",
+      "name": "Poison Dagger Rework",
+      "description": "Poison Dagger becomes an AoE enchant"
+    },
+    {
+      "id": "raise_skeletal_mage",
+      "type": "checkbox",
+      "name": "Skeletal Mages",
+      "description": "Increases Mages missile damage"
+    },
+    {
+      "id": "missile_damage_multiplier",
+      "type": "number",
+      "name": "Mage missile damage multiplier",
+      "description": "Only works if Skeletal Mage is ON",
+      "defaultValue": 3,
+      "minValue": 1,
+      "maxValue": 10
+    },
+    {
+      "id": "fire_golem",
+      "type": "checkbox",
+      "name": "Fire Golem",
+      "description": "Fire Golem gets minus enemy resistance aura"
+    },
+    {
+      "id": "blood_golem",
+      "type": "checkbox",
+      "name": "Blood Golem",
+      "description": "Blood Golem applies Open Wounds and gets Oak Sage aura (weaker than Druid's)"
+    },
+    {
+      "id": "no_curse_prereq",
+      "type": "checkbox",
+      "name": "No Curse prerequisites",
+      "description": "Curses have no skill prerequisites"
+    }
+  ]
+}

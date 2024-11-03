@@ -1,0 +1,30 @@
+{
+  "name": "Breakpoint & Recipe Panels",
+  "description": "Adds breakpoint and recipe UI panels to the game",
+  "author": "Finkster, olegbl",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/414",
+  "version": "1.5",
+  "config": [
+    {
+      "id": "breakpoint",
+      "type": "checkbox",
+      "name": "Enable Breakpoint Panel",
+      "description": "Adds Breakpoints button/panel to the Character screen",
+      "defaultValue": true
+    },
+    {
+      "id": "recipeStash",
+      "type": "checkbox",
+      "name": "Enable Recipe Panel for Stash",
+      "description": "Adds Recipes button/panel to the Stash screen",
+      "defaultValue": true
+    },
+    {
+      "id": "recipeCube",
+      "type": "checkbox",
+      "name": "Enable Recipe Panel for Cube",
+      "description": "Adds Recipes button/panel to the Cube screen",
+      "defaultValue": true
+    }
+  ]
+}

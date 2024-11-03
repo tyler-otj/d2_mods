@@ -1,0 +1,22 @@
+{
+    "name": "Amazon Balance",
+    "description": "Attempts to balance the amazon",
+    "author": "_syntax",
+    "version": "1.0.0",
+    "config": [
+        {
+            "id": "drop_magic",
+            "type": "checkbox",
+            "name": "Add Magic/Rare Quality Levels to the Arrows",
+            "description": "Arrows/Bolts can be drop as magic or rare.",
+            "defaultValue": false
+        },
+        {
+            "id": "add_recipe",
+            "type": "checkbox",
+            "name": "Add Crafting Recipes for the Arrows",
+            "description": "Add crafting recipes for the arrows/bolts. Just use magical arrows/bolts as an ingredient instead of amulet.",
+            "defaultValue": false
+        }
+    ]
+}

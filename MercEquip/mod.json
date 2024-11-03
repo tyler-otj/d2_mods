@@ -1,0 +1,7 @@
+{
+  "name": "MercEquip",
+  "description": "Merc now can equip boost, gloves, belt, amulet and ring. Base on https://www.nexusmods.com/diablo2resurrected/mods/13.",
+  "author": "qhu91it",
+  "website": "https://github.com/olegbl/d2rmm.mods",
+  "version": "1.3"
+}

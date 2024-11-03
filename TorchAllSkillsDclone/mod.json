@@ -1,0 +1,23 @@
+{
+  "name": "Torch All Skills & D Clone Anni Recipe",
+  "description": "Change Hellfire Torch to give All Skills & Add Diablo Clone recipe",
+  "author": "Finkster",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/554",
+  "version": "1.0",
+  "config":[
+    {
+      "id": "torch",
+      "type": "checkbox",
+      "name": "Change Hellfire Torch to + All Skills",
+      "description": "Hellfire Torch gives +3 All Skills, instead of +3 Class Skills",
+      "defaultValue": true
+    },
+    {
+      "id": "anni",
+      "type": "checkbox",
+      "name": "Add Diablo Clone Recipe",
+      "description": "1 Diablo Horn + 1 Baal Eye + 1 Mephisto Brain + 1 Standard of Heroes",
+      "defaultValue": true
+    }
+  ]
+}

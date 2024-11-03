@@ -1,0 +1,69 @@
+{
+  "name": "ColorUberKeys",
+  "description": "Apply different colors to Key of Terror and Key of Destruction.",
+  "author": "edipo2s",
+  "website": "",
+  "version": "1.0.1",
+  "config": [
+    {
+      "id": "keyOfTerrorColor",
+      "type": "select",
+      "name": "Key of Terror color",
+      "defaultValue": "dark_blue",
+      "options": [
+        { "label": "Default", "value": "default" },
+        { "label": "Bronze", "value": "bronze" },
+        { "label": "Dark Blue", "value": "dark_blue" },
+        { "label": "Dark Yellow", "value": "dark_yellow" },
+        { "label": "Dark Green", "value": "dark_green" },
+        { "label": "Dark Red", "value": "dark_red" },
+        { "label": "Dark Purple", "value": "dark_purple" },
+        { "label": "Light Blue", "value": "light_blue" },
+        { "label": "Light Yellow", "value": "light_yellow" },
+        { "label": "Light Green", "value": "light_green" },
+        { "label": "Light Red", "value": "light_red" },
+        { "label": "Light Purple", "value": "light_purple" }
+      ]
+    },
+    {
+      "id": "keyOfHateColor",
+      "type": "select",
+      "name": "Key of Hate color",
+      "defaultValue": "dark_purple",
+      "options": [
+        { "label": "Default", "value": "default" },
+        { "label": "Bronze", "value": "bronze" },
+        { "label": "Dark Blue", "value": "dark_blue" },
+        { "label": "Dark Yellow", "value": "dark_yellow" },
+        { "label": "Dark Green", "value": "dark_green" },
+        { "label": "Dark Red", "value": "dark_red" },
+        { "label": "Dark Purple", "value": "dark_purple" },
+        { "label": "Light Blue", "value": "light_blue" },
+        { "label": "Light Yellow", "value": "light_yellow" },
+        { "label": "Light Green", "value": "light_green" },
+        { "label": "Light Red", "value": "light_red" },
+        { "label": "Light Purple", "value": "light_purple" }
+      ]
+    },
+    {
+      "id": "keyOfDestructionColor",
+      "type": "select",
+      "name": "Key of Destruction color",
+      "defaultValue": "dark_green",
+      "options": [
+        { "label": "Default", "value": "default" },
+        { "label": "Bronze", "value": "bronze" },
+        { "label": "Dark Blue", "value": "dark_blue" },
+        { "label": "Dark Yellow", "value": "dark_yellow" },
+        { "label": "Dark Green", "value": "dark_green" },
+        { "label": "Dark Red", "value": "dark_red" },
+        { "label": "Dark Purple", "value": "dark_purple" },
+        { "label": "Light Blue", "value": "light_blue" },
+        { "label": "Light Yellow", "value": "light_yellow" },
+        { "label": "Light Green", "value": "light_green" },
+        { "label": "Light Red", "value": "light_red" },
+        { "label": "Light Purple", "value": "light_purple" }
+      ]
+    }
+  ]
+}

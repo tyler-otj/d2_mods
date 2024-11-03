@@ -1,0 +1,22 @@
+{
+  "name": "Make Rares Great Again",
+  "description": "Improve Rare Weapons, Body Armors, Helmets, and Shields",
+  "author": "Finkster",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/439",
+  "version": "1.1",
+  "config": [
+     {
+      "id": "testSection",
+      "type": "section",
+      "name": "Test Mode",
+      "defaultExpanded": false
+    },
+    {
+      "id": "allRare",
+      "type": "checkbox",
+      "name": "Make Almost All Items Drop As Rare",
+      "description": "",
+      "defaultValue": false
+    }
+  ]
+}

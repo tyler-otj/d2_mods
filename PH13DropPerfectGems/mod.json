@@ -1,0 +1,25 @@
+{
+  "name": "PH13 Drop Perfect Gems",
+  "description": "Add Perfect Gems to drop list on Hell",
+  "author": "PHombie",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/342",
+  "version": "1.0",
+  "config": [
+    {
+      "id": "dropRates",
+      "type": "number",
+      "name": "Perfect Gems Droprate",
+      "description": "The base drop value of Perfect Gem is twice as rare as Flawless Gem",
+      "defaultValue": 1,
+      "minValue": 1,
+      "maxValue": 100
+    },
+    {
+      "id": "othergems",
+      "type": "checkbox",
+      "name": "Don't Drop Other Gems",
+      "description": "All other gems except Perfect Gem are *removed from the drop. (*so as not to break the drop chances, instead of gems will drop potions)",
+      "defaultValue": false
+    }
+  ]
+}

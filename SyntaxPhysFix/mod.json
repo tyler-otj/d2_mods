@@ -1,0 +1,104 @@
+{
+  "name": "Fix Physical Damage",
+  "description": "Attempts to fix physical by buffing core physical item damage",
+  "author": "_syntax",
+  "version": "1.1.0",
+  "config": [
+	{
+		"id": "axe",
+		"name": "axe dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "sword",
+		"name": "sword dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "club",
+		"name": "club dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "scepter",
+		"name": "scepter dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "mace",
+		"name": "mace dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "knife",
+		"name": "knife dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "javelin",
+		"name": "javelin dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "spear",
+		"name": "spear dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "pole",
+		"name": "pole dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "bow",
+		"name": "bow dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "crossbow",
+		"name": "crossbow dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "amazon_bow",
+		"name": "amazon bow dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "hammer",
+		"name": "hammer dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "throwing_axe",
+		"name": "throwing axe dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "throwing_knife",
+		"name": "throwing knife dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	},
+	{
+		"id": "claw",
+		"name": "claw dmg multiplier",
+		"type": "number",
+		"defaultValue": 2.0
+	}
+  ]
+}
