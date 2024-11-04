@@ -2,7 +2,7 @@
     "name": "Amazon Balance",
     "description": "Attempts to balance the amazon",
     "author": "_syntax",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "config": [
         {
             "id": "drop_magic",

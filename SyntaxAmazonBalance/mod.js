@@ -1,5 +1,3 @@
-//TODO: repair arrows to refill - otherwise no way to keep magic arrows?
-
 const arrowsItemId = "bowq";
 const boltsItemId = "xboq";
 
@@ -8,14 +6,14 @@ function spawn_item_as_rare(item){
 	item.Normal = 0;
 }
 
-function affix_linked_to_amulet(affix){
+function affix_should_apply_to_ammo(affix){
 	for(var i = 1; i <= 7; ++i){
 		let affixType = affix['itype' + i];
 		if(affixType == ''){
 			return false;
 		}
 		
-		if(affixType == 'amul'){
+		if(affixType == 'miss' || affixType == arrowsItemId || affixType == boltsItemId || affixType == 'jave'){
 			return true;
 		}
 	}
@@ -54,8 +52,7 @@ function set_affix_to_spawn_on_ammunition(affixTable, currentAffix){
 	});
 }
 
-if(config.drop_magic == true)
-{	
+if(config.drop_magic == true){	
 	{ // Set ammunition to spawn as magic or rare
 		const itemTypesFilename = 'global\\excel\\itemtypes.txt';
 		const item_types = D2RMM.readTsv(itemTypesFilename);
@@ -66,12 +63,12 @@ if(config.drop_magic == true)
 		D2RMM.writeTsv(itemTypesFilename, item_types);
 	}
 
-	{ //Set prefixes that can spawn on ammunition to any that can spawn on amulets
+	{ //Set prefixes
 		const magicPrefixFilename = 'global\\excel\\magicprefix.txt';
 		const magic_prefixes = D2RMM.readTsv(magicPrefixFilename);
 
 		magic_prefixes.rows.forEach(magic_prefix => {
-			if(affix_linked_to_amulet(magic_prefix) && Math.floor(magic_prefix.version) >= 1){ //disallow pre v08 prefixes
+			if(affix_should_apply_to_ammo(magic_prefix) && Math.floor(magic_prefix.version) >= 1){ //disallow pre v08 prefixes
 				set_affix_to_spawn_on_ammunition(magic_prefixes, magic_prefix);
 			}
 		});
@@ -79,12 +76,12 @@ if(config.drop_magic == true)
 		D2RMM.writeTsv(magicPrefixFilename, magic_prefixes);
 	}
 
-	{ //set suffixes that can spawn on ammunition to any that can spawn on amulets
+	{ //set suffixes
 		const magicSuffixFilename = 'global\\excel\\magicsuffix.txt';
 		const magic_suffixes = D2RMM.readTsv(magicSuffixFilename);
 
 		magic_suffixes.rows.forEach(magic_suffix => {
-			var suffixExistsOnAmulet = affix_linked_to_amulet(magic_suffix);
+			var suffixExistsOnAmulet = affix_should_apply_to_ammo(magic_suffix);
 
 			if((suffixExistsOnAmulet == true && Math.floor(magic_suffix.version) >= 1 && magic_suffix.mod1code.indexOf('cast') == -1) ||
 			   (Math.floor(magic_suffix.version) >= 1 && magic_suffix.itype1 == 'weap' && magic_suffix.mod1code.indexOf('swing') != -1)){
@@ -214,4 +211,33 @@ if(config.add_recipe == true){
     });
 
     D2RMM.writeTsv(cubeMainFilename, recipes);
+}
+
+{
+	const missilesFileName = 'global\\excel\\missiles.txt';
+    const missiles = D2RMM.readTsv(missilesFileName);
+	
+	//TODO: this is retarded, but must loop since API provides no direct access other than with numeric key??
+	missiles.rows.forEach(missile => {
+		if(missile["Missile"] == "guidedarrow"){
+			missile.Pierce = 1;
+		}
+	});
+	
+	D2RMM.writeTsv(missilesFileName, missiles);
+}
+
+{
+	const skillsFileName = 'global\\excel\\skills.txt';
+    const skills = D2RMM.readTsv(skillsFileName);
+	
+	//TODO: this is retarded, but must loop since API provides no direct access other than with numeric key??
+	skills.rows.forEach(skill => {
+		if(skill["skill"] == "Valkyrie"){
+			skill.sumskill5 = "Vigor";
+			skill.sumsk5calc = 5;
+		}
+	});
+	
+	D2RMM.writeTsv(skillsFileName, skills);
 }
