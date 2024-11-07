@@ -123,16 +123,19 @@ function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	const cubemainFilename = 'global\\excel\\cubemain.txt';
 	const cubemain = D2RMM.readTsv(cubemainFilename);
 
+	//Recipe to Unsocket Item in cube
 	add_empty_socket_recipe(cubemain, 'weap', 'Weapon');
 	add_empty_socket_recipe(cubemain, 'shie', 'Shield');
 	add_empty_socket_recipe(cubemain, 'armo', 'Armor');
 	add_empty_socket_recipe(cubemain, 'ring', 'Ring');
 	add_empty_socket_recipe(cubemain, 'amul', 'Amulet');
 	
-
+	//4 Socket Recipes (2 Handed Weapons)
 	add_socket_item_recipe(cubemain, 'spea', 'Spear',   4, 4);
 	add_socket_item_recipe(cubemain, 'pole', 'Polearm', 4, 4);
 	add_socket_item_recipe(cubemain, 'staf', 'Staff',   4, 4);
+
+	//2 Socket Recipes (Weapons/Shields)
 	add_socket_item_recipe(cubemain, 'bow',  'bow',     2, 2);
 	add_socket_item_recipe(cubemain, 'abow', 'abow',    2, 2);
 	add_socket_item_recipe(cubemain, 'xbow', 'xbow',    2, 2);
@@ -153,6 +156,8 @@ function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	add_socket_item_recipe(cubemain, 'aspe', 'aspe',    2, 2);
 	add_socket_item_recipe(cubemain, 'ashd', 'ashd',    2, 2);
 	add_socket_item_recipe(cubemain, 'shie', 'Shield',  2, 2);
+
+	//1 Socket Recipes (Armor/Jewlery)
 	add_socket_item_recipe(cubemain, 'armo', 'Armor',   1, 1);
 	add_socket_item_recipe(cubemain, 'ring', 'Ring',    1, 1);
 	add_socket_item_recipe(cubemain, 'amul', 'Amulet',  1, 1);
