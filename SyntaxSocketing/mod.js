@@ -56,9 +56,13 @@ function set_max_num_item_sockets(item, numSockets){
 	];
 	
 	const twoSockItems = [
-		'shie', 'bowq', 'xboq', 'scep', 'wand', 'staf', 'bow', 'axe', 'club', 'swor',
-		'hamm', 'knif', 'spea', 'pole', 'xbow', 'mace', 'jave', 'orb', 'head', 'ashd',
+		'shie', 'bowq', 'xboq', 'scep', 'wand', 'bow', 'axe', 'club', 'swor',
+		'hamm', 'knif', 'xbow', 'mace', 'jave', 'orb', 'head', 'ashd',
 		'abow', 'aspe', 'ajav', 'mboq', 'mxbq'
+	];
+
+	const fourSockItems = [
+		'staf','pole','spea'
 	];
 
 	itemtypes.rows.forEach((row) => {
@@ -67,6 +71,8 @@ function set_max_num_item_sockets(item, numSockets){
 			set_max_num_item_sockets(row, 1)
 		}else if(twoSockItems.includes(row.Code)){
 			set_max_num_item_sockets(row, 2)
+		}else if(fourSockItems.includes(row.Code)){
+			set_max_num_item_sockets(row, 4)
 		}
 	});
 
@@ -108,14 +114,9 @@ function help_add_socket_recipe(recipes, descriptionText, code, itemType, minSoc
 	});
 }
 
-function add_socket_normal_item_recipe(recipes, code, name, minSockets, maxSockets){
+function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	//note: we only allow socketing normal. Add recipe for hig(high quality)/eth(ethereal) items? Can just socket and then upgrade? Check upgrade recipe if this is allowed...
-	help_add_socket_recipe(recipes, `Add Sockets To ${name}`, code, "nor", minSockets, maxSockets);
-}
-
-function add_socket_non_normal_item_recipe(recipes, code, name){
-	help_add_socket_recipe(recipes, `Add Sockets To ${name}`, code, "uni", 1, 1);
-	help_add_socket_recipe(recipes, `Add Sockets To ${name}`, code, "rar", 1, 1);
+	help_add_socket_recipe(recipes, `Add Sockets To ${name}`, code, "any", minSockets, maxSockets);
 }
 
 {
@@ -123,16 +124,38 @@ function add_socket_non_normal_item_recipe(recipes, code, name){
 	const cubemain = D2RMM.readTsv(cubemainFilename);
 
 	add_empty_socket_recipe(cubemain, 'weap', 'Weapon');
+	add_empty_socket_recipe(cubemain, 'shie', 'Shield');
 	add_empty_socket_recipe(cubemain, 'armo', 'Armor');
 	add_empty_socket_recipe(cubemain, 'ring', 'Ring');
 	add_empty_socket_recipe(cubemain, 'amul', 'Amulet');
+	
 
-	add_socket_normal_item_recipe(cubemain, 'weap', 'Weapon', 1, 2);
-	add_socket_normal_item_recipe(cubemain, 'armo', 'Armor', 1, 2);
-	add_socket_normal_item_recipe(cubemain, 'ring', 'Ring', 1, 1);
-	add_socket_normal_item_recipe(cubemain, 'amul', 'Amulet', 1, 1);
-	add_socket_non_normal_item_recipe(cubemain, 'weap', "Weapon");
-	add_socket_non_normal_item_recipe(cubemain, 'armo', "Armor");
+	add_socket_item_recipe(cubemain, 'spea', 'Spear',   4, 4);
+	add_socket_item_recipe(cubemain, 'pole', 'Polearm', 4, 4);
+	add_socket_item_recipe(cubemain, 'staf', 'Staff',   4, 4);
+	add_socket_item_recipe(cubemain, 'bow',  'bow',     2, 2);
+	add_socket_item_recipe(cubemain, 'abow', 'abow',    2, 2);
+	add_socket_item_recipe(cubemain, 'xbow', 'xbow',    2, 2);
+	add_socket_item_recipe(cubemain, 'scep', 'scep',    2, 2);
+	add_socket_item_recipe(cubemain, 'wand', 'wand',    2, 2);
+	add_socket_item_recipe(cubemain, 'axe',  'axe',     2, 2);
+	add_socket_item_recipe(cubemain, 'club', 'club',    2, 2);
+	add_socket_item_recipe(cubemain, 'swor', 'swor',    2, 2);
+	add_socket_item_recipe(cubemain, 'hamm', 'hamm',    2, 2);
+	add_socket_item_recipe(cubemain, 'knif', 'knif',    2, 2);
+	add_socket_item_recipe(cubemain, 'mace', 'mace',    2, 2);
+	add_socket_item_recipe(cubemain, 'jave', 'jave',    2, 2);
+	add_socket_item_recipe(cubemain, 'orb',  'orb',     2, 2);
+	add_socket_item_recipe(cubemain, 'head', 'head',    2, 2);
+	add_socket_item_recipe(cubemain, 'ajav', 'ajav',    2, 2);
+	add_socket_item_recipe(cubemain, 'mboq', 'mboq',    2, 2);
+	add_socket_item_recipe(cubemain, 'mxbq', 'mxbq',    2, 2);
+	add_socket_item_recipe(cubemain, 'aspe', 'aspe',    2, 2);
+	add_socket_item_recipe(cubemain, 'ashd', 'ashd',    2, 2);
+	add_socket_item_recipe(cubemain, 'shie', 'Shield',  2, 2);
+	add_socket_item_recipe(cubemain, 'armo', 'Armor',   1, 1);
+	add_socket_item_recipe(cubemain, 'ring', 'Ring',    1, 1);
+	add_socket_item_recipe(cubemain, 'amul', 'Amulet',  1, 1);
 
 	D2RMM.writeTsv(cubemainFilename, cubemain);
 }
