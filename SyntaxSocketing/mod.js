@@ -1,36 +1,40 @@
-const maxNumGloveSockets = 2;
-const maxNumBootSockets = 2;
+const weaponBehavior = 0;
+const armorBehavior = 1;
+const shieldBehavior = 2;
 
-function enable_socketing_item(item, numSockets, applyType){
+function enable_socketing_item(item, numSockets){
 	item.hasinv = 1;
 	item.gemsockets = numSockets;
+}
+
+
+function enable_socketing_item_with_behavior(item, numSockets, applyType){
+	enable_socketing_item(item, numSockets);
 	item.gemapplytype = applyType;
 }
 
-if(config.socketGloves || config.socketBoots){
+{
 	const armorFilename = 'global\\excel\\armor.txt';
 	const armor = D2RMM.readTsv(armorFilename);
 
 	armor.rows.forEach(row => { 
-		if(config.socketGloves && row.type == 'glov'){
-			enable_socketing_item(row, maxNumGloveSockets, config.glovesBehavior);
-		}
-
-		if(config.socketBoots && row.type == 'boot'){
-			enable_socketing_item(row, maxNumBootSockets, config.bootsBehavior);
+		if(row.type == 'shie' || row.type == 'ashd'){
+			enable_socketing_item(row, 2);
+		}else{
+			enable_socketing_item(row, 1);
 		}
 	});
 
 	D2RMM.writeTsv(armorFilename, armor);
 }
 
-if(config.socketJewelry){
+{
 	const miscFilename = 'global\\excel\\misc.txt';
 	const misc = D2RMM.readTsv(miscFilename);
 
 	misc.rows.forEach(row => {
 		if(row.type == 'ring' || row.type == 'amul'){
-			enable_socketing_item(row, 1, config.jewelryBehavior);
+			enable_socketing_item(row, 1, armorBehavior);
 		}
 	});
 
@@ -43,19 +47,26 @@ function set_max_num_item_sockets(item, numSockets){
 	item.MaxSockets3 = numSockets;
 }
 
-if(config.socketJewelry || config.socketBoots || config.socketGloves){
+{
 	const itemtypesFilename = 'global\\excel\\itemtypes.txt';
 	const itemtypes = D2RMM.readTsv(itemtypesFilename);
 
+	const oneSockItems = [
+		'helm', 'tors', 'boot', 'glov', 'amul', 'ring', 'phlm', 'pelt', 'circ'
+	];
+	
+	const twoSockItems = [
+		'shie', 'bowq', 'xboq', 'scep', 'wand', 'staf', 'bow', 'axe', 'club', 'swor',
+		'hamm', 'knif', 'spea', 'pole', 'xbow', 'mace', 'jave', 'orb', 'head', 'ashd',
+		'abow', 'aspe', 'ajav', 'mboq', 'mxbq'
+	];
+
 	itemtypes.rows.forEach((row) => {
-		if(row.Code == 'jave'){
-			set_max_num_item_sockets(row, 1);
-		}else if(config.socketGloves && row.Code == 'glov'){
-			set_max_num_item_sockets(row, maxNumGloveSockets);
-		}else if(config.socketBoots && row.Code == 'boot'){
-			set_max_num_item_sockets(row, maxNumBootSockets);
-		}else if(config.socketJewelry && (row.Code == 'ring' || row.Code == 'amul')){
-			set_max_num_item_sockets(row, 1);
+		
+		if(oneSockItems.includes(row.Code)){
+			set_max_num_item_sockets(row, 1)
+		}else if(twoSockItems.includes(row.Code)){
+			set_max_num_item_sockets(row, 2)
 		}
 	});
 
@@ -111,30 +122,17 @@ function add_socket_non_normal_item_recipe(recipes, code, name){
 	const cubemainFilename = 'global\\excel\\cubemain.txt';
 	const cubemain = D2RMM.readTsv(cubemainFilename);
 
-	{
-		add_empty_socket_recipe(cubemain, 'weap', 'Weapon');
-		add_empty_socket_recipe(cubemain, 'armo', 'Armor');
-		
-		if(config.socketJewelry){
-			add_empty_socket_recipe(cubemain, 'ring', 'Ring');
-			add_empty_socket_recipe(cubemain, 'amul', 'Amulet');
-		}
-	}
+	add_empty_socket_recipe(cubemain, 'weap', 'Weapon');
+	add_empty_socket_recipe(cubemain, 'armo', 'Armor');
+	add_empty_socket_recipe(cubemain, 'ring', 'Ring');
+	add_empty_socket_recipe(cubemain, 'amul', 'Amulet');
 
-	if(config.socketNormals){
-		add_socket_normal_item_recipe(cubemain, 'weap', 'Weapon', 1, 6);
-		add_socket_normal_item_recipe(cubemain, 'armo', 'Armor', 1, 6);
-	}
-	
-	if(config.socketNonNormals){
-		add_socket_non_normal_item_recipe(cubemain, 'weap', "Weapon");
-		add_socket_non_normal_item_recipe(cubemain, 'armo', "Armor");
-	}
-	
-	if(config.socketJewelry){
-		add_socket_normal_item_recipe(cubemain, 'ring', 'Ring', 1, 1);
-		add_socket_normal_item_recipe(cubemain, 'amul', 'Amulet', 1, 1);
-	}
+	add_socket_normal_item_recipe(cubemain, 'weap', 'Weapon', 1, 2);
+	add_socket_normal_item_recipe(cubemain, 'armo', 'Armor', 1, 2);
+	add_socket_normal_item_recipe(cubemain, 'ring', 'Ring', 1, 1);
+	add_socket_normal_item_recipe(cubemain, 'amul', 'Amulet', 1, 1);
+	add_socket_non_normal_item_recipe(cubemain, 'weap', "Weapon");
+	add_socket_non_normal_item_recipe(cubemain, 'armo', "Armor");
 
 	D2RMM.writeTsv(cubemainFilename, cubemain);
 }
