@@ -2,11 +2,11 @@
 	const gemsFilename = 'global\\excel\\gems.txt';
 	const gems = D2RMM.readTsv(gemsFilename);
 
-	function set_properties(prefix, num, code, min, max, param = ""){
-		row[prefix + "Mod" + num + "Code"] = code;
-		row[prefix + "Mod" + num + "Param"] = param;
-		row[prefix + "Mod" + num + "Min"] = min;
-		row[prefix + "Mod" + num + "Max"] = max;
+	function set_properties(rune, prefix, num, code, min, max, param = ""){
+		rune[prefix + "Mod" + num + "Code"] = code;
+		rune[prefix + "Mod" + num + "Param"] = param;
+		rune[prefix + "Mod" + num + "Min"] = min;
+		rune[prefix + "Mod" + num + "Max"] = max;
 	}
 
 	function set_weapon_properties(rune, code, min, max, propNum = "1", param = ""){
@@ -164,4 +164,44 @@
 	});
 
 	D2RMM.writeTsv(runesFilename, runes);
+}
+
+//add better rune conversion recipes
+{
+	const cubemainFilename = 'global\\excel\\cubemain.txt';
+	const cubemain = D2RMM.readTsv(cubemainFilename);
+
+	//Note: we keep 3->1 lower runes, 2->1 high runes
+	cubemain.rows.forEach(row => {
+		//TODO: modify description to remove gem
+		//removes gem requirement for upgrading runes
+		if(row["input 1"].startsWith('r')){
+			row["input 2"] = "";
+		}
+	});
+
+	for (let tier = 2; tier <= 33; ++tier){
+		let previousTier = tier - 1;
+		let output = 'r' + previousTier.toString().padStart(2, '0');
+
+		 let recipe = {
+			description: 'Rune ' + tier + ' -> Rune ' + previousTier,
+			enabled: 1,
+			version: 100,
+			numinputs: 1,
+			'input 1': 'r' + tier.toString().padStart(2, '0'),
+			output: output,
+			'output b': output,
+			'*eol': 0
+		 };
+		
+		//convert 3->1 runes back down to 3. Otherwise will convert 1->2
+		if(tier <= 20){
+			recipe['output c'] = output;
+		}
+
+		cubemain.rows.push(recipe);
+	}
+
+	D2RMM.writeTsv(cubemainFilename, cubemain);
 }
