@@ -175,7 +175,8 @@
 	cubemain.rows.forEach(row => {
 		//TODO: modify description to remove gem
 		//removes gem requirement for upgrading runes
-		if(row["input 1"].startsWith('r')){
+		if(row["input 1"].startsWith('"r')){
+			row["numinputs"] = row["numinputs"] - 1;
 			row["input 2"] = "";
 		}
 	});
