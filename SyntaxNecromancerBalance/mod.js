@@ -19,8 +19,8 @@
 
 	monstats.rows.forEach(row => {
 		if(row["Id"] == "necroskeleton" || row["Id"] == "necromage"){
-			row["Velocity"] = 18;
-			row["Run"] = 20;
+			row["Velocity"] = 25;
+			row["Run"] = 25;
 		}
 	});
 
