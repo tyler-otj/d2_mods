@@ -241,3 +241,70 @@ if(config.add_recipe == true){
 	
 	D2RMM.writeTsv(skillsFileName, skills);
 }
+
+{
+	{
+		const gambleFileName = 'global\\excel\\gamble.txt';
+		const gambleItems = D2RMM.readTsv(gambleFileName);
+		
+		gambleItems.rows.push(
+			{
+				name: "Arrows",
+				'code\r': 'aqv\r'
+			}
+		);
+		
+		gambleItems.rows.push(
+			{
+				name: "Bolts",
+				'code\r': 'cqv\r'
+			}
+		);
+		
+		D2RMM.writeTsv(gambleFileName, gambleItems);
+	}
+	{
+		const miscFileName = 'global\\excel\\misc.txt';
+		const misc = D2RMM.readTsv(miscFileName);
+		const merchants = ['Gheed', 'Elzix', 'Alkor', 'Jamella', 'Anya'];
+		
+		//normcode is required (game otherwise crashes on launch), and exists in equivalent tables (weapons, armor), but not here
+		//must preserve last lines \r column (have tried to overwrite, add next column with \r without success)
+		//unsure whether ubercode/ultracode is needed...
+		//also, for some fucking reason, adding to end of columns crashes game when opening gamble screen.
+		//so... hope this works?
+		//misc.headers.splice(misc.headers.length - 1, 0, "normcode");
+		misc.headers.unshift("normcode");
+		//misc.headers.unshift("ubercode");
+		//misc.headers.unshift("ultracode");
+		
+		misc.rows.forEach(row => {
+			if(row["name"] == "Arrows"){
+				row["gamble cost"] = 1;
+				for(const merchant of merchants){
+					row[merchant + "Min"] = 1;
+					row[merchant + "Max"] = 1;
+					row[merchant + "MagicMin"] = 1;
+					row[merchant + "MagicMax"] = 255;
+					row["normcode"] = 'aqv';
+					//row["ubercode"] = 'aqv';
+					//row["ultracode"] = 'aqv';
+				}
+			}
+			else if(row["name"] == "Bolts"){
+				row["gamble cost"] = 100;
+				for(const merchant of merchants){
+					row[merchant + "Min"] = 1;
+					row[merchant + "Max"] = 1;
+					row[merchant + "MagicMin"] = 1;
+					row[merchant + "MagicMax"] = 255;
+					row["normcode"] = 'cqv';
+					//row["ubercode"] = 'cqv';
+					//row["ultracode"] = 'cqv';
+				}
+			}
+		});
+		
+		D2RMM.writeTsv(miscFileName, misc);
+	}
+}

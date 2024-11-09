@@ -15,7 +15,7 @@
 
 {
 	const monstatsFilename = 'global\\excel\\monstats.txt';
-	const monstats = D2RMM.readTsv(skillsFilename);
+	const monstats = D2RMM.readTsv(monstatsFilename);
 
 	monstats.rows.forEach(row => {
 		if(row["Id"] == "necroskeleton" || row["Id"] == "necromage"){
