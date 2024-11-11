@@ -56,7 +56,7 @@
 		}else if(row["name"] == "Ral Rune"){
 			set_all_properties(row, "att%", 30, 30, 15, 15, 30, 30);
 		}else if(row["name"] == "Ort Rune"){
-			set_all_properties(row, "regen-mana", 30, 30, 15, 15, 30);
+			set_all_properties(row, "regen-mana", 30, 30, 15, 15, 30, 30);
 		}else if(row["name"] == "Thul Rune"){
 			set_all_properties(row, "mana%", 30, 30, 15, 15, 30, 30);
 		}else if(row["name"] == "Amn Rune"){
