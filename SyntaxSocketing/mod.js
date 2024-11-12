@@ -56,13 +56,13 @@ function set_max_num_item_sockets(item, numSockets){
 	];
 	
 	const twoSockItems = [
-		'shie', 'bowq', 'xboq', 'scep', 'wand', 'bow', 'axe', 'club', 'swor',
-		'hamm', 'knif', 'xbow', 'mace', 'jave', 'orb', 'head', 'ashd',
-		'abow', 'aspe', 'ajav', 'mboq', 'mxbq'
+		'shie', 'scep', 'wand', 'axe', 'club', 'swor',
+		'hamm', 'knif', 'mace', 'jave', 'orb', 'head', 'ashd',
+		'aspe', 'ajav'
 	];
 
 	const fourSockItems = [
-		'staf','pole','spea'
+		'staf','pole','spea', 'xbow', 'abow', 'bow'
 	];
 
 	itemtypes.rows.forEach((row) => {
@@ -134,11 +134,11 @@ function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	add_socket_item_recipe(cubemain, 'spea', 'Spear',   4, 4);
 	add_socket_item_recipe(cubemain, 'pole', 'Polearm', 4, 4);
 	add_socket_item_recipe(cubemain, 'staf', 'Staff',   4, 4);
+	add_socket_item_recipe(cubemain, 'bow',  'bow',     4, 4);
+	add_socket_item_recipe(cubemain, 'abow', 'abow',    4, 4);
+	add_socket_item_recipe(cubemain, 'xbow', 'xbow',    4, 4);
 
 	//2 Socket Recipes (Weapons/Shields)
-	add_socket_item_recipe(cubemain, 'bow',  'bow',     2, 2);
-	add_socket_item_recipe(cubemain, 'abow', 'abow',    2, 2);
-	add_socket_item_recipe(cubemain, 'xbow', 'xbow',    2, 2);
 	add_socket_item_recipe(cubemain, 'scep', 'scep',    2, 2);
 	add_socket_item_recipe(cubemain, 'wand', 'wand',    2, 2);
 	add_socket_item_recipe(cubemain, 'axe',  'axe',     2, 2);
@@ -151,8 +151,6 @@ function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	add_socket_item_recipe(cubemain, 'orb',  'orb',     2, 2);
 	add_socket_item_recipe(cubemain, 'head', 'head',    2, 2);
 	add_socket_item_recipe(cubemain, 'ajav', 'ajav',    2, 2);
-	add_socket_item_recipe(cubemain, 'mboq', 'mboq',    2, 2);
-	add_socket_item_recipe(cubemain, 'mxbq', 'mxbq',    2, 2);
 	add_socket_item_recipe(cubemain, 'aspe', 'aspe',    2, 2);
 	add_socket_item_recipe(cubemain, 'ashd', 'ashd',    2, 2);
 	add_socket_item_recipe(cubemain, 'shie', 'Shield',  2, 2);
