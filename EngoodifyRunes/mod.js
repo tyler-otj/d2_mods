@@ -47,11 +47,11 @@
 		}
 		
 		else if(row["name"] == "Tir Rune"){
-			set_all_properties(row, "heal-kill", 12, 12, 6, 6, 12, 12);
+			set_all_properties(row, "heal-kill", 6, 6, 3, 3, 6, 6);
 		}
 		
 		else if(row["name"] == "Nef Rune"){
-			set_all_properties(row, "mana-kill", 12, 12, 6, 6, 12, 12);
+			set_all_properties(row, "mana-kill", 6, 6, 3, 3, 6, 6);
 		}
 		
 		else if(row["name"] == "Eth Rune"){
