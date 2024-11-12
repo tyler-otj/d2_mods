@@ -3,8 +3,14 @@
   "description": "Engoodifies Runes",
   "author": "055uary",
   "website": "",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "config": [
-
+	{
+	  "id": "classicConversionRates",
+	  "type": "checkbox",
+	  "name": "Keep Classic Conversion Rates",
+	  "description": "Keep 3:1 conversion (upgrade and downgrade) for gems and low/mid runes. Otherwise, reduce to 2:1.",
+	  "defaultValue": true
+	}
   ]
 }
