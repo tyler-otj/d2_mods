@@ -1267,11 +1267,11 @@ uniqueitems.rows.forEach((row) => {
     row["min6"] = 15;
     row["max6"] = 15;
 
-    // Socketed (1 - 2)
+    // Remove Socketed (1 - 2)
     row["prop7"] = "sock";
     row["par7"] = "";
-    row["min7"] = 1;
-    row["max7"] = 2;
+    row["min7"] = "";
+    row["max7"] = "";
 
     // +1 - 2 to Fire Skills
     row["prop8"] = "fireskill";
@@ -1883,11 +1883,11 @@ uniqueitems.rows.forEach((row) => {
     row["min7"] = 15;
     row["max7"] = 15;
 
-    // +15% to Cold Skill Damage
+    // +5% to Cold Skill Damage
     row["prop8"] = "extra-cold";
     row["par8"] = "";
-    row["min8"] = 15;
-    row["max8"] = 15;
+    row["min8"] = 5;
+    row["max8"] = 5;
   }
 
   // Gloomstrap
@@ -2054,6 +2054,12 @@ uniqueitems.rows.forEach((row) => {
     row["par6"] = "";
     row["min6"] = 10;
     row["max6"] = 10;
+
+    // 3% Life stolen per hit
+    row["prop7"] = "lifesteal";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
   }
 
   // Venom Grip
@@ -2135,23 +2141,23 @@ uniqueitems.rows.forEach((row) => {
     row["min5"] = 140;
     row["max5"] = 180;
 
-    // +2 - 3 to Skeleton Mastery ([Class] only)
+    // +1 - 2 to Skeleton Mastery ([Class] only)
     row["prop6"] = "skill";
     row["par6"] = "Skeleton Mastery";
-    row["min6"] = 2;
-    row["max6"] = 3;
+    row["min6"] = 1;
+    row["max6"] = 2;
 
-    // +2 - 3 to Raise Skeleton ([Class] only)
+    // +1 - 2 to Raise Skeleton ([Class] only)
     row["prop7"] = "skill";
     row["par7"] = "Raise Skeleton";
-    row["min7"] = 2;
-    row["max7"] = 3;
+    row["min7"] = 1;
+    row["max7"] = 2;
 
-    // +2 - 3 to Raise Skeletal Mage ([Class] only)
+    // +1 - 2 to Raise Skeletal Mage ([Class] only)
     row["prop8"] = "skill";
     row["par8"] = "Raise Skeletal Mage";
-    row["min8"] = 2;
-    row["max8"] = 3;
+    row["min8"] = 1;
+    row["max8"] = 2;
   }
 
   // Ghoulhide
@@ -5948,6 +5954,1276 @@ uniqueitems.rows.forEach((row) => {
 
 
 
+  // Felloak
+  if (row["index"] === "Felloak") {
+
+    // Lightning Resist +60%
+    row["prop1"] = "res-ltng";
+    row["par1"] = "";
+    row["min1"] = 60;
+    row["max1"] = 60;
+
+    // Fire Resist +20%
+    row["prop2"] = "res-fire";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 20;
+
+    // +5 - 7 to Strength
+    row["prop3"] = "str";
+    row["par3"] = "";
+    row["min3"] = 5;
+    row["max3"] = 7;
+
+    // +6 to Minimum Fire Damage
+    row["prop4"] = "fire-min";
+    row["par4"] = "";
+    row["min4"] = 6;
+    row["max4"] = 6;
+
+    // +8 to Maximum Fire Damage
+    row["prop5"] = "fire-max";
+    row["par5"] = "";
+    row["min5"] = 8;
+    row["max5"] = 8;
+
+    // +70 - 80% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 70;
+    row["max6"] = 80;
+
+    // +1 to Druid Skill Levels
+    row["prop1"] = "dru";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+  }
+
+  // Stoutnail
+  if (row["index"] === "Stoutnail") {
+
+    // Attacker Takes Damage of 3 - 10
+    row["prop1"] = "thorns";
+    row["par1"] = "";
+    row["min1"] = 3;
+    row["max1"] = 10;
+
+    // +100% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 100;
+    row["max2"] = 100;
+
+    // +7 to Vitality
+    row["prop3"] = "vit";
+    row["par3"] = "";
+    row["min3"] = 7;
+    row["max3"] = 7;
+
+    // Magic Damage Reduced by 2
+    row["prop4"] = "red-mag";
+    row["par4"] = "";
+    row["min4"] = 2;
+    row["max4"] = 2;
+
+    // Adds 15 - 20 Magic Damage
+    row["prop5"] = "dmg-mag";
+    row["par5"] = "";
+    row["min5"] = 15;
+    row["max5"] = 20;
+
+    // +1 to Druid Skill Levels
+    row["prop7"] = "dru";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 1;
+
+    // +20% Faster Cast Rate
+    row["prop8"] = "cast1";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 20;
+  }
+
+  // Crushflange
+  if (row["index"] === "Crushflange") {
+
+    // +15 to Strength
+    row["prop1"] = "str";
+    row["par1"] = "";
+    row["min1"] = 15;
+    row["max1"] = 15;
+
+    // Cannot Be Frozen
+    row["prop2"] = "nofreeze";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // +2 to Light Radius
+    row["prop3"] = "light";
+    row["par3"] = "";
+    row["min3"] = 2;
+    row["max3"] = 2;
+
+    // Fire Resist +50%
+    row["prop4"] = "res-fire";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // +50 - 60% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 60;
+
+    // 33% Chance of Crushing Blow
+    row["prop6"] = "crush";
+    row["par6"] = "";
+    row["min6"] = 33;
+    row["max6"] = 33;
+  }
+
+  // Bloodrise
+  if (row["index"] === "Bloodrise") {
+
+    // +120% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 120;
+    row["max1"] = 120;
+
+    // 50% Bonus to Attack Rating
+    row["prop2"] = "att%";
+    row["par2"] = "";
+    row["min2"] = 50;
+    row["max2"] = 50;
+
+    // 45% Chance of Open Wounds
+    row["prop3"] = "openwounds";
+    row["par3"] = "";
+    row["min3"] = 45;
+    row["max3"] = 45;
+
+    // +2 to Light Radius
+    row["prop4"] = "light";
+    row["par4"] = "";
+    row["min4"] = 2;
+    row["max4"] = 2;
+
+    // +10% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 10;
+
+    // +3 to Sacrifice
+    row["prop6"] = "oskill";
+    row["par6"] = "96";
+    row["min6"] = 3;
+    row["max6"] = 3;
+
+    // 5% Life stolen per hit
+    row["prop7"] = "lifesteal";
+    row["par7"] = "";
+    row["min7"] = 5;
+    row["max7"] = 5;
+  }
+
+  // The Generals Tan Do Li Ga
+  if (row["index"] === "The Generals Tan Do Li Ga") {
+
+    // +1 to Minimum Damage
+    row["prop1"] = "dmg-min";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // +20 to Maximum Damage
+    row["prop2"] = "dmg-max";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 20;
+
+    // Slows Target by 50%
+    row["prop3"] = "slow";
+    row["par3"] = "";
+    row["min3"] = 50;
+    row["max3"] = 50;
+
+    // +25 Defense
+    row["prop4"] = "ac";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // 5% Mana stolen per hit
+    row["prop5"] = "manasteal";
+    row["par5"] = "";
+    row["min5"] = 5;
+    row["max5"] = 5;
+
+    // +70 - 90% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 70;
+    row["max6"] = 90;
+
+    // +20% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 20;
+
+    // Remove Socketed (1 - 2)
+    row["prop8"] = "sock";
+    row["par8"] = "";
+    row["min8"] = "";
+    row["max8"] = "";
+
+    // Repairs 1 durability in 10 seconds
+    row["prop9"] = "rep-dur";
+    row["par9"] = "10";
+    row["min9"] = "";
+    row["max9"] = "";
+  }
+
+  // Ironstone
+  if (row["index"] === "Ironstone") {
+
+    // +100 - 150 to Attack Rating
+    row["prop1"] = "att";
+    row["par1"] = "";
+    row["min1"] = 100;
+    row["max1"] = 150;
+
+    // +100 - 150% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 100;
+    row["max2"] = 150;
+
+    // +1 to Minimum Lightning Damage
+    row["prop3"] = "ltng-min";
+    row["par3"] = "";
+    row["min3"] = 1;
+    row["max3"] = 1;
+
+    // +30 to Maximum Lightning Damage
+    row["prop4"] = "ltng-max";
+    row["par4"] = "";
+    row["min4"] = 30;
+    row["max4"] = 30;
+
+    // +10 to Strength
+    row["prop5"] = "str";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 10;
+
+    // 10% Chance of Crushing Blow
+    row["prop6"] = "crush";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 10;
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+  }
+
+  // Bonesnap
+  if (row["index"] === "Bonesob") {
+
+    // +200 - 300% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 200;
+    row["max1"] = 300;
+
+    // 40% Chance of Crushing Blow
+    row["prop2"] = "crush";
+    row["par2"] = "";
+    row["min2"] = 40;
+    row["max2"] = 40;
+
+    // Fire Resist +30%
+    row["prop3"] = "res-fire";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 30;
+
+    // Cold Resist +30%
+    row["prop4"] = "res-cold";
+    row["par4"] = "";
+    row["min4"] = 30;
+    row["max4"] = 30;
+
+    // +50% Damage to Undead
+    row["prop5"] = "dmg-undead";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 50;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop6"] = "rep-dur";
+    row["par6"] = "10";
+    row["min6"] = "";
+    row["max6"] = "";
+
+    // +1 to Barbarian Skill Levels
+    row["prop7"] = "bar";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 1;
+  }
+
+  // Steeldriver
+  if (row["index"] === "Steeldriver") {
+
+    // Requirements --50%
+    row["prop1"] = "ease";
+    row["par1"] = "";
+    row["min1"] = -50;
+    row["max1"] = -50;
+
+    // +40% Increased Attack Speed
+    row["prop2"] = "swing1";
+    row["par2"] = "";
+    row["min2"] = 40;
+    row["max2"] = 40;
+
+    // Heal Stamina Plus 25%
+    row["prop3"] = "regen-stam";
+    row["par3"] = "";
+    row["min3"] = 25;
+    row["max3"] = 25;
+
+    // +150 - 250% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 150;
+    row["max4"] = 250;
+
+    // +0,5 to Strength (Based on Character Level)
+    row["prop5"] = "str/lvl";
+    row["par5"] = "4";
+    row["min5"] = "";
+    row["max5"] = "";
+  }
+
+  // Dark Clan Crusher
+  if (row["index"] === "Dark Clan Crusher") {
+
+    // +2 to Druid Skill Levels
+    row["prop1"] = "dru";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // +200% Damage to Demons
+    row["prop2"] = "dmg-demon";
+    row["par2"] = "";
+    row["min2"] = 200;
+    row["max2"] = 200;
+
+    // +200 to Attack Rating against Demons
+    row["prop3"] = "att-demon";
+    row["par3"] = "";
+    row["min3"] = 200;
+    row["max3"] = 200;
+
+    // +195% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 195;
+    row["max4"] = 195;
+
+    // 20 - 25% Bonus to Attack Rating
+    row["prop5"] = "att%";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 25;
+
+    // +15 Life after each Demon Kill
+    row["prop6"] = "demon-heal";
+    row["par6"] = "";
+    row["min6"] = 15;
+    row["max6"] = 15;
+
+    // +2 - 4 to Fury ([Class] only)
+    row["prop7"] = "skill";
+    row["par7"] = "Fury";
+    row["min7"] = 2;
+    row["max7"] = 4;
+
+    // 25% Chance of Crushing Blow
+    row["prop8"] = "crush";
+    row["par8"] = "";
+    row["min8"] = 25;
+    row["max8"] = 25;
+
+    // +20% Faster Cast Rate
+    row["prop9"] = "cast1";
+    row["par9"] = "";
+    row["min9"] = 20;
+    row["max9"] = 20;
+  }
+
+  // Sureshrill Frost
+  if (row["index"] === "Sureshrill Frost") {
+
+    // Adds 63 - 112 Cold Damage
+    row["prop1"] = "dmg-cold";
+    row["par1"] = "125";
+    row["min1"] = 63;
+    row["max1"] = 112;
+
+    // Cannot Be Frozen
+    row["prop2"] = "nofreeze";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // +150 - 180% Enhanced Damage
+    row["prop3"] = "dmg%";
+    row["par3"] = "";
+    row["min3"] = 150;
+    row["max3"] = 180;
+
+    // Adds 5 - 10 Damage
+    row["prop4"] = "dmg-norm";
+    row["par4"] = "";
+    row["min4"] = 5;
+    row["max4"] = 10;
+
+    // Freezes Target +3
+    row["prop5"] = "freeze";
+    row["par5"] = "";
+    row["min5"] = 3;
+    row["max5"] = 3;
+
+    // Level 9 Frozen Orb (50/50 Charges)
+    row["prop6"] = "charged";
+    row["par6"] = "64";
+    row["min6"] = 50;
+    row["max6"] = 9;
+
+    // 15% Chance to cast level 8 Frozen Orb on striking
+    row["prop7"] = "hit-skill";
+    row["par7"] = "64";
+    row["min7"] = 15;
+    row["max7"] = 8;
+  }
+
+  // Moonfall
+  if (row["index"] === "Moonfall") {
+
+    //Changes
+    row["code"] = "7ma";
+    row["*ItemName"] = "Reinforced Mace";
+
+    // +2 to Fire Skills
+    row["prop1"] = "fireskill";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+    
+    // +2 - 4 Inferno
+    row["prop2"] = "skill";
+    row["par2"] = "Inferno";
+    row["min2"] = 2;
+    row["max2"] = 4;
+
+    // +2 - 4 Fire Bolt
+    row["prop3"] = "skill";
+    row["par3"] = "Fire Bolt";
+    row["min3"] = 2;
+    row["max3"] = 4;
+
+    // +2 - 4 Fire Ball
+    row["prop4"] = "skill";
+    row["par4"] = "Fire Ball";
+    row["min4"] = 2;
+    row["max4"] = 4;
+
+    // +2 - 4 Meteor
+    row["prop5"] = "Meteor";
+    row["par5"] = "";
+    row["min5"] = 2;
+    row["max5"] = 4;
+
+    // Adds 1 - 333 Fire Damage
+    row["prop6"] = "dmg-fire";
+    row["par6"] = "";
+    row["min6"] = 132;
+    row["max6"] = 333;
+    
+    // Regenerate Mana 24%
+    row["prop7"] = "regen-mana";
+    row["par7"] = "";
+    row["min7"] = 24;
+    row["max7"] = 24;
+
+    // Lightning Resist +20 - 30%
+    row["prop8"] = "res-fire";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 30;
+
+    // +10 - 15% to Fire Skill Damage
+    row["prop9"] = "extra-fire";
+    row["par9"] = "";
+    row["min9"] = 10;
+    row["max9"] = 15;
+
+    // -10 - 15% to Enemy Fire Resistance
+    row["prop10"] = "pierce-fire";
+    row["par10"] = "";
+    row["min10"] = 15;
+    row["max10"] = 15;
+  }
+
+  // Baezil's Vortex
+  if (row["index"] === "Baezil's Vortex") {
+
+    // 15% Chance to cast level 12 Nova on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "48";
+    row["min1"] = 15;
+    row["max1"] = 12;
+
+    // Adds 1 - 150 Lightning Damage
+    row["prop2"] = "dmg-ltng";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 150;
+
+    // +100 to Mana
+    row["prop3"] = "mana";
+    row["par3"] = "";
+    row["min3"] = 100;
+    row["max3"] = 100;
+
+    // Lightning Resist +25%
+    row["prop4"] = "res-ltng";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // +160 - 200% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 160;
+    row["max5"] = 200;
+
+    // +20% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // Level 15 Nova (80/80 Charges)
+    row["prop7"] = "charged";
+    row["par7"] = "48";
+    row["min7"] = 80;
+    row["max7"] = 15;
+
+    // +10 - 15% to Lightning Skill Damage
+    row["prop8"] = "extra-ltng";
+    row["par8"] = "";
+    row["min8"] = 10;
+    row["max8"] = 15;
+  }
+
+  // Earthshaker
+  if (row["index"] === "Earthshaker") {
+
+    // 15% Chance to cast level 12 Eruption on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "234";
+    row["min1"] = 15;
+    row["max1"] = 12;
+
+    // All Resistances +10 - 15
+    row["prop2"] = "res-all";
+    row["par2"] = "";
+    row["min2"] = 10;
+    row["max2"] = 15;
+
+    // +30% Increased Attack Speed
+    row["prop3"] = "swing1";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 30;
+
+    // +180% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 180;
+    row["max4"] = 180;
+
+    // Hit Blinds Target +1
+    row["prop5"] = "stupidity";
+    row["par5"] = "";
+    row["min5"] = 1;
+    row["max5"] = 1;
+
+    // +3 to Elemental Skills [Class only] Skills
+    row["prop6"] = "skilltab";
+    row["par6"] = "17";
+    row["min6"] = 3;
+    row["max6"] = 3;
+
+    // Durability: 50 of 50
+    row["prop7"] = "dur";
+    row["par7"] = "";
+    row["min7"] = 50;
+    row["max7"] = 50;
+
+    // +20% Faster Cast Rate
+    row["prop8"] = "cast1";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 20;
+  }
+
+  // Bloodtree Stump
+  if (row["index"] === "Bloodtree Stump") {
+
+    // 50% Chance of Crushing Blow
+    row["prop1"] = "crush";
+    row["par1"] = "";
+    row["min1"] = 50;
+    row["max1"] = 50;
+
+    // +180 - 220% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 180;
+    row["max2"] = 220;
+
+    // All Resistances +20
+    row["prop3"] = "res-all";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // +25 to Strength
+    row["prop4"] = "str";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // +3 to Combat Masteries [Class only] Skills
+    row["prop5"] = "skilltab";
+    row["par5"] = "13";
+    row["min5"] = 3;
+    row["max5"] = 3;
+
+    // +3 - 5 to Mace Mastery ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "129";
+    row["min6"] = 3;
+    row["max6"] = 5;
+
+    // Durability: 40 of 40
+    row["prop7"] = "dur";
+    row["par7"] = "";
+    row["min7"] = 40;
+    row["max7"] = 40;
+
+    // 4 - 8% Life stolen per hit
+    row["prop8"] = "lifesteal";
+    row["par8"] = "";
+    row["min8"] = 4;
+    row["max8"] = 8;
+  }
+
+  // The Gavel of Pain
+  if (row["index"] === "The Gavel of Pain") {
+
+    // 12% Chance to cast level 6 Amplify Damage on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "66";
+    row["min1"] = 12;
+    row["max1"] = 6;
+
+    // 12% Chance to cast level 14 Iron Maiden when struck
+    row["prop2"] = "gethit-skill";
+    row["par2"] = "76";
+    row["min2"] = 12;
+    row["max2"] = 14;
+
+    // Attacker Takes Damage of 130
+    row["prop3"] = "thorns";
+    row["par3"] = "";
+    row["min3"] = 130;
+    row["max3"] = 130;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop4"] = "rep-dur";
+    row["par4"] = "10";
+    row["min4"] = 1;
+    row["max4"] = 1;
+
+    // Adds 30 - 50 Damage
+    row["prop5"] = "dmg-norm";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 50;
+
+    // +160 - 200% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 160;
+    row["max6"] = 200;
+
+    // Level 8 Amplify Damage (30/30 Charges)
+    row["prop7"] = "charged";
+    row["par7"] = "66";
+    row["min7"] = 30;
+    row["max7"] = 8;
+
+    // 25% Bonus to Attack Rating
+    row["prop8"] = "att%";
+    row["par8"] = "";
+    row["min8"] = 25;
+    row["max8"] = 25;
+  }
+
+  // Nord's Tenderizer
+  if (row["index"] === "Nord's Tenderizer") {
+
+    // +270 - 330% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 270;
+    row["max1"] = 330;
+
+    // Freezes Target +2 - 4
+    row["prop2"] = "freeze";
+    row["par2"] = "";
+    row["min2"] = 2;
+    row["max2"] = 4;
+
+    // +25% Increased Attack Speed
+    row["prop3"] = "swing1";
+    row["par3"] = "";
+    row["min3"] = 25;
+    row["max3"] = 25;
+
+    // +3 to Druid Skill Levels
+    row["prop4"] = "dru";
+    row["par4"] = "";
+    row["min4"] = 3;
+    row["max4"] = 3;
+
+    // 150 - 180% Bonus to Attack Rating
+    row["prop5"] = "att%";
+    row["par5"] = "";
+    row["min5"] = 150;
+    row["max5"] = 180;
+
+    // +5 - 15 Cold Absorb
+    row["prop6"] = "abs-cold%";
+    row["par6"] = "";
+    row["min6"] = 5;
+    row["max6"] = 15;
+
+    // Adds 205 - 455 Cold Damage
+    row["prop7"] = "dmg-cold";
+    row["par7"] = "125";
+    row["min7"] = 205;
+    row["max7"] = 455;
+
+    // -15 - 25% to Enemy Cold Resistance
+    row["prop8"] = "pierce-cold";
+    row["par8"] = "";
+    row["min8"] = 15;
+    row["max8"] = 25;
+
+    // +25% Faster Cast Rate
+    row["prop8"] = "cast1";
+    row["par8"] = "";
+    row["min8"] = 25;
+    row["max8"] = 25;
+  }
+
+  // Demon limb
+  if (row["index"] === "Demonlimb") {
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // Adds 222 - 333 Fire Damage
+    row["prop2"] = "dmg-fire";
+    row["par2"] = "";
+    row["min2"] = 222;
+    row["max2"] = 333;
+
+    // 7 - 13% Life stolen per hit
+    row["prop3"] = "lifesteal";
+    row["par3"] = "";
+    row["min3"] = 7;
+    row["max3"] = 13;
+
+    // +3 to Druid Skill Levels
+    row["prop7"] = "dru";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // Repairs 1 durability in 20 seconds
+    row["prop5"] = "rep-dur";
+    row["par5"] = "5";
+    row["min5"] = "";
+    row["max5"] = "";
+
+    // +234% Damage to Demons
+    row["prop6"] = "dmg-demon";
+    row["par6"] = "";
+    row["min6"] = 234;
+    row["max6"] = 234;
+
+    // Fire Resist +15 - 20%
+    row["prop7"] = "res-fire";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 20;
+
+    // +120 - 150 to Attack Rating against Demons
+    row["prop8"] = "att-demon";
+    row["par8"] = "";
+    row["min8"] = 120;
+    row["max8"] = 150;
+
+    // +40% Faster Cast Rate
+    row["prop9"] = "cast1";
+    row["par9"] = "";
+    row["min9"] = 40;
+    row["max9"] = 40;
+  }
+
+  // Baranar's Star
+  if (row["index"] === "Baranar's Star") {
+
+    // 200% Bonus to Attack Rating
+    row["prop1"] = "att%";
+    row["par1"] = "";
+    row["min1"] = 200;
+    row["max1"] = 200;
+
+    // +200% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 200;
+    row["max2"] = 200;
+
+    // +15 to Dexterity
+    row["prop3"] = "dex";
+    row["par3"] = "";
+    row["min3"] = 15;
+    row["max3"] = 15;
+
+    // +15 to Strength
+    row["prop4"] = "str";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // +50% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 50;
+
+    // Durability: 100 of 100
+    row["prop6"] = "dur";
+    row["par6"] = "";
+    row["min6"] = 100;
+    row["max6"] = 100;
+
+    // Adds 1 - 333 Lightning Damage
+    row["prop7"] = "dmg-ltng";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 333;
+
+    // Adds 1 - 333 Fire Damage
+    row["prop8"] = "dmg-fire";
+    row["par8"] = "";
+    row["min8"] = 1;
+    row["max8"] = 333;
+
+    // Adds 1 - 333 Cold Damage
+    row["prop9"] = "dmg-cold";
+    row["par9"] = "";
+    row["min9"] = 1;
+    row["max9"] = 333;
+
+    // +2 to Druid Skill Levels
+    row["prop10"] = "dru";
+    row["par10"] = "";
+    row["min10"] = 2;
+    row["max10"] = 2;
+
+    // +2 to Shapeshifting [Class only] Skills
+    row["prop7"] = "skilltab";
+    row["par7"] = "16";
+    row["min7"] = 2;
+    row["max7"] = 2;
+
+  }
+
+  // Horizon's Tornado
+  if (row["index"] === "Horizon's Tornado") {
+
+    // +230 - 280% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 230;
+    row["max1"] = 280;
+
+    // +50% Increased Attack Speed
+    row["prop2"] = "swing1";
+    row["par2"] = "";
+    row["min2"] = 50;
+    row["max2"] = 50;
+
+    // Slows Target by 20%
+    row["prop3"] = "slow";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // 20% Chance to cast level 15 Tornado on striking
+    row["prop4"] = "hit-skill";
+    row["par4"] = "Tornado";
+    row["min4"] = 20;
+    row["max4"] = 15;
+
+    // Requirements --20%
+    row["prop5"] = "ease";
+    row["par5"] = "";
+    row["min5"] = -20;
+    row["max5"] = -20;
+
+    // +4 - 6 to Tornado ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "Tornado";
+    row["min6"] = 4;
+    row["max6"] = 6;
+
+    // +1 - 2 to Druid Skill Levels
+    row["prop7"] = "dru";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 2;
+
+    // 0,75% Better Chance of Getting Magic Items (Based on Character Level)
+    row["prop8"] = "mag%/lvl";
+    row["par8"] = "6";
+    row["min8"] = "";
+    row["max8"] = "";
+
+  }
+
+  // Stone Crusher
+  if (row["index"] === "Stone Crusher") {
+
+    // +280 - 320% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 280;
+    row["max1"] = 320;
+
+    // +20 - 30 to Strength
+    row["prop2"] = "str";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 30;
+
+    // 40% Chance of Crushing Blow
+    row["prop3"] = "crush";
+    row["par3"] = "";
+    row["min3"] = 40;
+    row["max3"] = 40;
+
+    // -25% Target Defense
+    row["prop4"] = "reduce-ac";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // --100 to Monster Defense Per Hit
+    row["prop5"] = "dmg-ac";
+    row["par5"] = "";
+    row["min5"] = -100;
+    row["max5"] = -100;
+
+    // Damage +30 - 50
+    row["prop6"] = "dmg";
+    row["par6"] = "";
+    row["min6"] = 30;
+    row["max6"] = 50;
+
+    // +25% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 25;
+    row["max7"] = 25;
+
+  }
+
+  // Schaefer's Hammer
+  if (row["index"] === "Schaefer's Hammer") {
+
+    // 20% Chance to cast level 10 Static Field on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "42";
+    row["min1"] = 20;
+    row["max1"] = 10;
+
+    // +50 to Life
+    row["prop2"] = "hp";
+    row["par2"] = "";
+    row["min2"] = 50;
+    row["max2"] = 50;
+
+    // +8 to Attack Rating (Based on Character Level)
+    row["prop3"] = "att/lvl";
+    row["par3"] = "16";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // Lightning Resist +75%
+    row["prop4"] = "res-ltng";
+    row["par4"] = "";
+    row["min4"] = 75;
+    row["max4"] = 75;
+
+    // +20% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 20;
+
+    // +2 to Maximum Damage (Based on Character Level)
+    row["prop6"] = "dmg/lvl";
+    row["par6"] = "16";
+    row["min6"] = "";
+    row["max6"] = "";
+
+    // Repairs 1 durability in 10 seconds
+    row["prop7"] = "rep-dur";
+    row["par7"] = "10";
+    row["min7"] = 1;
+    row["max7"] = 1;
+
+    // +100 - 130% Enhanced Damage
+    row["prop8"] = "dmg%";
+    row["par8"] = "";
+    row["min8"] = 100;
+    row["max8"] = 130;
+
+    // +1 to Light Radius
+    row["prop9"] = "light";
+    row["par9"] = "";
+    row["min9"] = 1;
+    row["max9"] = 1;
+
+    // Adds 50 - 200 Lightning Damage
+    row["prop10"] = "dmg-ltng";
+    row["par10"] = "";
+    row["min10"] = 50;
+    row["max10"] = 200;
+
+    // Level 5 - 7 Vigor Aura When Equipped
+    row["prop11"] = "aura";
+    row["par11"] = "Vigor";
+    row["min11"] = 5;
+    row["max11"] = 7;
+
+  }
+
+  // Windhammer
+  if (row["index"] === "Windhammer") {
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // 50% Chance of Crushing Blow
+    row["prop2"] = "crush";
+    row["par2"] = "";
+    row["min2"] = 50;
+    row["max2"] = 50;
+
+    // +60% Increased Attack Speed
+    row["prop3"] = "swing1";
+    row["par3"] = "";
+    row["min3"] = 60;
+    row["max3"] = 60;
+
+    // 33% Chance to cast level 22 Twister on striking
+    row["prop4"] = "hit-skill";
+    row["par4"] = "Twister";
+    row["min4"] = 33;
+    row["max4"] = 22;
+
+    // +3 to Hurricane
+    row["prop5"] = "oskill";
+    row["par5"] = "Hurricane";
+    row["min5"] = 3;
+    row["max5"] = 3;
+
+    // +6  to Barbarian Skill Levels
+    row["prop6"] = "bar";
+    row["par6"] = "";
+    row["min6"] = 6;
+    row["max6"] = 6;
+
+    // +60% Faster Run/Walk
+    row["prop7"] = "move1";
+    row["par7"] = "";
+    row["min7"] = 60;
+    row["max7"] = 60;
+
+    // 33% Chance to cast level 22 Tornado on striking
+    row["prop8"] = "hit-skill";
+    row["par8"] = "Tornado";
+    row["min8"] = 33;
+    row["max8"] = 22;
+
+  }
+
+  // Earthshifter
+  if (row["index"] === "Earthshifter") {
+
+    // +250 - 300% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 250;
+    row["max1"] = 300;
+
+    // 25% Chance to cast level 14 Eruption on striking
+    row["prop2"] = "hit-skill";
+    row["par2"] = "Eruption";
+    row["min2"] = 25;
+    row["max2"] = 14;
+
+    // 33% Chance of Crushing Blow
+    row["prop3"] = "crush";
+    row["par3"] = "";
+    row["min3"] = 33;
+    row["max3"] = 33;
+
+    // +50% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // 15% Chance to cast level 25 Volcano on striking
+    row["prop5"] = "hit-skill";
+    row["par5"] = "Volcano";
+    row["min5"] = 15;
+    row["max5"] = 25;
+
+    // +7 to Elemental Skills [Class only] Skills
+    row["prop6"] = "skilltab";
+    row["par6"] = "17";
+    row["min6"] = 7;
+    row["max6"] = 7;
+
+    // +30% Faster Cast Rate
+    row["prop7"] = "cast1";
+    row["par7"] = "";
+    row["min7"] = 30;
+    row["max7"] = 30;
+
+    // Cannot Be Frozen
+    row["prop8"] = "nofreeze";
+    row["par8"] = "";
+    row["min8"] = 1;
+    row["max8"] = 1;
+
+  }
+
+  // The Cranium Basher
+  if (row["index"] === "The Cranium Basher") {
+
+    // +40% Increased Attack Speed
+    row["prop1"] = "swing1";
+    row["par1"] = "";
+    row["min1"] = 40;
+    row["max1"] = 40;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop2"] = "rep-dur";
+    row["par2"] = "10";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // +1 to Strength (Based on Character Level)
+    row["prop3"] = "str/lvl";
+    row["par3"] = "8";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // All Resistances +25
+    row["prop4"] = "res-all";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // 75% Chance of Crushing Blow
+    row["prop5"] = "crush";
+    row["par5"] = "";
+    row["min5"] = 75;
+    row["max5"] = 75;
+
+    // Adds 20 Damage
+    row["prop6"] = "dmg-norm";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // +280 - 330% Enhanced Damage
+    row["prop7"] = "dmg%";
+    row["par7"] = "";
+    row["min7"] = 280;
+    row["max7"] = 330;
+
+    // 4% Chance to cast level 1 Amplify Damage on striking
+    row["prop8"] = "hit-skill";
+    row["par8"] = "66";
+    row["min8"] = 4;
+    row["max8"] = 1;
+
+    // Monster Physical Immunity is Sundered
+    row["prop9"] = "pierce-immunity-damage";
+    row["par9"] = "";
+    row["min9"] = 300;
+    row["max9"] = 300;
+
+    // Remove Socketed (1 - 2)
+    row["prop10"] = "sock";
+    row["par10"] = "";
+    row["min10"] = "";
+    row["max10"] = "";
+  }
+
 // #endregion
 
 
@@ -5967,25 +7243,2934 @@ uniqueitems.rows.forEach((row) => {
 
 
 
+  // Krintizs Skewer
+  if (row["index"] === "Krintizs Skewer") {
+
+    // Ignore Target's Defense
+    row["prop1"] = "ignore-ac";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // +10 to Strength
+    row["prop2"] = "str";
+    row["par2"] = "";
+    row["min2"] = 10;
+    row["max2"] = 10;
+
+    // +10 to Dexterity
+    row["prop3"] = "dex";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 10;
+
+    // 7% Mana stolen per hit
+    row["prop4"] = "manasteal";
+    row["par4"] = "";
+    row["min4"] = 7;
+    row["max4"] = 7;
+
+    // +50% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 50;
+
+    // Adds 10 - 15 Damage
+    row["prop6"] = "dmg-norm";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 15;
+
+    // 10% Deadly Strike
+    row["prop7"] = "deadly";
+    row["par7"] = "";
+    row["min7"] = 10;
+    row["max7"] = 10;
+
+  }
+
+  // Gleamscythe
+  if (row["index"] === "Gleamscythe") {
+
+    // +3 to Light Radius
+    row["prop1"] = "light";
+    row["par1"] = "";
+    row["min1"] = 3;
+    row["max1"] = 3;
+
+    // +30 to Mana
+    row["prop2"] = "mana";
+    row["par2"] = "";
+    row["min2"] = 30;
+    row["max2"] = 30;
+
+    // +20 Defense
+    row["prop3"] = "ac";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // +20% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 20;
+    row["max4"] = 20;
+
+    // +60 - 100% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 60;
+    row["max5"] = 100;
+
+    // Adds 3 - 5 Cold Damage
+    row["prop6"] = "dmg-cold";
+    row["par6"] = "50";
+    row["min6"] = 3;
+    row["max6"] = 5;
+
+    // Adds 1 - 15 Lightning Damage
+    row["prop7"] = "dmg-ltng";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 15;
+
+    // 40 - 60% Extra Gold from Monsters
+    row["prop8"] = "gold%";
+    row["par8"] = "";
+    row["min8"] = 40;
+    row["max8"] = 60;
+
+  }
+
+  // Griswolds Edge
+  if (row["index"] === "Griswolds Edge") {
+
+    // +10 - 12 to Minimum Fire Damage
+    row["prop1"] = "fire-min";
+    row["par1"] = "";
+    row["min1"] = 10;
+    row["max1"] = 12;
+
+    // +15 - 25 to Maximum Fire Damage
+    row["prop2"] = "fire-max";
+    row["par2"] = "";
+    row["min2"] = 15;
+    row["max2"] = 25;
+
+    // +100 to Attack Rating
+    row["prop3"] = "att";
+    row["par3"] = "";
+    row["min3"] = 100;
+    row["max3"] = 100;
+
+    // +15% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop5"] = "rep-dur";
+    row["par5"] = "10";
+    row["min5"] = "";
+    row["max5"] = "";
+
+    // +80 - 120% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 80;
+    row["max6"] = 120;
+
+    // +12 to Strength
+    row["prop7"] = "str";
+    row["par7"] = "";
+    row["min7"] = 12;
+    row["max7"] = 12;
+
+    // +1  to Barbarian Skill Levels
+    row["prop8"] = "bar";
+    row["par8"] = "";
+    row["min8"] = 1;
+    row["max8"] = 1;
+
+  }
+
+  // Hellplague
+  if (row["index"] === "Hellplague") {
+
+    // 5% Mana stolen per hit
+    row["prop1"] = "manasteal";
+    row["par1"] = "";
+    row["min1"] = 5;
+    row["max1"] = 5;
+
+    // 5% Life stolen per hit
+    row["prop2"] = "lifesteal";
+    row["par2"] = "";
+    row["min2"] = 5;
+    row["max2"] = 5;
+
+    // +48 to Minimum Poison Damage
+    row["prop3"] = "pois-min";
+    row["par3"] = "";
+    row["min3"] = 48;
+    row["max3"] = 48;
+
+    // +96 to Maximum Poison Damage
+    row["prop4"] = "pois-max";
+    row["par4"] = "";
+    row["min4"] = 96;
+    row["max4"] = 96;
+
+    // Poison Length
+    row["prop5"] = "pois-len";
+    row["par5"] = "";
+    row["min5"] = 150;
+    row["max5"] = 150;
+
+    // +70 - 80% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 70;
+    row["max6"] = 80;
+
+    // Adds 25 - 75 Fire Damage
+    row["prop7"] = "dmg-fire";
+    row["par7"] = "";
+    row["min7"] = 25;
+    row["max7"] = 75;
+
+    // +2 to Fire Skills
+    row["prop8"] = "fireskill";
+    row["par8"] = "";
+    row["min8"] = 2;
+    row["max8"] = 2;
+
+    // +1 - 2 to Paladin Skill Levels
+    row["prop9"] = "pal";
+    row["par9"] = "";
+    row["min9"] = 1;
+    row["max9"] = 2;
+
+  }
+
+  // Culwens Point
+  if (row["index"] === "Culwens Point") {
+
+    // +1 to All Skills
+    row["prop1"] = "allskills";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // Poison Length Reduced by 50%
+    row["prop2"] = "res-pois-len";
+    row["par2"] = "";
+    row["min2"] = 50;
+    row["max2"] = 50;
+
+    // +20% Faster Hit Recovery
+    row["prop3"] = "balance1";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // +20% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 20;
+    row["max4"] = 20;
+
+    // +80 - 100 to Attack Rating
+    row["prop5"] = "att";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 100;
+
+    // +70 - 80% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 70;
+    row["max6"] = 80;
+
+    // +15% Faster Run/Walk
+    row["prop7"] = "move1";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 15;
+
+  }
+
+  // Shadowfang
+  if (row["index"] === "Shadowfang") {
+
+    // 9% Mana stolen per hit
+    row["prop1"] = "manasteal";
+    row["par1"] = "";
+    row["min1"] = 9;
+    row["max1"] = 9;
+
+    // Cold Resist +20%
+    row["prop2"] = "res-cold";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 20;
+
+    // -2 to Light Radius
+    row["prop3"] = "light";
+    row["par3"] = "";
+    row["min3"] = -2;
+    row["max3"] = -2;
+
+    // Adds 40 - 60 Cold Damage
+    row["prop4"] = "dmg-cold";
+    row["par4"] = "150";
+    row["min4"] = 40;
+    row["max4"] = 60;
+
+    // +100% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 100;
+    row["max5"] = 100;
+
+    // 9% Life stolen per hit
+    row["prop6"] = "lifesteal";
+    row["par6"] = "";
+    row["min6"] = 9;
+    row["max6"] = 9;
+
+    // Freezes Target +3
+    row["prop7"] = "freeze";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // +15% Increased Attack Speed
+    row["prop8"] = "swing1";
+    row["par8"] = "";
+    row["min8"] = 15;
+    row["max8"] = 15;
+
+    // Prevent Monster Heal
+    row["prop9"] = "noheal";
+    row["par9"] = "";
+    row["min9"] = 1;
+    row["max9"] = 1;
+
+  }
+
+  // Soulflay
+  if (row["index"] === "Soulflay") {
+
+    // 4 - 10% Mana stolen per hit
+    row["prop1"] = "manasteal";
+    row["par1"] = "";
+    row["min1"] = 4;
+    row["max1"] = 10;
+
+    // 4 - 10% Life stolen per hit
+    row["prop2"] = "lifesteal";
+    row["par2"] = "";
+    row["min2"] = 4;
+    row["max2"] = 10;
+
+    // +70 - 100% Enhanced Damage
+    row["prop3"] = "dmg%";
+    row["par3"] = "";
+    row["min3"] = 70;
+    row["max3"] = 100;
+
+    // All Resistances +10 - 15
+    row["prop4"] = "res-all";
+    row["par4"] = "";
+    row["min4"] = 10;
+    row["max4"] = 15;
+
+    // +10% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 10;
+
+    // +40 - 50% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 40;
+    row["max6"] = 50;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop7"] = "rep-dur";
+    row["par7"] = "10";
+    row["min7"] = "";
+    row["max7"] = "";
+
+  }
+
+  // Kinemils Awl
+  if (row["index"] === "Kinemils Awl") {
+
+    // +100 - 150 to Attack Rating
+    row["prop1"] = "att";
+    row["par1"] = "";
+    row["min1"] = 100;
+    row["max1"] = 150;
+
+    // +20 to Mana
+    row["prop2"] = "mana";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 20;
+
+    // +60 to Minimum Fire Damage
+    row["prop3"] = "fire-min";
+    row["par3"] = "";
+    row["min3"] = 60;
+    row["max3"] = 60;
+
+    // +80 to Maximum Fire Damage
+    row["prop4"] = "fire-max";
+    row["par4"] = "";
+    row["min4"] = 80;
+    row["max4"] = 80;
+
+    // +80 - 100% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 100;
+
+    // +6 to Holy Fire ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "102";
+    row["min6"] = 6;
+    row["max6"] = 6;
+
+    // +20% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 20;
+
+    // +5 - 15% to Fire Skill Damage
+    row["prop8"] = "extra-fire";
+    row["par8"] = "";
+    row["min8"] = 5;
+    row["max8"] = 15;
+
+    // +2 to Combat Skills (Paladin) [Class only] Skills
+    row["prop9"] = "skilltab";
+    row["par9"] = "9";
+    row["min9"] = 2;
+    row["max9"] = 2;
+
+  }
+
+  // Blacktongue
+  if (row["index"] === "Blacktongue") {
+
+    // Adds 100 Poison Damage Over 3 Seconds
+    row["prop1"] = "dmg-pois";
+    row["par1"] = "75";
+    row["min1"] = 340;
+    row["max1"] = 340;
+
+    // Prevent Monster Heal
+    row["prop2"] = "noheal";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // +60 - 90 to Attack Rating
+    row["prop3"] = "att";
+    row["par3"] = "";
+    row["min3"] = 60;
+    row["max3"] = 90;
+
+    // Poison Resist +50%
+    row["prop4"] = "res-pois";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // +50 - 60% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 60;
+
+    // Poison Length Reduced by 50%
+    row["prop6"] = "res-pois-len";
+    row["par6"] = "";
+    row["min6"] = 50;
+    row["max6"] = 50;
+
+    // 20 - 30% Better Chance of Getting Magic Items
+    row["prop7"] = "mag%";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 30;
+
+  }
+
+  // Ripsaw
+  if (row["index"] === "Ripsaw") {
+
+    // 80% Chance of Open Wounds
+    row["prop1"] = "openwounds";
+    row["par1"] = "";
+    row["min1"] = 80;
+    row["max1"] = 80;
+
+    // +15 to Maximum Damage
+    row["prop2"] = "dmg-max";
+    row["par2"] = "";
+    row["min2"] = 15;
+    row["max2"] = 15;
+
+    // 6% Mana stolen per hit
+    row["prop3"] = "manasteal";
+    row["par3"] = "";
+    row["min3"] = 6;
+    row["max3"] = 6;
+
+    // +80 - 100% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 80;
+    row["max4"] = 100;
+
+    // +10 - 15 to Dexterity
+    row["prop5"] = "dex";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 15;
+
+    // +30 - 45% Damage to Demons
+    row["prop6"] = "dmg-demon";
+    row["par6"] = "";
+    row["min6"] = 30;
+    row["max6"] = 45;
+
+    // 15 - 20% Bonus to Attack Rating
+    row["prop7"] = "att%";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 20;
+
+  }
+
+  // The Patriarch
+  if (row["index"] === "The Patriarch") {
+
+    // Damage Reduced by 3
+    row["prop1"] = "red-dmg";
+    row["par1"] = "";
+    row["min1"] = 3;
+    row["max1"] = 3;
+
+    // Magic Damage Reduced by 3
+    row["prop2"] = "red-mag";
+    row["par2"] = "";
+    row["min2"] = 3;
+    row["max2"] = 3;
+
+    // Hit Blinds Target +1
+    row["prop3"] = "stupidity";
+    row["par3"] = "";
+    row["min3"] = 1;
+    row["max3"] = 1;
+
+    // 150 - 200% Extra Gold from Monsters
+    row["prop4"] = "gold%";
+    row["par4"] = "";
+    row["min4"] = 150;
+    row["max4"] = 200;
+
+    // +140 - 160% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 140;
+    row["max5"] = 160;
+
+    // +10 - 15 to Strength
+    row["prop6"] = "str";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 15;
+
+    // +1 - 3 to Combat Skills (Barbarian) [Class only] Skills
+    row["prop7"] = "skilltab";
+    row["par7"] = "12";
+    row["min7"] = 1;
+    row["max7"] = 3;
+
+    // 20% Deadly Strike
+    row["prop8"] = "deadly";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 20;
+
+  }
+
+  // Coldsteel Eye
+  if (row["index"] === "Coldsteel Eye") {
+
+    // Hit Blinds Target +1
+    row["prop1"] = "stupidity";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // Slows Target by 30%
+    row["prop2"] = "slow";
+    row["par2"] = "";
+    row["min2"] = 30;
+    row["max2"] = 30;
+
+    // 50% Deadly Strike
+    row["prop3"] = "deadly";
+    row["par3"] = "";
+    row["min3"] = 50;
+    row["max3"] = 50;
+
+    // Durability: 50 of 50
+    row["prop4"] = "dur";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // +200 - 250% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 200;
+    row["max5"] = 250;
+
+    // +20% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // 6% Mana stolen per hit
+    row["prop7"] = "manasteal";
+    row["par7"] = "";
+    row["min7"] = 6;
+    row["max7"] = 6;
+
+    // Adds 80 - 100 Cold Damage
+    row["prop8"] = "dmg-cold";
+    row["par8"] = "75";
+    row["min8"] = 80;
+    row["max8"] = 100;
+
+    // +10 - 15% to Cold Skill Damage
+    row["prop9"] = "extra-cold";
+    row["par9"] = "";
+    row["min9"] = 10;
+    row["max9"] = 15;
+
+  }
+
+  // Hexfire
+  if (row["index"] === "Hexfire") {
+
+    // +6 - 10 to Hydra
+    row["prop1"] = "oskill";
+    row["par1"] = "62";
+    row["min1"] = 6;
+    row["max1"] = 10;
+
+    // Ignore Target's Defense
+    row["prop2"] = "ignore-ac";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // Fire Resist +25%
+    row["prop3"] = "res-fire";
+    row["par3"] = "";
+    row["min3"] = 25;
+    row["max3"] = 25;
+
+    // +10% to Maximum Fire Resist
+    row["prop4"] = "res-fire-max";
+    row["par4"] = "";
+    row["min4"] = 10;
+    row["max4"] = 10;
+
+    // Adds 80 - 100 Damage
+    row["prop5"] = "dmg-norm";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 100;
+
+    // +140 - 160% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 140;
+    row["max6"] = 160;
+
+    // +3 to Fire Skills
+    row["prop7"] = "fireskill";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // -8 - 12% to Enemy Fire Resistance
+    row["prop8"] = "pierce-fire";
+    row["par8"] = "";
+    row["min8"] = 8;
+    row["max8"] = 12;
+
+  }
+
+  // Ginther's Rift
+  if (row["index"] === "Ginther's Rift") {
+
+    // Magic Damage Reduced by 7 - 12
+    row["prop1"] = "red-mag";
+    row["par1"] = "";
+    row["min1"] = 7;
+    row["max1"] = 12;
+
+    // +30% Increased Attack Speed
+    row["prop2"] = "swing1";
+    row["par2"] = "";
+    row["min2"] = 30;
+    row["max2"] = 30;
+
+    // Repairs 1 durability in 5 seconds
+    row["prop3"] = "rep-dur";
+    row["par3"] = "20";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // Durability: 40 of 40
+    row["prop4"] = "dur";
+    row["par4"] = "";
+    row["min4"] = 40;
+    row["max4"] = 40;
+
+    // Adds 80 - 140 Magic Damage
+    row["prop5"] = "dmg-mag";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 140;
+
+    // +100 - 150% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 100;
+    row["max6"] = 150;
+
+    // 5 - 7% Mana stolen per hit
+    row["prop7"] = "manasteal";
+    row["par7"] = "";
+    row["min7"] = 5;
+    row["max7"] = 7;
+
+    // 20% Deadly Strike
+    row["prop8"] = "deadly";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 20;
+
+  }
+
+  // Headstriker
+  if (row["index"] === "Headstriker") {
+
+    // Prevent Monster Heal
+    row["prop1"] = "noheal";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // +15 - 20 to Strength
+    row["prop2"] = "str";
+    row["par2"] = "";
+    row["min2"] = 15;
+    row["max2"] = 20;
+
+    // 0% Deadly Strike (Based on Character Level)
+    row["prop3"] = "deadly/lvl";
+    row["par3"] = "12";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // +0 to Maximum Damage (Based on Character Level)
+    row["prop4"] = "dmg/lvl";
+    row["par4"] = "8";
+    row["min4"] = "";
+    row["max4"] = "";
+
+    // +180 - 200% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 180;
+    row["max5"] = 200;
+
+    // 15% Chance of Crushing Blow
+    row["prop6"] = "crush";
+    row["par6"] = "";
+    row["min6"] = 15;
+    row["max6"] = 15;
+
+  }
+
+  // Plague Bearer
+  if (row["index"] === "Plague Bearer") {
+
+    // +10 - 15% to Poison Skill Damage
+    row["prop1"] = "extra-pois";
+    row["par1"] = "";
+    row["min1"] = 10;
+    row["max1"] = 15;
+
+    // -10 - 15% to Enemy Poison Resistance
+    row["prop2"] = "pierce-pois";
+    row["par2"] = "";
+    row["min2"] = 10;
+    row["max2"] = 15;
+
+    // Adds 10 - 45 Damage
+    row["prop3"] = "dmg-norm";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 45;
+
+    // +180 - 200% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 180;
+    row["max4"] = 200;
+
+    // Poison Resist +45%
+    row["prop5"] = "res-pois";
+    row["par5"] = "";
+    row["min5"] = 45;
+    row["max5"] = 45;
+
+    // +7 - 8 to Rabies ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "238";
+    row["min6"] = 7;
+    row["max6"] = 8;
+
+    // +10 - 15 to Dexterity
+    row["prop7"] = "dex";
+    row["par7"] = "";
+    row["min7"] = 10;
+    row["max7"] = 15;
+
+  }
+
+  // The Atlantian
+  if (row["index"] === "The Atlantian") {
+
+    // Durability: 100 of 100
+    row["prop1"] = "dur";
+    row["par1"] = "";
+    row["min1"] = 100;
+    row["max1"] = 100;
+
+    // +75 Defense
+    row["prop2"] = "ac";
+    row["par2"] = "";
+    row["min2"] = 75;
+    row["max2"] = 75;
+
+    // +16 to Strength
+    row["prop3"] = "str";
+    row["par3"] = "";
+    row["min3"] = 16;
+    row["max3"] = 16;
+
+    // +12 to Dexterity
+    row["prop4"] = "dex";
+    row["par4"] = "";
+    row["min4"] = 12;
+    row["max4"] = 12;
+
+    // +8 to Vitality
+    row["prop5"] = "vit";
+    row["par5"] = "";
+    row["min5"] = 8;
+    row["max5"] = 8;
+
+    // +200 - 250% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 200;
+    row["max6"] = 250;
+
+    // +2 to Paladin Skill Levels
+    row["prop7"] = "pal";
+    row["par7"] = "";
+    row["min7"] = 2;
+    row["max7"] = 2;
+
+    // 130% Bonus to Attack Rating
+    row["prop8"] = "att%";
+    row["par8"] = "";
+    row["min8"] = 130;
+    row["max8"] = 130;
+
+    // Remove Socketed (1 - 2)
+    row["prop9"] = "sock";
+    row["par9"] = "";
+    row["min9"] = "";
+    row["max9"] = "";
+
+  }
+
+  // Crainte Vomir
+  if (row["index"] === "Crainte Vomir") {
+
+    // Slows Target by 35%
+    row["prop1"] = "slow";
+    row["par1"] = "";
+    row["min1"] = 35;
+    row["max1"] = 35;
+
+    // --70 to Monster Defense Per Hit
+    row["prop2"] = "dmg-ac";
+    row["par2"] = "";
+    row["min2"] = -70;
+    row["max2"] = -70;
+
+    // +35% Faster Run/Walk
+    row["prop3"] = "move1";
+    row["par3"] = "";
+    row["min3"] = 35;
+    row["max3"] = 35;
+
+    // Damage Reduced by 10%
+    row["prop4"] = "red-dmg%";
+    row["par4"] = "";
+    row["min4"] = 10;
+    row["max4"] = 10;
+
+    // +180 - 220% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 180;
+    row["max5"] = 220;
+
+    // +50% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 50;
+    row["max6"] = 50;
+
+    // Ignore Target's Defense
+    row["prop7"] = "ignore-ac";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 1;
+
+    // Repairs 1 durability in 5 seconds
+    row["prop8"] = "rep-dur";
+    row["par8"] = "20";
+    row["min8"] = "";
+    row["max8"] = "";
+
+  }
+
+  // Bing Sz Wang
+  if (row["index"] === "Bing Sz Wang") {
+
+    // Requirements --30%
+    row["prop1"] = "ease";
+    row["par1"] = "";
+    row["min1"] = -30;
+    row["max1"] = -30;
+
+    // Adds 100 - 180 Cold Damage
+    row["prop2"] = "dmg-cold";
+    row["par2"] = "75";
+    row["min2"] = 100;
+    row["max2"] = 180;
+
+    // +20 to Strength
+    row["prop3"] = "str";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // Freezes Target +2
+    row["prop4"] = "freeze";
+    row["par4"] = "";
+    row["min4"] = 2;
+    row["max4"] = 2;
+
+    // 15% Chance to cast level 10 Frozen Orb on striking
+    row["prop5"] = "hit-skill";
+    row["par5"] = "64";
+    row["min5"] = 15;
+    row["max5"] = 10;
+
+    // +130 - 160% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 130;
+    row["max6"] = 160;
+
+    // -10 - 15% to Enemy Cold Resistance
+    row["prop7"] = "pierce-cold";
+    row["par7"] = "";
+    row["min7"] = 10;
+    row["max7"] = 15;
+
+    // Level 10 Holy Freeze Aura When Equipped
+    row["prop8"] = "aura";
+    row["par8"] = "Holy Freeze";
+    row["min8"] = 10;
+    row["max8"] = 10;
+
+  }
+
+  // The Vile Husk
+  if (row["index"] === "The Vile Husk") {
+
+    // 6% Chance to cast level 6 Amplify Damage on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "66";
+    row["min1"] = 6;
+    row["max1"] = 6;
+
+    // +7,5% Damage to Undead (Based on Character Level)
+    row["prop2"] = "dmg-und/lvl";
+    row["par2"] = "60";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // Poison Resist +50%
+    row["prop3"] = "res-pois";
+    row["par3"] = "";
+    row["min3"] = 50;
+    row["max3"] = 50;
+
+    // Adds 250 Poison Damage Over 6 Seconds
+    row["prop4"] = "dmg-pois";
+    row["par4"] = "150";
+    row["min4"] = 426;
+    row["max4"] = 426;
+
+    // +150 - 200% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 150;
+    row["max5"] = 200;
+
+    // +10 to Attack Rating against Undead (Based on Character Level)
+    row["prop6"] = "att-und/lvl";
+    row["par6"] = "20";
+    row["min6"] = "";
+    row["max6"] = "";
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+  }
+
+  // Cloudcrack
+  if (row["index"] === "Cloudcrack") {
+
+    // 12% Chance to cast level 10 Fist of the Heavens on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "121";
+    row["min1"] = 12;
+    row["max1"] = 10;
+
+    // Adds 1 - 240 Lightning Damage
+    row["prop2"] = "dmg-ltng";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 240;
+
+    // +30 Defense
+    row["prop3"] = "ac";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 30;
+
+    // +2 to Light Radius
+    row["prop4"] = "light";
+    row["par4"] = "";
+    row["min4"] = 2;
+    row["max4"] = 2;
+
+    // +10% to Maximum Lightning Resist
+    row["prop5"] = "res-ltng-max";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 10;
+
+    // +150 - 200% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 150;
+    row["max6"] = 200;
+
+    // Attacker Takes Lightning Damage of 100
+    row["prop7"] = "light-thorns";
+    row["par7"] = "";
+    row["min7"] = 100;
+    row["max7"] = 100;
+
+    // +3 - 4 to Offensive Auras [Class only] Skills
+    row["prop8"] = "skilltab";
+    row["par8"] = "10";
+    row["min8"] = 3;
+    row["max8"] = 4;
+
+    // +3 - 4 to Defensive Auras [Class only] Skills
+    row["prop9"] = "skilltab";
+    row["par9"] = "11";
+    row["min9"] = 3;
+    row["max9"] = 4;
+
+    // Lightning Resist +30 - 40%
+    row["prop10"] = "res-ltng";
+    row["par10"] = "";
+    row["min10"] = 30;
+    row["max10"] = 40;
+
+  }
+
+  // Todesfaelle Flamme
+  if (row["index"] === "Todesfaelle Flamme") {
+
+    // Adds 140 - 200 Fire Damage
+    row["prop1"] = "dmg-fire";
+    row["par1"] = "";
+    row["min1"] = 140;
+    row["max1"] = 200;
+
+    // Fire Resist +40%
+    row["prop2"] = "res-fire";
+    row["par2"] = "";
+    row["min2"] = 40;
+    row["max2"] = 40;
+
+    // Fire Absorb 10%
+    row["prop3"] = "abs-fire";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 10;
+
+    // 12% Chance to cast level 12 Fire Ball on attack
+    row["prop4"] = "att-skill";
+    row["par4"] = "47";
+    row["min4"] = 12;
+    row["max4"] = 12;
+
+    // +160 - 200% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 160;
+    row["max5"] = 200;
+
+    // Level 10 Enchant (45/45 Charges)
+    row["prop6"] = "charged";
+    row["par6"] = "52";
+    row["min6"] = 45;
+    row["max6"] = 10;
+
+    // 12% Chance to cast level 12 Fire Wall on attack
+    row["prop7"] = "att-skill";
+    row["par7"] = "51";
+    row["min7"] = 12;
+    row["max7"] = 12;
+
+    // -10 - 15% to Enemy Fire Resistance
+    row["prop8"] = "pierce-fire";
+    row["par8"] = "";
+    row["min8"] = 10;
+    row["max8"] = 15;
+
+  }
+
+  // Swordguard
+  if (row["index"] === "Swordguard") {
+
+    // Requirements --50%
+    row["prop1"] = "ease";
+    row["par1"] = "";
+    row["min1"] = -50;
+    row["max1"] = -50;
+
+    // +5 Defense (Based on Character Level)
+    row["prop2"] = "ac/lvl";
+    row["par2"] = "40";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // All Resistances +10 - 20
+    row["prop3"] = "res-all";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 20;
+
+    // +100 Defense vs. Missile
+    row["prop4"] = "ac-miss";
+    row["par4"] = "";
+    row["min4"] = 100;
+    row["max4"] = 100;
+
+    // 30% Damage Taken Goes To Mana
+    row["prop5"] = "dmg-to-mana";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 30;
+
+    // +170 - 180% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 170;
+    row["max6"] = 180;
+
+    // +200 Defense vs. Melee
+    row["prop7"] = "ac-hth";
+    row["par7"] = "";
+    row["min7"] = 200;
+    row["max7"] = 200;
+
+    // +20% Faster Hit Recovery
+    row["prop8"] = "balance1";
+    row["par8"] = "";
+    row["min8"] = 20;
+    row["max8"] = 20;
+
+    // 20% Increased Chance of Blocking
+    row["prop9"] = "block";
+    row["par9"] = "";
+    row["min9"] = 20;
+    row["max9"] = 20;
+
+    // +30% Increased Attack Speed
+    row["prop10"] = "swing1";
+    row["par10"] = "";
+    row["min10"] = 30;
+    row["max10"] = 30;
+
+    // Level 5 Cleansing Aura When Equipped
+    row["prop11"] = "aura";
+    row["par11"] = "Cleansing";
+    row["min11"] = 5;
+    row["max11"] = 5;
+
+  }
+
+  // Djinnslayer
+  if (row["index"] === "Djinnslayer") {
+
+    // +190 - 240% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 190;
+    row["max1"] = 240;
+
+    // Adds 250 - 500 Fire Damage
+    row["prop2"] = "dmg-fire";
+    row["par2"] = "";
+    row["min2"] = 250;
+    row["max2"] = 500;
+
+    // +180 - 230% Damage to Demons
+    row["prop3"] = "dmg-demon";
+    row["par3"] = "";
+    row["min3"] = 180;
+    row["max3"] = 230;
+
+    // +200 - 300 to Attack Rating against Demons
+    row["prop4"] = "att-demon";
+    row["par4"] = "";
+    row["min4"] = 200;
+    row["max4"] = 300;
+
+    // Lightning Absorb 3 - 7%
+    row["prop5"] = "abs-ltng";
+    row["par5"] = "";
+    row["min5"] = 3;
+    row["max5"] = 7;
+
+    // 3 - 6% Mana stolen per hit
+    row["prop6"] = "manasteal";
+    row["par6"] = "";
+    row["min6"] = 3;
+    row["max6"] = 6;
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // Adds 250 - 500 Lightning Damage
+    row["prop8"] = "dmg-ltng";
+    row["par8"] = "";
+    row["min8"] = 250;
+    row["max8"] = 500;
+
+    // 30 - 45% Better Chance of Getting Magic Items
+    row["prop9"] = "mag%";
+    row["par9"] = "";
+    row["min9"] = 30;
+    row["max9"] = 45;
+
+  }
+
+  // Bloodmoon
+  if (row["index"] === "Bloodmoon") {
+
+    // +210 - 260% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 210;
+    row["max1"] = 260;
+
+    // 10 - 15% Life stolen per hit
+    row["prop2"] = "lifesteal";
+    row["par2"] = "";
+    row["min2"] = 10;
+    row["max2"] = 15;
+
+    // +5 to BloodGolem
+    row["prop3"] = "oskill";
+    row["par3"] = "BloodGolem";
+    row["min3"] = 5;
+    row["max3"] = 5;
+
+    // +7 - 13 Life after each Kill
+    row["prop4"] = "heal-kill";
+    row["par4"] = "";
+    row["min4"] = 7;
+    row["max4"] = 13;
+
+    // 66% Chance of Open Wounds
+    row["prop5"] = "openwounds";
+    row["par5"] = "";
+    row["min5"] = 66;
+    row["max5"] = 66;
+
+    // +6 - 10 Life after each Kill
+    row["prop6"] = "heal-kill";
+    row["par6"] = "";
+    row["min6"] = 6;
+    row["max6"] = 10;
+
+    // +5 - 15 to all Attributes
+    row["prop7"] = "all-stats";
+    row["par7"] = "";
+    row["min7"] = 5;
+    row["max7"] = 15;
+
+  }
+
+  // Lightsabre
+  if (row["index"] === "Lightsabre") {
+
+    // +7 to Light Radius
+    row["prop1"] = "light";
+    row["par1"] = "";
+    row["min1"] = 7;
+    row["max1"] = 7;
+
+    // 15% Chance to cast level 0 Chain Lightning on attack
+    row["prop2"] = "att-skill";
+    row["par2"] = "53";
+    row["min2"] = 15;
+    row["max2"] = 0;
+
+    // Ignore Target's Defense
+    row["prop3"] = "ignore-ac";
+    row["par3"] = "1";
+    row["min3"] = 1;
+    row["max3"] = 1;
+
+    // +25 Lightning Absorb
+    row["prop4"] = "abs-ltng%";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // +20% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 20;
+
+    // Adds 60 - 120 Magic Damage
+    row["prop6"] = "dmg-mag";
+    row["par6"] = "";
+    row["min6"] = 60;
+    row["max6"] = 120;
+
+    // Adds 1 - 400 Lightning Damage
+    row["prop7"] = "dmg-ltng";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 400;
+
+    // 5 - 7% Mana stolen per hit
+    row["prop8"] = "manasteal";
+    row["par8"] = "";
+    row["min8"] = 5;
+    row["max8"] = 7;
+
+    // +150 - 200% Enhanced Damage
+    row["prop9"] = "dmg%";
+    row["par9"] = "";
+    row["min9"] = 150;
+    row["max9"] = 200;
+
+    // Adds 10 - 30 Damage
+    row["prop10"] = "dmg-norm";
+    row["par10"] = "";
+    row["min10"] = 10;
+    row["max10"] = 30;
+
+    // +1 to Telekinesis
+    row["prop11"] = "oskill";
+    row["par11"] = "Telekinesis";
+    row["min11"] = 1;
+    row["max11"] = 1;
+
+    // -10 - 15% to Enemy Lightning Resistance
+    row["prop12"] = "pierce-ltng";
+    row["par12"] = "";
+    row["min12"] = 10;
+    row["max12"] = 15;
+
+  }
+
+  // Azurewrath
+  if (row["index"] === "Azurewrath") {
+
+    // Adds 255 - 510 Magic Damage
+    row["prop1"] = "dmg-mag";
+    row["par1"] = "";
+    row["min1"] = 255;
+    row["max1"] = 510;
+
+    // +230 - 270% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 230;
+    row["max2"] = 270;
+
+    // Level 10 - 13 Sanctuary Aura When Equipped
+    row["prop3"] = "aura";
+    row["par3"] = "Sanctuary";
+    row["min3"] = 10;
+    row["max3"] = 13;
+
+    // Adds 255 - 510 Cold Damage
+    row["prop4"] = "dmg-cold";
+    row["par4"] = "250";
+    row["min4"] = 255;
+    row["max4"] = 510;
+
+    // +30% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 30;
+
+    // +10 - 15 to all Attributes
+    row["prop6"] = "all-stats";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 15;
+
+    // +3 to Light Radius
+    row["prop7"] = "light";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // +2 to All Skills
+    row["prop8"] = "allskills";
+    row["par8"] = "";
+    row["min8"] = 2;
+    row["max8"] = 2;
+
+    // +250 - 300% Damage to Demons
+    row["prop9"] = "dmg-demon";
+    row["par9"] = "";
+    row["min9"] = 250;
+    row["max9"] = 300;
+
+    // Requirements --60%
+    row["prop10"] = "ease";
+    row["par10"] = "";
+    row["min10"] = -60;
+    row["max10"] = -60;
+
+    // Damage +66 - 99
+    row["prop11"] = "dmg";
+    row["par11"] = "";
+    row["min11"] = 66;
+    row["max11"] = 99;
+
+  }
+
+  // Frostwind
+  if (row["index"] === "Frostwind") {
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // Freezes Target +4
+    row["prop2"] = "freeze";
+    row["par2"] = "";
+    row["min2"] = 4;
+    row["max2"] = 4;
+
+    // Cannot Be Frozen
+    row["prop3"] = "nofreeze";
+    row["par3"] = "";
+    row["min3"] = 1;
+    row["max3"] = 1;
+
+    // Adds 237 - 486 Cold Damage
+    row["prop4"] = "dmg-cold";
+    row["par4"] = "150";
+    row["min4"] = 237;
+    row["max4"] = 486;
+
+    // +25% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 25;
+    row["max5"] = 25;
+
+    // +7 - 15 Cold Absorb
+    row["prop6"] = "abs-cold%";
+    row["par6"] = "";
+    row["min6"] = 7;
+    row["max6"] = 15;
+
+    // +7 - 14 to Arctic Blast
+    row["prop7"] = "oskill";
+    row["par7"] = "Arctic Blast";
+    row["min7"] = 7;
+    row["max7"] = 14;
+
+    // -25 - 35% to Enemy Cold Resistance
+    row["prop8"] = "pierce-cold";
+    row["par8"] = "";
+    row["min8"] = 25;
+    row["max8"] = 35;
+
+    // +7 - 14 to Cyclone Armor
+    row["prop9"] = "oskill";
+    row["par9"] = "Cyclone Armor";
+    row["min9"] = 7;
+    row["max9"] = 14;
+
+  }
+
+  // Flamebellow
+  if (row["index"] === "Flamebellow") {
+
+    // +170 - 240% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 170;
+    row["max1"] = 240;
+
+    // Adds 233 - 482 Fire Damage
+    row["prop2"] = "dmg-fire";
+    row["par2"] = "";
+    row["min2"] = 233;
+    row["max2"] = 482;
+
+    // +3 to Fire Skills
+    row["prop3"] = "fireskill";
+    row["par3"] = "";
+    row["min3"] = 3;
+    row["max3"] = 3;
+
+    // +20 - 30 Fire Absorb
+    row["prop4"] = "abs-fire%";
+    row["par4"] = "";
+    row["min4"] = 20;
+    row["max4"] = 30;
+
+    // 12% Chance to cast level 16 Firestorm on striking
+    row["prop5"] = "hit-skill";
+    row["par5"] = "Firestorm";
+    row["min5"] = 12;
+    row["max5"] = 16;
+
+    // +10 - 20 to Strength
+    row["prop6"] = "str";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 20;
+
+    // +5 - 10 to Vitality
+    row["prop7"] = "vit";
+    row["par7"] = "";
+    row["min7"] = 5;
+    row["max7"] = 10;
+
+    // +12 - 18 to Inferno
+    row["prop8"] = "oskill";
+    row["par8"] = "Inferno";
+    row["min8"] = 12;
+    row["max8"] = 18;
+
+    // +2 - 3 to Fire Mastery
+    row["prop9"] = "oskill";
+    row["par9"] = "Fire Mastery";
+    row["min9"] = 2;
+    row["max9"] = 3;
+
+    // -10 - 15% to Enemy Fire Resistance
+    row["prop10"] = "pierce-fire";
+    row["par10"] = "";
+    row["min10"] = 10;
+    row["max10"] = 15;
+
+    // Monster Fire Immunity is Sundered
+    row["prop11"] = "pierce-immunity-fire";
+    row["par11"] = "";
+    row["min11"] = 300;
+    row["max11"] = 300;
+
+    // Level 12 - 15 Holy Fire Aura When Equipped
+    row["prop12"] = "aura";
+    row["par12"] = "Holy Fire";
+    row["min12"] = 12;
+    row["max12"] = 15;
+
+  }
+
+  // Doombringer
+  if (row["index"] === "Doombringer") {
+
+    // Increase Maximum Life 20%
+    row["prop1"] = "hp%";
+    row["par1"] = "";
+    row["min1"] = 20;
+    row["max1"] = 20;
+
+    // +180 - 250% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 180;
+    row["max2"] = 250;
+
+    // 40% Bonus to Attack Rating
+    row["prop3"] = "att%";
+    row["par3"] = "";
+    row["min3"] = 40;
+    row["max3"] = 40;
+
+    // Repairs 1 durability in 5 seconds
+    row["prop4"] = "rep-dur";
+    row["par4"] = "20";
+    row["min4"] = 1;
+    row["max4"] = 1;
+
+    // Adds 100 - 150 Damage
+    row["prop5"] = "dmg-norm";
+    row["par5"] = "";
+    row["min5"] = 100;
+    row["max5"] = 150;
+
+    // 8% Chance to cast level 6 Amplify Damage on striking
+    row["prop6"] = "hit-skill";
+    row["par6"] = "66";
+    row["min6"] = 8;
+    row["max6"] = 6;
+
+    // 5 - 7% Life stolen per hit
+    row["prop7"] = "lifesteal";
+    row["par7"] = "";
+    row["min7"] = 5;
+    row["max7"] = 7;
+
+    // +1 - 2 to All Skills
+    row["prop8"] = "allskills";
+    row["par8"] = "";
+    row["min8"] = 1;
+    row["max8"] = 2;
+
+    // Level 5 - 7 Fanaticism Aura When Equipped
+    row["prop9"] = "aura";
+    row["par9"] = "Fanaticism";
+    row["min9"] = 5;
+    row["max9"] = 7;
+
+  }
+
+  // The Grandfather
+  // The Grandfather
+  if (row["index"] === "The Grandfather") {
+
+    // +20 to all Attributes
+    row["prop1"] = "all-stats";
+    row["par1"] = "";
+    row["min1"] = 20;
+    row["max1"] = 20;
+
+    // +3  to Barbarian Skill Levels
+    row["prop2"] = "bar";
+    row["par2"] = "";
+    row["min2"] = 3;
+    row["max2"] = 3;
+
+    // 6 - 8% Mana stolen per hit
+    row["prop3"] = "manasteal";
+    row["par3"] = "";
+    row["min3"] = 6;
+    row["max3"] = 8;
+
+    // 6 - 8% Life stolen per hit
+    row["prop4"] = "lifesteal";
+    row["par4"] = "";
+    row["min4"] = 6;
+    row["max4"] = 8;
+
+    // 100 - 120% Bonus to Attack Rating
+    row["prop5"] = "att%";
+    row["par5"] = "";
+    row["min5"] = 100;
+    row["max5"] = 120;
+
+    // +80 to Life
+    row["prop6"] = "hp";
+    row["par6"] = "";
+    row["min6"] = 80;
+    row["max6"] = 80;
+
+    // +2,5 to Maximum Damage (Based on Character Level)
+    row["prop7"] = "dmg/lvl";
+    row["par7"] = "20";
+    row["min7"] = 32;
+    row["max7"] = 32;
+
+    // Repairs 1 durability in 10 seconds
+    row["prop8"] = "rep-dur";
+    row["par8"] = "10";
+    row["min8"] = "";
+    row["max8"] = "";
+
+    // +200 - 270% Enhanced Damage
+    row["prop9"] = "dmg%";
+    row["par9"] = "";
+    row["min9"] = 280;
+    row["max9"] = 370;
+
+    // Socketed (2 - 3)
+    row["prop10"] = "sock";
+    row["par10"] = "";
+    row["min10"] = 2;
+    row["max10"] = 2;
+
+  }
 // #endregion
 
 
 
 
-/*_____   _______           _______      __      _______  _______  _______  _______  _______  ______   _______           _______ 
-(  ___ \ (  ___  )|\     /|(  ____ \    /__\    (  ____ \(  ____ )(  ___  )(  ____ \(  ____ \(  ___ \ (  ___  )|\     /|(  ____ \
-| (   ) )| (   ) || )   ( || (    \/   ( \/ )   | (    \/| (    )|| (   ) || (    \/| (    \/| (   ) )| (   ) || )   ( || (    \/
-| (__/ / | |   | || | _ | || (_____     \  /    | |      | (____)|| |   | || (_____ | (_____ | (__/ / | |   | || | _ | || (_____ 
-|  __ (  | |   | || |( )| |(_____  )    /  \/\  | |      |     __)| |   | |(_____  )(_____  )|  __ (  | |   | || |( )| |(_____  )
-| (  \ \ | |   | || || || |      ) |   / /\  /  | |      | (\ (   | |   | |      ) |      ) || (  \ \ | |   | || || || |      ) |
-| )___) )| (___) || () () |/\____) |  (  \/  \  | (____/\| ) \ \__| (___) |/\____) |/\____) || )___) )| (___) || () () |/\____) |
-|/ \___/ (_______)(_______)\_______)   \___/\/  (_______/|/   \__/(_______)\_______)\_______)|/ \___/ (_______)(_______)\______*/
+/*_____   _______           _______ 
+(  ___ \ (  ___  )|\     /|(  ____ \
+| (   ) )| (   ) || )   ( || (    \/
+| (__/ / | |   | || | _ | || (_____ 
+|  __ (  | |   | || |( )| |(_____  )
+| (  \ \ | |   | || || || |      ) |
+| )___) )| (___) || () () |/\____) |
+|/ \___/ (_______)(_______)\______*/
 
-// #region Bows & Crossbows
-
-
+// #region Bows
 
 
+
+
+  // Skystrike
+  if (row["index"] === "Skystrike") {
+
+    // Adds 1 - 250 Lightning Damage
+    row["prop1"] = "dmg-ltng";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 250;
+
+    // +100 to Attack Rating
+    row["prop2"] = "att";
+    row["par2"] = "";
+    row["min2"] = 100;
+    row["max2"] = 100;
+
+    // +10 to Energy
+    row["prop3"] = "enr";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 10;
+
+    // +30% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 30;
+    row["max4"] = 30;
+
+    // +150 - 200% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 150;
+    row["max5"] = 200;
+
+    // 10% Chance to cast level 9 Meteor on striking
+    row["prop6"] = "hit-skill";
+    row["par6"] = "56";
+    row["min6"] = 10;
+    row["max6"] = 9;
+
+    // +1 - 2 to Amazon Skill Levels
+    row["prop7"] = "ama";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 2;
+
+  }
+
+  // Kuko Shakaku
+  if (row["index"] === "Kuko Shakaku") {
+
+    //Changes
+    row["code"] = "6lb";
+    row["*ItemName"] = "Shadow Bow";
+
+    // +3 - 5 to Immolation Arrow ([Class] only)
+    row["prop1"] = "skill";
+    row["par1"] = "27";
+    row["min1"] = 3;
+    row["max1"] = 5;
+
+    // Fires Explosive Arrows or Bolts
+    row["prop2"] = "explosivearrow";
+    row["par2"] = "";
+    row["min2"] = 7;
+    row["max2"] = 7;
+
+    // +150 - 180% Enhanced Damage
+    row["prop3"] = "dmg%";
+    row["par3"] = "";
+    row["min3"] = 150;
+    row["max3"] = 180;
+
+    // Piercing Attack
+    row["prop4"] = "pierce";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // Adds 80 - 200 Fire Damage
+    row["prop5"] = "dmg-fire";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 200;
+
+    // +3 to Bow and Crossbow Skills [Class only] Skills
+    row["prop6"] = "skilltab";
+    row["par6"] = "0";
+    row["min6"] = 3;
+    row["max6"] = 3;
+
+    // +10 - 20% to Fire Skill Damage
+    row["prop7"] = "extra-fire";
+    row["par7"] = "";
+    row["min7"] = 10;
+    row["max7"] = 20;
+  }
+
+  // Endlesshail
+  if (row["index"] === "Endlesshail") {
+ 
+    // Cold Resist +35%
+    row["prop1"] = "res-cold";
+    row["par1"] = "";
+    row["min1"] = 35;
+    row["max1"] = 35;
+
+    // +40 to Mana
+    row["prop2"] = "mana";
+    row["par2"] = "";
+    row["min2"] = 40;
+    row["max2"] = 40;
+
+    // +50 Defense vs. Missile
+    row["prop3"] = "ac-miss";
+    row["par3"] = "";
+    row["min3"] = 50;
+    row["max3"] = 50;
+
+    // +3 - 5 to Strafe ([Class] only)
+    row["prop4"] = "skill";
+    row["par4"] = "26";
+    row["min4"] = 3;
+    row["max4"] = 5;
+
+    // +180 - 220% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 180;
+    row["max5"] = 220;
+
+    // Adds 60 - 90 Cold Damage
+    row["prop6"] = "dmg-cold";
+    row["par6"] = "75";
+    row["min6"] = 60;
+    row["max6"] = 90;
+
+    // Cannot Be Frozen
+    row["prop7"] = "nofreeze";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 1;
+
+    // +10 - 20% to Cold Skill Damage
+    row["prop8"] = "extra-cold";
+    row["par8"] = "";
+    row["min8"] = 10;
+    row["max8"] = 20;
+
+  }
+
+  // Whichwild String
+  if (row["index"] === "Whichwild String") {
+
+    // 8% Chance to cast level 5 Amplify Damage on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "66";
+    row["min1"] = 8;
+    row["max1"] = 5;
+
+    // All Resistances +40
+    row["prop2"] = "res-all";
+    row["par2"] = "";
+    row["min2"] = 40;
+    row["max2"] = 40;
+
+    // 1% Deadly Strike (Based on Character Level)
+    row["prop3"] = "deadly/lvl";
+    row["par3"] = "8";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // +150 - 170% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 150;
+    row["max4"] = 170;
+
+    // Fires Magic Arrows
+    row["prop5"] = "magicarrow";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 20;
+
+    // +12 to Dexterity
+    row["prop6"] = "dex";
+    row["par6"] = "";
+    row["min6"] = 12;
+    row["max6"] = 12;
+
+    // Adds 60 - 90 Magic Damage
+    row["prop7"] = "dmg-mag";
+    row["par7"] = "";
+    row["min7"] = 60;
+    row["max7"] = 90;
+
+  }
+
+  // Cliffkiller
+  if (row["index"] === "Cliffkiller") {
+
+    // +2 to Amazon Skill Levels
+    row["prop1"] = "ama";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // +190 - 230% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 190;
+    row["max2"] = 230;
+
+    // +80 Defense vs. Missile
+    row["prop3"] = "ac-miss";
+    row["par3"] = "";
+    row["min3"] = 80;
+    row["max3"] = 80;
+
+    // Knockback
+    row["prop4"] = "knock";
+    row["par4"] = "";
+    row["min4"] = 1;
+    row["max4"] = 1;
+
+    // +50 to Life
+    row["prop5"] = "hp";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 50;
+
+    // +5 - 10 to Minimum Damage
+    row["prop6"] = "dmg-min";
+    row["par6"] = "";
+    row["min6"] = 5;
+    row["max6"] = 10;
+
+    // +20 - 30 to Maximum Damage
+    row["prop7"] = "dmg-max";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 30;
+
+    // +30% Increased Attack Speed
+    row["prop8"] = "swing1";
+    row["par8"] = "";
+    row["min8"] = 30;
+    row["max8"] = 30;
+
+  }
+
+  // Magewrath
+  if (row["index"] === "Magewrath") {
+
+    // 15% Mana stolen per hit
+    row["prop1"] = "manasteal";
+    row["par1"] = "";
+    row["min1"] = 15;
+    row["max1"] = 15;
+
+    // Magic Damage Reduced by 9 - 13
+    row["prop2"] = "red-mag";
+    row["par2"] = "";
+    row["min2"] = 9;
+    row["max2"] = 13;
+
+    // +3 to Guided Arrow
+    row["prop3"] = "oskill";
+    row["par3"] = "22";
+    row["min3"] = 3;
+    row["max3"] = 3;
+
+    // +200 - 250 to Attack Rating
+    row["prop4"] = "att";
+    row["par4"] = "";
+    row["min4"] = 200;
+    row["max4"] = 250;
+
+    // +10 to Dexterity
+    row["prop5"] = "dex";
+    row["par5"] = "";
+    row["min5"] = 10;
+    row["max5"] = 10;
+
+    // Hit Blinds Target +1
+    row["prop6"] = "stupidity";
+    row["par6"] = "";
+    row["min6"] = 1;
+    row["max6"] = 1;
+
+    // Adds 25 - 50 Damage
+    row["prop7"] = "dmg-norm";
+    row["par7"] = "";
+    row["min7"] = 25;
+    row["max7"] = 50;
+
+    // +120 - 150% Enhanced Damage
+    row["prop8"] = "dmg%";
+    row["par8"] = "";
+    row["min8"] = 120;
+    row["max8"] = 150;
+
+    // +2 to All Skills
+    row["prop9"] = "allskills";
+    row["par9"] = "";
+    row["min9"] = 2;
+    row["max9"] = 2;
+
+  }
+
+  // Godstrike Arch
+  if (row["index"] === "Godstrike Arch") {
+
+    // +200 - 250% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 200;
+    row["max1"] = 250;
+
+    // 100 - 150% Bonus to Attack Rating
+    row["prop2"] = "att%";
+    row["par2"] = "";
+    row["min2"] = 100;
+    row["max2"] = 150;
+
+    // +150 - 220% Damage to Undead
+    row["prop3"] = "dmg-undead";
+    row["par3"] = "";
+    row["min3"] = 150;
+    row["max3"] = 220;
+
+    // +150 - 220% Damage to Demons
+    row["prop4"] = "dmg-demon";
+    row["par4"] = "";
+    row["min4"] = 150;
+    row["max4"] = 220;
+
+    // 15% Chance to cast level 12 Fist of the Heavens on striking
+    row["prop5"] = "hit-skill";
+    row["par5"] = "121";
+    row["min5"] = 15;
+    row["max5"] = 12;
+
+    // +50% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 50;
+    row["max6"] = 50;
+
+    // Replenish Life +12
+    row["prop7"] = "regen";
+    row["par7"] = "";
+    row["min7"] = 12;
+    row["max7"] = 12;
+
+    // 0,75% Better Chance of Getting Magic Items (Based on Character Level)
+    row["prop8"] = "mag%/lvl";
+    row["par8"] = "6";
+    row["min8"] = "";
+    row["max8"] = "";
+
+  }
+
+  // Widowmaker
+  if (row["index"] === "Widowmaker") {
+
+    // +150 - 200% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 150;
+    row["max1"] = 200;
+
+    // 33% Deadly Strike
+    row["prop2"] = "deadly";
+    row["par2"] = "";
+    row["min2"] = 33;
+    row["max2"] = 33;
+
+    // Ignore Target's Defense
+    row["prop3"] = "ignore-ac";
+    row["par3"] = "";
+    row["min3"] = 1;
+    row["max3"] = 1;
+
+    // Fires Magic Arrows
+    row["prop4"] = "magicarrow";
+    row["par4"] = "";
+    row["min4"] = 11;
+    row["max4"] = 11;
+
+    // +3 - 5 to Guided Arrow
+    row["prop5"] = "oskill";
+    row["par5"] = "Guided Arrow";
+    row["min5"] = 3;
+    row["max5"] = 5;
+
+    // Requirements --30%
+    row["prop6"] = "ease";
+    row["par6"] = "";
+    row["min6"] = -30;
+    row["max6"] = -30;
+
+    // +30% Faster Run/Walk
+    row["prop7"] = "move1";
+    row["par7"] = "";
+    row["min7"] = 30;
+    row["max7"] = 30;
+
+    // 30 - 50% Better Chance of Getting Magic Items
+    row["prop8"] = "mag%";
+    row["par8"] = "";
+    row["min8"] = 30;
+    row["max8"] = 50;
+
+  }
+
+  // Windforce
+  if (row["index"] === "Windforce") {
+
+    // Damage +30 - 50
+    row["prop1"] = "dmg";
+    row["par1"] = "";
+    row["min1"] = 387;
+    row["max1"] = 387;
+
+    // +3,125 to Maximum Damage (Based on Character Level)
+    row["prop2"] = "dmg/lvl";
+    row["par2"] = "25";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // Heal Stamina Plus 30%
+    row["prop3"] = "regen-stam";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 30;
+
+    // 6 - 8% Mana stolen per hit
+    row["prop4"] = "manasteal";
+    row["par4"] = "";
+    row["min4"] = 6;
+    row["max4"] = 8;
+
+    // Knockback
+    row["prop5"] = "knock";
+    row["par5"] = "";
+    row["min5"] = 1;
+    row["max5"] = 1;
+
+    // +250% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 250;
+    row["max6"] = 250;
+
+    // +35% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 35;
+    row["max7"] = 35;
+
+    // +10 - 20 to all Attributes
+    row["prop8"] = "all-stats";
+    row["par8"] = "";
+    row["min8"] = 10;
+    row["max8"] = 20;
+
+    // +12 to Dexterity
+    row["prop9"] = "dex";
+    row["par9"] = "";
+    row["min9"] = 12;
+    row["max9"] = 12;
+
+  }
+
+  // Lycander's Aim
+  if (row["index"] === "Lycander's Aim") {
+
+    // +2 to Amazon Skill Levels
+    row["prop1"] = "ama";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // +2 to Bow and Crossbow Skills [Class only] Skills
+    row["prop2"] = "skilltab";
+    row["par2"] = "0";
+    row["min2"] = 2;
+    row["max2"] = 2;
+
+    // +150 - 200% Enhanced Damage
+    row["prop3"] = "dmg%";
+    row["par3"] = "";
+    row["min3"] = 150;
+    row["max3"] = 200;
+
+    // +20% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 20;
+    row["max4"] = 20;
+
+    // +20% Enhanced Defense
+    row["prop5"] = "ac%";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 20;
+
+    // +20 to Dexterity
+    row["prop6"] = "dex";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // +20 to Energy
+    row["prop7"] = "enr";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 20;
+
+    // 5 - 8% Mana stolen per hit
+    row["prop8"] = "manasteal";
+    row["par8"] = "";
+    row["min8"] = 5;
+    row["max8"] = 8;
+
+    // Adds 25 - 50 Damage
+    row["prop9"] = "dmg-norm";
+    row["par9"] = "";
+    row["min9"] = 25;
+    row["max9"] = 50;
+
+    // -50% Target Defense
+    row["prop10"] = "reduce-ac";
+    row["par10"] = "";
+    row["min10"] = 50;
+    row["max10"] = 50;
+
+  }
+
+  // Bloodraven's Charge
+  if (row["index"] === "Bloodraven's Charge") {
+
+    row['lvl req'] = 50;
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // 200 - 300% Bonus to Attack Rating
+    row["prop2"] = "att%";
+    row["par2"] = "";
+    row["min2"] = 200;
+    row["max2"] = 300;
+
+    // Fires Explosive Arrows or Bolts
+    row["prop3"] = "explosivearrow";
+    row["par3"] = "";
+    row["min3"] = 13;
+    row["max3"] = 13;
+
+    // +2 - 4 to Bow and Crossbow Skills [Class only] Skills
+    row["prop4"] = "skilltab";
+    row["par4"] = "0";
+    row["min4"] = 2;
+    row["max4"] = 4;
+
+    // +8 - 10 to Revive
+    row["prop5"] = "oskill";
+    row["par5"] = "Revive";
+    row["min5"] = 8;
+    row["max5"] = 10;
+
+    // Reanimate As: [Returned]
+    row["prop6"] = "reanimate";
+    row["par6"] = "579";
+    row["min6"] = 80;
+    row["max6"] = 80;
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // Requirements --70%
+    row["prop8"] = "ease";
+    row["par8"] = "";
+    row["min8"] = -70;
+    row["max8"] = -70;
+
+  }
+
+  // Eaglehorn
+  if (row["index"] === "Eaglehorn") {
+
+    // Ignore Target's Defense
+    row["prop1"] = "ignore-ac";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // +6 to Attack Rating (Based on Character Level)
+    row["prop2"] = "att/lvl";
+    row["par2"] = "12";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // +2% Enhanced Maximum Damage (Based on Character Level)
+    row["prop3"] = "dmg%/lvl";
+    row["par3"] = "16";
+    row["min3"] = "";
+    row["max3"] = "";
+
+    // +200% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 200;
+    row["max4"] = 200;
+
+    // +1 - 3 to Amazon Skill Levels
+    row["prop5"] = "ama";
+    row["par5"] = "";
+    row["min5"] = 1;
+    row["max5"] = 3;
+
+    // +25 to Dexterity
+    row["prop6"] = "dex";
+    row["par6"] = "";
+    row["min6"] = 25;
+    row["max6"] = 25;
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // Piercing Attack
+    row["prop8"] = "pierce";
+    row["par8"] = "";
+    row["min8"] = 33;
+    row["max8"] = 33;
+
+  }
+// #endregion
+
+
+
+
+/*______  _______  _______  _______  _______  ______   _______           _______ 
+(  ____ \(  ____ )(  ___  )(  ____ \(  ____ \(  ___ \ (  ___  )|\     /|(  ____ \
+| (    \/| (    )|| (   ) || (    \/| (    \/| (   ) )| (   ) || )   ( || (    \/
+| |      | (____)|| |   | || (_____ | (_____ | (__/ / | |   | || | _ | || (_____ 
+| |      |     __)| |   | |(_____  )(_____  )|  __ (  | |   | || |( )| |(_____  )
+| |      | (\ (   | |   | |      ) |      ) || (  \ \ | |   | || || || |      ) |
+| (____/\| ) \ \__| (___) |/\____) |/\____) || )___) )| (___) || () () |/\____) |
+(_______/|/   \__/(_______)\_______)\_______)|/ \___/ (_______)(_______)\______*/
+
+// #region Crossbows
+
+
+
+
+  // Leadcrow
+  if (row["index"] === "Leadcrow") {
+
+    // +10 to Dexterity
+    row["prop1"] = "dex";
+    row["par1"] = "";
+    row["min1"] = 10;
+    row["max1"] = 10;
+
+    // +10 to Life
+    row["prop2"] = "hp";
+    row["par2"] = "";
+    row["min2"] = 10;
+    row["max2"] = 10;
+
+    // +70% Enhanced Damage
+    row["prop3"] = "dmg%";
+    row["par3"] = "";
+    row["min3"] = 70;
+    row["max3"] = 70;
+
+    // Poison Resist +30%
+    row["prop4"] = "res-pois";
+    row["par4"] = "";
+    row["min4"] = 30;
+    row["max4"] = 30;
+
+    // 25% Deadly Strike
+    row["prop5"] = "deadly";
+    row["par5"] = "";
+    row["min5"] = 25;
+    row["max5"] = 25;
+
+    // +40 to Attack Rating
+    row["prop6"] = "att";
+    row["par6"] = "";
+    row["min6"] = 40;
+    row["max6"] = 40;
+
+    // +15% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 15;
+
+    // Adds 22 Poison Damage Over 3 Seconds
+    row["prop8"] = "dmg-pois";
+    row["par8"] = "75";
+    row["min8"] = 75;
+    row["max8"] = 75;
+
+  }
+
+  // Ichorsting
+  if (row["index"] === "Ichorsting") {
+
+    // Adds 30 Poison Damage Over 3 Seconds
+    row["prop1"] = "dmg-pois";
+    row["par1"] = "75";
+    row["min1"] = 102;
+    row["max1"] = 102;
+
+    // +20 to Dexterity
+    row["prop2"] = "dex";
+    row["par2"] = "";
+    row["min2"] = 20;
+    row["max2"] = 20;
+
+    // Piercing Attack
+    row["prop3"] = "pierce";
+    row["par3"] = "";
+    row["min3"] = 50;
+    row["max3"] = 50;
+
+    // +50 to Attack Rating
+    row["prop4"] = "att";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // +50% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 50;
+    row["max5"] = 50;
+
+    // +20% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // Remove Socketed (1 - 2)
+    row["prop7"] = "sock";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+  }
+
+  // Hellcast
+  if (row["index"] === "Hellcast") {
+
+    // Fires Explosive Arrows or Bolts
+    row["prop1"] = "explosivearrow";
+    row["par1"] = "";
+    row["min1"] = 5;
+    row["max1"] = 5;
+
+    // +15% to Maximum Fire Resist
+    row["prop2"] = "res-fire-max";
+    row["par2"] = "";
+    row["min2"] = 15;
+    row["max2"] = 15;
+
+    // Fire Resist +15%
+    row["prop3"] = "res-fire";
+    row["par3"] = "";
+    row["min3"] = 15;
+    row["max3"] = 15;
+
+    // +70 to Attack Rating
+    row["prop4"] = "att";
+    row["par4"] = "";
+    row["min4"] = 70;
+    row["max4"] = 70;
+
+    // +20% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 20;
+    row["max5"] = 20;
+
+    // +70 - 80% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 70;
+    row["max6"] = 80;
+
+    // Adds 35 - 55 Fire Damage
+    row["prop7"] = "dmg-fire";
+    row["par7"] = "";
+    row["min7"] = 35;
+    row["max7"] = 55;
+
+    // +1 - 3 to Fire Skills
+    row["prop8"] = "fireskill";
+    row["par8"] = "";
+    row["min8"] = 1;
+    row["max8"] = 3;
+
+  }
+
+  // Doomspittle
+  if (row["index"] === "Doomspittle") {
+
+    // +1 - 2 to Amazon Skill Levels
+    row["prop1"] = "ama";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 2;
+
+    // Piercing Attack
+    row["prop2"] = "pierce";
+    row["par2"] = "";
+    row["min2"] = 35;
+    row["max2"] = 35;
+
+    // +30% Increased Attack Speed
+    row["prop3"] = "swing1";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 30;
+
+    // +15 to Life
+    row["prop4"] = "hp";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // +60 - 100% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 60;
+    row["max5"] = 100;
+
+    // +3 - 4 to Exploding Arrow ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "16";
+    row["min6"] = 3;
+    row["max6"] = 4;
+
+  }
+
+  // Langer Briser
+  if (row["index"] === "Langer Briser") {
+
+    // 10% Chance to cast level 10 Volcano on striking
+    row["prop1"] = "hit-skill";
+    row["par1"] = "244";
+    row["min1"] = 10;
+    row["max1"] = 10;
+
+    // +170 - 200% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 170;
+    row["max2"] = 200;
+
+    // 30 - 60% Better Chance of Getting Magic Items
+    row["prop3"] = "mag%";
+    row["par3"] = "";
+    row["min3"] = 30;
+    row["max3"] = 60;
+
+    // +30 to Life
+    row["prop4"] = "hp";
+    row["par4"] = "";
+    row["min4"] = 30;
+    row["max4"] = 30;
+
+    // +30 - 50 to Maximum Damage
+    row["prop5"] = "dmg-max";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 50;
+
+    // 33% Chance of Open Wounds
+    row["prop6"] = "openwounds";
+    row["par6"] = "";
+    row["min6"] = 33;
+    row["max6"] = 33;
+
+    // Adds 1 - 212 Lightning Damage
+    row["prop7"] = "dmg-ltng";
+    row["par7"] = "";
+    row["min7"] = 1;
+    row["max7"] = 212;
+
+  }
+
+  // Pus Spiter
+  if (row["index"] === "Pus Spiter") {
+
+    // Adds 132 Poison Damage Over 3 Seconds
+    row["prop1"] = "dmg-pois";
+    row["par1"] = "75";
+    row["min1"] = 450;
+    row["max1"] = 450;
+
+    // 10% Chance to cast level 5 Lower Resist on striking
+    row["prop2"] = "hit-skill";
+    row["par2"] = "91";
+    row["min2"] = 10;
+    row["max2"] = 5;
+
+    // +2 to All Skills
+    row["prop3"] = "allskills";
+    row["par3"] = "";
+    row["min3"] = 2;
+    row["max3"] = 2;
+
+    // Requirements --60%
+    row["prop4"] = "ease";
+    row["par4"] = "";
+    row["min4"] = -60;
+    row["max4"] = -60;
+
+    // 10% Chance to cast level 8 Poison Nova when struck
+    row["prop5"] = "gethit-skill";
+    row["par5"] = "92";
+    row["min5"] = 10;
+    row["max5"] = 8;
+
+    // +20% Increased Attack Speed
+    row["prop6"] = "swing1";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 20;
+
+    // +150 - 220% Enhanced Damage
+    row["prop7"] = "dmg%";
+    row["par7"] = "";
+    row["min7"] = 150;
+    row["max7"] = 220;
+
+    // +5 to Attack Rating (Based on Character Level)
+    row["prop8"] = "att/lvl";
+    row["par8"] = "10";
+    row["min8"] = "";
+    row["max8"] = "";
+
+    // -10 - 15% to Enemy Poison Resistance
+    row["prop9"] = "pierce-pois";
+    row["par9"] = "";
+    row["min9"] = 10;
+    row["max9"] = 15;
+
+  }
+
+  // Buriza-Do Kyanon
+  if (row["index"] === "Buriza-Do Kyanon") {
+
+    // Piercing Attack
+    row["prop1"] = "pierce";
+    row["par1"] = "";
+    row["min1"] = 100;
+    row["max1"] = 100;
+
+    // +35 to Dexterity
+    row["prop2"] = "dex";
+    row["par2"] = "";
+    row["min2"] = 35;
+    row["max2"] = 35;
+
+    // +75 - 150 Defense
+    row["prop3"] = "ac";
+    row["par3"] = "";
+    row["min3"] = 75;
+    row["max3"] = 150;
+
+    // +2,5 to Maximum Damage (Based on Character Level)
+    row["prop4"] = "dmg/lvl";
+    row["par4"] = "20";
+    row["min4"] = "";
+    row["max4"] = "";
+
+    // +80% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 80;
+
+    // +150 - 200% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 150;
+    row["max6"] = 200;
+
+    // Freezes Target +3
+    row["prop7"] = "freeze";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // Adds 100 - 196 Cold Damage
+    row["prop8"] = "dmg-cold";
+    row["par8"] = "200";
+    row["min8"] = 100;
+    row["max8"] = 196;
+
+    // +3 - 5 to Freezing Arrow
+    row["prop9"] = "oskill";
+    row["par9"] = "31";
+    row["min9"] = 3;
+    row["max9"] = 5;
+
+  }
+
+  // Demon Machine
+  if (row["index"] === "Demon Machine") {
+
+    // +666 Defense
+    row["prop1"] = "ac";
+    row["par1"] = "";
+    row["min1"] = 666;
+    row["max1"] = 666;
+
+    // +66 to Mana
+    row["prop2"] = "mana";
+    row["par2"] = "";
+    row["min2"] = 66;
+    row["max2"] = 66;
+
+    // Piercing Attack
+    row["prop3"] = "pierce";
+    row["par3"] = "";
+    row["min3"] = 66;
+    row["max3"] = 66;
+
+    // Fires Explosive Arrows or Bolts
+    row["prop4"] = "explosivearrow";
+    row["par4"] = "";
+    row["min4"] = 6;
+    row["max4"] = 6;
+
+    // +66 to Maximum Damage
+    row["prop5"] = "dmg-max";
+    row["par5"] = "";
+    row["min5"] = 66;
+    row["max5"] = 66;
+
+    // +123% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 123;
+    row["max6"] = 123;
+
+    // +666 to Attack Rating
+    row["prop7"] = "att";
+    row["par7"] = "";
+    row["min7"] = 666;
+    row["max7"] = 666;
+
+  }
+
+  // Hellrack
+  if (row["index"] === "Hellrack") {
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // Adds 300 - 500 Fire/Lightning/Cold Damage
+    row["prop2"] = "dmg-elem";
+    row["par2"] = "33";
+    row["min2"] = 300;
+    row["max2"] = 500;
+
+    // +20% Increased Attack Speed
+    row["prop3"] = "swing1";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // 100 - 150% Bonus to Attack Rating
+    row["prop4"] = "att%";
+    row["par4"] = "";
+    row["min4"] = 100;
+    row["max4"] = 150;
+
+    // Remove Socketed (1 - 2)
+    row["prop5"] = "sock";
+    row["par5"] = "";
+    row["min5"] = "";
+    row["max5"] = "";
+
+    // Level 18 Immolation Arrow (150/150 Charges)
+    row["prop6"] = "charged";
+    row["par6"] = "Immolation Arrow";
+    row["min6"] = 150;
+    row["max6"] = 18;
+
+    // 15% Chance to cast level 10 Lower Resist on striking
+    row["prop7"] = "hit-skill";
+    row["par7"] = "91";
+    row["min7"] = 15;
+    row["max7"] = 10;
+
+  }
+
+  // Gutsiphon
+  if (row["index"] === "Gutsiphon") {
+
+    // +160 - 220% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 160;
+    row["max1"] = 220;
+
+    // Piercing Attack
+    row["prop2"] = "pierce";
+    row["par2"] = "";
+    row["min2"] = 33;
+    row["max2"] = 33;
+
+    // 12 - 18% Life stolen per hit
+    row["prop3"] = "lifesteal";
+    row["par3"] = "";
+    row["min3"] = 12;
+    row["max3"] = 18;
+
+    // Slows Target by 25%
+    row["prop4"] = "slow";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
+
+    // 33% Chance of Open Wounds
+    row["prop5"] = "openwounds";
+    row["par5"] = "";
+    row["min5"] = 33;
+    row["max5"] = 33;
+
+    // Monster Physical Immunity is Sundered
+    row["prop6"] = "pierce-immunity-damage";
+    row["par6"] = "";
+    row["min6"] = 300;
+    row["max6"] = 300;
+
+    // 0,5% Deadly Strike (Based on Character Level)
+    row["prop7"] = "deadly/lvl";
+    row["par7"] = "4";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // Level 7 - 10 Might Aura When Equipped
+    row["prop8"] = "aura";
+    row["par8"] = "Might";
+    row["min8"] = 7;
+    row["max8"] = 10;
+
+  }
 // #endregion
 
 
@@ -6005,6 +10190,205 @@ uniqueitems.rows.forEach((row) => {
 
 
 
+  // Demon's Arch
+  if (row["index"] === "Demon's Arch") {
+
+    // +160 - 210% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 160;
+    row["max1"] = 210;
+
+    // Adds 333 - 666 Fire Damage
+    row["prop2"] = "dmg-fire";
+    row["par2"] = "";
+    row["min2"] = 333;
+    row["max2"] = 666;
+
+    // 6 - 12% Life stolen per hit
+    row["prop3"] = "lifesteal";
+    row["par3"] = "";
+    row["min3"] = 6;
+    row["max3"] = 12;
+
+    // Replenishes quantity
+    row["prop4"] = "rep-quant";
+    row["par4"] = "30";
+    row["min4"] = "";
+    row["max4"] = "";
+
+    // +30% Increased Attack Speed
+    row["prop5"] = "swing1";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 30;
+
+    // Adds 333 - 666 Lightning Damage
+    row["prop6"] = "dmg-ltng";
+    row["par6"] = "";
+    row["min6"] = 333;
+    row["max6"] = 666;
+
+    // +1% Damage to Demons (Based on Character Level)
+    row["prop7"] = "dmg-dem/lvl";
+    row["par7"] = "8";
+    row["min7"] = "";
+    row["max7"] = "";
+
+  }
+
+  // Wraithflight
+  if (row["index"] === "Wraithflight") {
+
+    // +150 - 190% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 150;
+    row["max1"] = 190;
+
+    // Replenishes quantity
+    row["prop2"] = "rep-quant";
+    row["par2"] = "40";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // 9 - 13% Life stolen per hit
+    row["prop3"] = "lifesteal";
+    row["par3"] = "";
+    row["min3"] = 9;
+    row["max3"] = 13;
+
+    // +15 to Mana after each Kill
+    row["prop4"] = "mana-kill";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // Ethereal
+    row["prop5"] = "ethereal";
+    row["par5"] = "";
+    row["min5"] = 1;
+    row["max5"] = 1;
+
+    // Adds 300 - 500 Magic Damage
+    row["prop6"] = "dmg-mag";
+    row["par6"] = "";
+    row["min6"] = 300;
+    row["max6"] = 500;
+
+    // Piercing Attack
+    row["prop7"] = "pierce";
+    row["par7"] = "";
+    row["min7"] = 60;
+    row["max7"] = 60;
+
+  }
+
+  // Gargoyle's Bite
+  if (row["index"] === "Gargoyle's Bite") {
+
+    // +180 - 230% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 180;
+    row["max1"] = 230;
+
+    // Replenishes quantity
+    row["prop2"] = "rep-quant";
+    row["par2"] = "30";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // Adds 300 Poison Damage Over 3 Seconds
+    row["prop3"] = "dmg-pois";
+    row["par3"] = "75";
+    row["min3"] = 1023;
+    row["max3"] = 1023;
+
+    // 9 - 15% Life stolen per hit
+    row["prop4"] = "lifesteal";
+    row["par4"] = "";
+    row["min4"] = 9;
+    row["max4"] = 15;
+
+    // +6 to Plague Javelin ([Class] only)
+    row["prop5"] = "skill";
+    row["par5"] = "Plague Javelin";
+    row["min5"] = 6;
+    row["max5"] = 6;
+
+    // -20 - 30% to Enemy Poison Resistance
+    row["prop6"] = "pierce-pois";
+    row["par6"] = "";
+    row["min6"] = 20;
+    row["max6"] = 30;
+
+    // +40% Faster Run/Walk
+    row["prop7"] = "move1";
+    row["par7"] = "";
+    row["min7"] = 40;
+    row["max7"] = 40;
+
+    // +2 to Amazon Skill Levels
+    row["prop8"] = "ama";
+    row["par8"] = "";
+    row["min8"] = 2;
+    row["max8"] = 2;
+
+  }
+
+  // Thunderstroke
+  if (row["index"] === "Thunderstroke") {
+
+    // +150 - 200% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 150;
+    row["max1"] = 200;
+
+    // Adds 1 - 511 Lightning Damage
+    row["prop2"] = "dmg-ltng";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 511;
+
+    // 20% Chance to cast level 14 Lightning on striking
+    row["prop3"] = "hit-skill";
+    row["par3"] = "Lightning";
+    row["min3"] = 20;
+    row["max3"] = 14;
+
+    // +15% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // -15% to Enemy Lightning Resistance
+    row["prop5"] = "pierce-ltng";
+    row["par5"] = "";
+    row["min5"] = 15;
+    row["max5"] = 15;
+
+    // +3 to Lightning Bolt ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "Lightning Bolt";
+    row["min6"] = 3;
+    row["max6"] = 3;
+
+    // +2 - 4 to Javelin and Spear Skills [Class only] Skills
+    row["prop7"] = "skilltab";
+    row["par7"] = "2";
+    row["min7"] = 2;
+    row["max7"] = 4;
+
+    // Replenishes quantity
+    row["prop8"] = "rep-quant";
+    row["par8"] = "30";
+    row["min8"] = "";
+    row["max8"] = "";
+
+  }
 // #endregion
 
 
@@ -6171,11 +10555,11 @@ uniqueitems.rows.forEach((row) => {
     row["min5"] = 7;
     row["max5"] = 7;
 
-    // Socketed (1 - 3)
+    // Remove Socketed (1 - 2)
     row["prop6"] = "sock";
     row["par6"] = "";
-    row["min6"] = 1;
-    row["max6"] = 3;
+    row["min6"] = "";
+    row["max6"] = "";
   }
 
   // Woestave
@@ -6412,35 +10796,55 @@ uniqueitems.rows.forEach((row) => {
     row["min3"] = 13;
     row["max3"] = 13;
     
-    // 13% Damage Taken Goes To Mana
+    // 23% Damage Taken Goes To Mana
     row["prop4"] = "dmg-to-mana";
     row["par4"] = "";
-    row["min4"] = 13;
-    row["max4"] = 13;
+    row["min4"] = 23;
+    row["max4"] = 23;
 
-    // +13 to Energy
+    // +23 to Energy
     row["prop5"] = "enr";
     row["par5"] = "";
-    row["min5"] = 13;
-    row["max5"] = 13;
+    row["min5"] = 23;
+    row["max5"] = 23;
 
-    // Regenerate Mana 13%
+    // Regenerate Mana 23%
     row["prop6"] = "regen-mana";
     row["par6"] = "";
-    row["min6"] = 13;
-    row["max6"] = 13;
+    row["min6"] = 23;
+    row["max6"] = 23;
 
-    // Regenerate Mana 13%
-    row["prop7"] = "regen-mana";
-    row["par7"] = "";
-    row["min7"] = 13;
-    row["max7"] = 13;
+    // Increase Maximum Life 23%
+    row["prop5"] = "hp%";
+    row["par5"] = "";
+    row["min5"] = 23;
+    row["max5"] = 23;
 
-    // All Resistances +5
+    // All Resistances +55
     row["prop8"] = "res-all";
     row["par8"] = "";
     row["min8"] = 55;
     row["max8"] = 55;
+
+    // +30% Faster Hit Recovery
+    row["prop9"] = "balance1";
+    row["par9"] = "";
+    row["min9"] = 30;
+    row["max9"] = 30;
+
+    // +45% Faster Run/Walk
+    row["prop10"] = "move1";
+    row["par10"] = "";
+    row["min10"] = 45;
+    row["max10"] = 45;
+
+    // +45% Faster Run/Walk
+    row["prop10"] = "ease";
+    row["par10"] = "";
+    row["min10"] = 45;
+    row["max10"] = 45;
+
+
   }
 
   // Pierre Tombale Couant
@@ -6650,11 +11054,11 @@ uniqueitems.rows.forEach((row) => {
     row["min5"] = 1;
     row["max5"] = 1;
 
-    // Socketed (2 - 3)
+    // Remove Socketed (1 - 2)
     row["prop6"] = "sock";
     row["par6"] = "";
-    row["min6"] = 2;
-    row["max6"] = 3;
+    row["min6"] = "";
+    row["max6"] = "";
   }
 
   // The Reaper's Toll
@@ -6805,6 +11209,365 @@ uniqueitems.rows.forEach((row) => {
 
 
 
+  // Stormeye
+  if (row["index"] === "Stormeye") {
+
+    // Adds 1 - 20 Lightning Damage
+    row["prop1"] = "dmg-ltng";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 20;
+
+    // Adds 10 - 20 Cold Damage
+    row["prop2"] = "dmg-cold";
+    row["par2"] = "75";
+    row["min2"] = 10;
+    row["max2"] = 20;
+
+    // Replenish Life +10
+    row["prop3"] = "regen";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 10;
+
+    // +80 - 120% Enhanced Damage
+    row["prop4"] = "dmg%";
+    row["par4"] = "";
+    row["min4"] = 80;
+    row["max4"] = 120;
+
+    // +3 - 5 to Resist Lightning ([Class] only)
+    row["prop5"] = "skill";
+    row["par5"] = "110";
+    row["min5"] = 3;
+    row["max5"] = 5;
+
+    // +3 to Holy Shock ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "118";
+    row["min6"] = 3;
+    row["max6"] = 3;
+
+    // +2 to Fist of the Heavens ([Class] only)
+    row["prop7"] = "skill";
+    row["par7"] = "121";
+    row["min7"] = 2;
+    row["max7"] = 2;
+
+  }
+
+  // Zakarum's Hand
+  if (row["index"] === "Zakarum's Hand") {
+
+    // 8% Mana stolen per hit
+    row["prop1"] = "manasteal";
+    row["par1"] = "";
+    row["min1"] = 8;
+    row["max1"] = 8;
+
+    // Ignore Target's Defense
+    row["prop2"] = "ignore-ac";
+    row["par2"] = "";
+    row["min2"] = 1;
+    row["max2"] = 1;
+
+    // Regenerate Mana 10%
+    row["prop3"] = "regen-mana";
+    row["par3"] = "";
+    row["min3"] = 10;
+    row["max3"] = 10;
+
+    // Heal Stamina Plus 15%
+    row["prop4"] = "regen-stam";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+
+    // 12% Chance to cast level 6 Blizzard on striking
+    row["prop5"] = "hit-skill";
+    row["par5"] = "59";
+    row["min5"] = 12;
+    row["max5"] = 6;
+
+    // +180 - 220% Enhanced Damage
+    row["prop6"] = "dmg%";
+    row["par6"] = "";
+    row["min6"] = 180;
+    row["max6"] = 220;
+
+    // +30% Increased Attack Speed
+    row["prop7"] = "swing1";
+    row["par7"] = "";
+    row["min7"] = 30;
+    row["max7"] = 30;
+
+    // +3 - 5 to Holy Freeze ([Class] only)
+    row["prop8"] = "skill";
+    row["par8"] = "114";
+    row["min8"] = 3;
+    row["max8"] = 5;
+
+    // +3 - 5 to Holy Shock ([Class] only)
+    row["prop9"] = "skill";
+    row["par9"] = "118";
+    row["min9"] = 3;
+    row["max9"] = 5;
+
+    // Half Freeze Duration
+    row["prop10"] = "half-freeze";
+    row["par10"] = "";
+    row["min10"] = 1;
+    row["max10"] = 1;
+
+  }
+
+  // The Fetid Sprinkler
+  if (row["index"] === "The Fetid Sprinkler") {
+
+    // +2 to Paladin Skill Levels
+    row["prop1"] = "pal";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // 5% Chance to cast level 1 Decrepify on striking
+    row["prop2"] = "hit-skill";
+    row["par2"] = "87";
+    row["min2"] = 5;
+    row["max2"] = 1;
+
+    // 10% Chance to cast level 1 Confuse on striking
+    row["prop3"] = "hit-skill";
+    row["par3"] = "81";
+    row["min3"] = 10;
+    row["max3"] = 1;
+
+    // Adds 150 Poison Damage Over 3 Seconds
+    row["prop4"] = "dmg-pois";
+    row["par4"] = "75";
+    row["min4"] = 513;
+    row["max4"] = 513;
+
+    // +160 - 190% Enhanced Damage
+    row["prop5"] = "dmg%";
+    row["par5"] = "";
+    row["min5"] = 160;
+    row["max5"] = 190;
+
+    // +150 - 200 to Attack Rating
+    row["prop6"] = "att";
+    row["par6"] = "";
+    row["min6"] = 150;
+    row["max6"] = 200;
+
+    // Adds 15 - 25 Damage
+    row["prop7"] = "dmg-norm";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 25;
+
+    // Remove Socketed (1 - 2)
+    row["prop8"] = "sock";
+    row["par8"] = "";
+    row["min8"] = "";
+    row["max8"] = "";
+
+  }
+
+  // Hand of Blessed Light
+  if (row["index"] === "Hand of Blessed Light") {
+
+    // +2 to Paladin Skill Levels
+    row["prop1"] = "pal";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // +130 - 160% Enhanced Damage
+    row["prop2"] = "dmg%";
+    row["par2"] = "";
+    row["min2"] = 130;
+    row["max2"] = 160;
+
+    // 100% Bonus to Attack Rating
+    row["prop3"] = "att%";
+    row["par3"] = "";
+    row["min3"] = 100;
+    row["max3"] = 100;
+
+    // +50 Defense
+    row["prop4"] = "ac";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
+
+    // Regenerate Mana 15%
+    row["prop5"] = "regen-mana";
+    row["par5"] = "";
+    row["min5"] = 15;
+    row["max5"] = 15;
+
+    // +4 to Light Radius
+    row["prop6"] = "light";
+    row["par6"] = "";
+    row["min6"] = 4;
+    row["max6"] = 4;
+
+    // Adds 20 - 45 Damage
+    row["prop7"] = "dmg-norm";
+    row["par7"] = "";
+    row["min7"] = 20;
+    row["max7"] = 45;
+
+    // +4 to Holy Bolt ([Class] only)
+    row["prop8"] = "skill";
+    row["par8"] = "101";
+    row["min8"] = 4;
+    row["max8"] = 4;
+
+    // +2 - 4 to Fist of the Heavens ([Class] only)
+    row["prop9"] = "skill";
+    row["par9"] = "121";
+    row["min9"] = 2;
+    row["max9"] = 4;
+
+    // 10% Chance to cast level 12 Fist of the Heavens on striking
+    row["prop10"] = "hit-skill";
+    row["par10"] = "121";
+    row["min10"] = 10;
+    row["max10"] = 12;
+
+    // +10 - 15% to Lightning Skill Damage
+    row["prop11"] = "extra-ltng";
+    row["par11"] = "";
+    row["min11"] = 10;
+    row["max11"] = 15;
+
+  }
+
+  // The Reedeemer
+  if (row["index"] === "The Reedeemer") {
+
+    // +250 - 300% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 250;
+    row["max1"] = 300;
+
+    // +250 - 300% Damage to Demons
+    row["prop2"] = "dmg-demon";
+    row["par2"] = "";
+    row["min2"] = 250;
+    row["max2"] = 300;
+
+    // +2 - 3 to Paladin Skill Levels
+    row["prop3"] = "pal";
+    row["par3"] = "";
+    row["min3"] = 2;
+    row["max3"] = 3;
+
+    // Requirements --60%
+    row["prop4"] = "ease";
+    row["par4"] = "";
+    row["min4"] = -60;
+    row["max4"] = -60;
+
+    // +2 - 4 to Redemption ([Class] only)
+    row["prop5"] = "skill";
+    row["par5"] = "Redemption";
+    row["min5"] = 2;
+    row["max5"] = 4;
+
+    // +2 - 4 to Holy Bolt ([Class] only)
+    row["prop6"] = "skill";
+    row["par6"] = "Holy Bolt";
+    row["min6"] = 2;
+    row["max6"] = 4;
+
+    // +3 to Light Radius
+    row["prop7"] = "light";
+    row["par7"] = "";
+    row["min7"] = 3;
+    row["max7"] = 3;
+
+    // -33% Target Defense
+    row["prop8"] = "reduce-ac";
+    row["par8"] = "";
+    row["min8"] = 33;
+    row["max8"] = 33;
+
+    // Damage +80 - 130
+    row["prop9"] = "dmg";
+    row["par9"] = "";
+    row["min9"] = 80;
+    row["max9"] = 130;
+
+    // +2 - 4 to Zeal ([Class] only)
+    row["prop10"] = "skill";
+    row["par10"] = "Zeal";
+    row["min10"] = 2;
+    row["max10"] = 4;
+
+  }
+
+  // Ironward
+  if (row["index"] === "Ironward") {
+
+    // +240 - 290% Enhanced Damage
+    row["prop1"] = "dmg%";
+    row["par1"] = "";
+    row["min1"] = 240;
+    row["max1"] = 290;
+
+    // Slows Target by 25%
+    row["prop2"] = "slow";
+    row["par2"] = "";
+    row["min2"] = 25;
+    row["max2"] = 25;
+
+    // 150 - 200% Bonus to Attack Rating
+    row["prop3"] = "att%";
+    row["par3"] = "";
+    row["min3"] = 150;
+    row["max3"] = 200;
+
+    // +40% Increased Attack Speed
+    row["prop4"] = "swing1";
+    row["par4"] = "";
+    row["min4"] = 40;
+    row["max4"] = 40;
+
+    // Adds 80 - 240 Magic Damage
+    row["prop5"] = "dmg-mag";
+    row["par5"] = "";
+    row["min5"] = 80;
+    row["max5"] = 240;
+
+    // Damage Reduced by 4 - 7
+    row["prop6"] = "red-dmg";
+    row["par6"] = "";
+    row["min6"] = 4;
+    row["max6"] = 7;
+
+    // Damage +150 - 200
+    row["prop7"] = "dmg";
+    row["par7"] = "";
+    row["min7"] = 150;
+    row["max7"] = 200;
+
+    // +2 - 4 to Combat Skills (Paladin) [Class only] Skills
+    row["prop8"] = "skilltab";
+    row["par8"] = "9";
+    row["min8"] = 2;
+    row["max8"] = 4;
+
+    // 33% Chance of Crushing Blow
+    row["prop9"] = "crush";
+    row["par9"] = "";
+    row["min9"] = 33;
+    row["max9"] = 33;
+
+  }
 // #endregion
 
 
@@ -6867,11 +11630,15 @@ uniqueitems.rows.forEach((row) => {
   // Maelstromwrath
   if (row["index"] === "Maelstromwrath") {
 
-    // +1 - 2 to Necromancer Skill Levels
-    row["prop1"] = "nec";
-    row["par1"] = "";
-    row["min1"] = 1;
-    row["max1"] = 2;
+    //Changes
+    row["code"] = "7wn";
+    row["*ItemName"] = "Polished Wand";
+
+    // +3 to Curses [Class only] Skills
+    row["prop5"] = "skilltab";
+    row["par5"] = "6";
+    row["min5"] = 3;
+    row["max5"] = 3;
 
     // Lightning Absorb 8 - 12%
     row["prop2"] = "abs-ltng";
@@ -6894,8 +11661,8 @@ uniqueitems.rows.forEach((row) => {
     // +30% Faster Cast Rate
     row["prop5"] = "cast1";
     row["par5"] = "";
-    row["min5"] = 30;
-    row["max5"] = 30;
+    row["min5"] = 45;
+    row["max5"] = 45;
 
     // +2 - 4 to Corpse Explosion ([Class] only)
     row["prop6"] = "skill";
@@ -6961,11 +11728,11 @@ uniqueitems.rows.forEach((row) => {
     row["min6"] = 3;
     row["max6"] = 3;
 
-    // +2 to Necromancer Skill Levels
+    // +1 to Necromancer Skill Levels
     row["prop7"] = "nec";
     row["par7"] = "";
-    row["min7"] = 2;
-    row["max7"] = 2;
+    row["min7"] = 1;
+    row["max7"] = 1;
 
     // +25 - 50 to Mana
     row["prop8"] = "mana";
@@ -6977,11 +11744,11 @@ uniqueitems.rows.forEach((row) => {
   // Umes Lament
   if (row["index"] === "Umes Lament") {
 
-    // +2 to Necromancer Skill Levels
+    // +1 to Necromancer Skill Levels
     row["prop1"] = "nec";
     row["par1"] = "";
-    row["min1"] = 2;
-    row["max1"] = 2;
+    row["min1"] = 1;
+    row["max1"] = 1;
 
     // +40 to Mana
     row["prop2"] = "mana";
@@ -7018,6 +11785,13 @@ uniqueitems.rows.forEach((row) => {
     row["par7"] = "";
     row["min7"] = 5;
     row["max7"] = 10;
+
+    // +3 to Raise Skeleton ([Class] only)
+    row["prop8"] = "skill";
+    row["par8"] = "Raise Skeleton";
+    row["min8"] = 3;
+    row["max8"] = 3;
+
   }
 
   // Carin Shard
@@ -7093,6 +11867,10 @@ uniqueitems.rows.forEach((row) => {
   // Arm of King Leoric
   if (row["index"] === "Arm of King Leoric") {
 
+    //Changes
+    row["code"] = "7bw";
+    row["*ItemName"] = "Lich Wand";
+
     // +1 Necromancer Skills
     row["prop1"] = "nec";
     row["par1"] = "";
@@ -7163,57 +11941,9 @@ uniqueitems.rows.forEach((row) => {
   // Blackhand Key
   if (row["index"] === "Blackhand Key") {
 
-    // +3 to Necromancer Skill Levels
-    row["prop1"] = "nec";
-    row["par1"] = "";
-    row["min1"] = 3;
-    row["max1"] = 3;
-
-    // All Resistances +33
-    row["prop2"] = "res-all";
-    row["par2"] = "";
-    row["min2"] = 33;
-    row["max2"] = 33;
-
-    // +33% Faster Cast Rate
-    row["prop3"] = "cast1";
-    row["par3"] = "";
-    row["min3"] = 33;
-    row["max3"] = 33;
-
-    // 23% Damage Taken Goes To Mana
-    row["prop2"] = "dmg-to-mana";
-    row["par2"] = "";
-    row["min2"] = 23;
-    row["max2"] = 23;
-
-    // +53 to Life
-    row["prop3"] = "hp";
-    row["par3"] = "";
-    row["min3"] = 53;
-    row["max3"] = 53;
-
-    // -3 to Light Radius
-    row["prop4"] = "light";
-    row["par4"] = "";
-    row["min4"] = -3;
-    row["max4"] = -3;
-
-    // +43% Faster Cast Rate
-    row["prop5"] = "cast1";
-    row["par5"] = "";
-    row["min5"] = 43;
-    row["max5"] = 43;
-
-    // Fire Resist +33%
-    row["prop6"] = "res-fire";
-    row["par6"] = "";
-    row["min6"] = 33;
-    row["max6"] = 33;
-  }
-
-  // Boneshade
-  if (row["index"] === "Boneshade") {
+    //Changes
+    row["code"] = "7gw";
+    row["*ItemName"] = "Unearthed Wand";
 
     // +2 to Necromancer Skill Levels
     row["prop1"] = "nec";
@@ -7274,6 +12004,130 @@ uniqueitems.rows.forEach((row) => {
     row["par10"] = "";
     row["min10"] = 6;
     row["max10"] = 6;
+  }
+
+  // Boneshade
+  if (row["index"] === "Boneshade") {
+
+    //Changes
+    row["code"] = "9bw";
+    row["*ItemName"] = "Tomb Wand";
+    
+    // +2 to Necromancer Skill Levels
+    row["prop1"] = "nec";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // All Resistances +33
+    row["prop2"] = "res-all";
+    row["par2"] = "";
+    row["min2"] = 33;
+    row["max2"] = 33;
+
+    // +33% Faster Cast Rate
+    row["prop3"] = "cast1";
+    row["par3"] = "";
+    row["min3"] = 33;
+    row["max3"] = 33;
+
+    // 23% Damage Taken Goes To Mana
+    row["prop2"] = "dmg-to-mana";
+    row["par2"] = "";
+    row["min2"] = 23;
+    row["max2"] = 23;
+
+    // +53 to Life
+    row["prop3"] = "hp";
+    row["par3"] = "";
+    row["min3"] = 53;
+    row["max3"] = 53;
+
+    // -3 to Light Radius
+    row["prop4"] = "light";
+    row["par4"] = "";
+    row["min4"] = -3;
+    row["max4"] = -3;
+
+    //
+    row["prop5"] = "res-fire";
+    row["par5"] = "";
+    row["min5"] = 33;
+    row["max5"] = 33;
+
+    // Fire Resist +33%
+    row["prop6"] = "res-fire";
+    row["par6"] = "";
+    row["min6"] = 33;
+    row["max6"] = 33;
+
+    // 
+    row["prop7"] = "";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // 0,5% Better Chance of Getting Magic Items (Based on Character Level)
+    row["prop8"] = "";
+    row["par8"] = "";
+    row["min8"] = "";
+    row["max8"] = "";
+
+    // +6 to Mana after each Kill
+    row["prop9"] = "mana-kill";
+    row["par9"] = "";
+    row["min9"] = 6;
+    row["max9"] = 6;
+
+    // +6 Life after each Kill
+    row["prop10"] = "heal-kill";
+    row["par10"] = "";
+    row["min10"] = 6;
+    row["max10"] = 6;
+  }
+
+  // Death's Web
+  if (row["index"] === "Death's Web") {
+
+    //Changes
+    row["code"] = "7yw";
+    row["*ItemName"] = "Ghost Wand";
+
+    // +2 to Necromancer Skill Levels
+    row["prop1"] = "nec";
+    row["par1"] = "";
+    row["min1"] = 2;
+    row["max1"] = 2;
+
+    // +2 to Poison and Bone Skills [Class only] Skills
+    row["prop2"] = "skilltab";
+    row["par2"] = 7;
+    row["min2"] = 2;
+    row["max2"] = 2;
+
+    // -40 - 50% to Enemy Poison Resistance
+    row["prop3"] = "pierce-pois";
+    row["par3"] = "";
+    row["min3"] = 40;
+    row["max3"] = 50;
+
+    // +7-12 to Mana after each Kill
+    row["prop4"] = "mana-kill";
+    row["par4"] = "";
+    row["min4"] = 7;
+    row["max4"] = 12;
+
+    // +7 - 12 Life after each Kill
+    row["prop5"] = "heal-kill";
+    row["par5"] = "";
+    row["min5"] = 7;
+    row["max5"] = 12;
+
+    // +50% Damage to Undead
+    row["prop6"] = "dmg-undead";
+    row["par6"] = "";
+    row["min6"] = 50;
+    row["max6"] = 50;
   }
 // #endregion
 
@@ -7406,6 +12260,10 @@ uniqueitems.rows.forEach((row) => {
   // Lazarus Spire
   if (row["index"] === "Lazarus Spire") {
 
+    //Changes
+    row["code"] = "6cs";
+    row["*ItemName"] = "Elder Staff";
+
     // Lightning Resist +75%
     row["prop1"] = "res-ltng";
     row["par1"] = "";
@@ -7421,8 +12279,8 @@ uniqueitems.rows.forEach((row) => {
     // +15 to Energy
     row["prop3"] = "enr";
     row["par3"] = "";
-    row["min3"] = 15;
-    row["max3"] = 15;
+    row["min3"] = 25;
+    row["max3"] = 25;
 
     // +1 - 2 to Chain Lightning ([Class] only)
     row["prop4"] = "skill";
@@ -7451,14 +12309,20 @@ uniqueitems.rows.forEach((row) => {
     // -10 - 15% to Enemy Lightning Resistance
     row["prop8"] = "pierce-ltng";
     row["par8"] = "";
-    row["min8"] = 10;
-    row["max8"] = 15;
+    row["min8"] = 20;
+    row["max8"] = 30;
+
+    // -10 - 15% to Enemy Lightning Resistance
+    row["prop9"] = "extra-ltng";
+    row["par9"] = "";
+    row["min9"] = 20;
+    row["max9"] = 30;
 
     // +1 to Sorceress Skill Levels
     row["prop9"] = "sor";
     row["par9"] = "";
-    row["min9"] = 1;
-    row["max9"] = 1;
+    row["min9"] = 3;
+    row["max9"] = 3;
 
     // +50% Faster Cast Rate
     row["prop10"] = "cast1";
@@ -7470,53 +12334,69 @@ uniqueitems.rows.forEach((row) => {
   // The Salamander
   if (row["index"] === "The Salamander") {
 
-    // Adds 15 - 32 Fire Damage
-    row["prop1"] = "dmg-fire";
-    row["par1"] = "";
-    row["min1"] = 15;
-    row["max1"] = 32;
-
-    // Fire Resist +30%
-    row["prop2"] = "res-fire";
-    row["par2"] = "";
-    row["min2"] = 30;
-    row["max2"] = 30;
-
-    // +2 to Fire Wall ([Class] only)
-    row["prop3"] = "skill";
-    row["par3"] = "51";
-    row["min3"] = 2;
-    row["max3"] = 2;
-
-    // +2 to Fire Ball ([Class] only)
-    row["prop4"] = "skill";
-    row["par4"] = "47";
-    row["min4"] = 2;
-    row["max4"] = 2;
-
-    // +3 to Warmth ([Class] only)
-    row["prop5"] = "skill";
-    row["par5"] = "37";
-    row["min5"] = 3;
-    row["max5"] = 3;
+    //Changes
+    row["code"] = "6bs";
+    row["*ItemName"] = "Shillelagh";
 
     // +3 to Fire Skills
-    row["prop6"] = "fireskill";
+    row["prop1"] = "fireskill";
+    row["par1"] = "";
+    row["min1"] = 3;
+    row["max1"] = 3;
+    
+    // +2 - 4 Inferno
+    row["prop2"] = "skill";
+    row["par2"] = "Inferno";
+    row["min2"] = 2;
+    row["max2"] = 4;
+
+    // +2 - 4 Fire Bolt
+    row["prop3"] = "skill";
+    row["par3"] = "Fire Bolt";
+    row["min3"] = 2;
+    row["max3"] = 4;
+
+    // +2 - 4 Fire Ball
+    row["prop4"] = "skill";
+    row["par4"] = "Fire Ball";
+    row["min4"] = 2;
+    row["max4"] = 4;
+
+    // +2 - 4 Meteor
+    row["prop5"] = "Meteor";
+    row["par5"] = "";
+    row["min5"] = 2;
+    row["max5"] = 4;
+
+    // Adds 1 - 333 Fire Damage
+    row["prop6"] = "dmg-fire";
     row["par6"] = "";
-    row["min6"] = 3;
-    row["max6"] = 3;
-
-    // -10 - 15% to Enemy Fire Resistance
-    row["prop7"] = "pierce-fire";
+    row["min6"] = 132;
+    row["max6"] = 333;
+    
+    // Regenerate Mana 24%
+    row["prop7"] = "regen-mana";
     row["par7"] = "";
-    row["min7"] = 10;
-    row["max7"] = 15;
+    row["min7"] = 24;
+    row["max7"] = 24;
 
-    // +50% Faster Cast Rate
-    row["prop8"] = "cast1";
+    // Lightning Resist +20 - 30%
+    row["prop8"] = "res-fire";
     row["par8"] = "";
     row["min8"] = 50;
-    row["max8"] = 50;
+    row["max8"] = 60;
+
+    // +20 - 30% to Fire Skill Damage
+    row["prop9"] = "extra-fire";
+    row["par9"] = "";
+    row["min9"] = 20;
+    row["max9"] = 30;
+
+    // -20 - 30% to Enemy Fire Resistance
+    row["prop10"] = "pierce-fire";
+    row["par10"] = "";
+    row["min10"] = 20;
+    row["max10"] = 30;
   }
 
   // The Iron Jang Bong
@@ -7755,6 +12635,10 @@ uniqueitems.rows.forEach((row) => {
 
   // Ondal's Wisdom
   if (row["index"] === "Ondal's Wisdom") {
+
+    //Changes
+    row["code"] = "gst";
+    row["*ItemName"] = "Gnarled Staff";
 
     // +65% Faster Cast Rate
     row["prop1"] = "cast1";
@@ -8420,32 +13304,20 @@ uniqueitems.rows.push({
   // Lifesteal
   "prop2": "lifesteal",
   "par2": "",
-  "min2": 4,
+  "min2": 7,
   "max2": 7,
 
   // manasteal
   "prop3": "manasteal",
   "par3": "",
-  "min3": 4,
+  "min3": 7,
   "max3": 7,
 
-    // +115 Defense vs. Missile
-  "prop4": "ac-miss",
-  "par4": "",
-  "min4": 115,
-  "max4": 115,
-
-  // Crushing Blow
-  "prop5": "red-dmg%",
-  "par5": "",
-  "min5": 15,
-  "max5": 15,
-
   // all res
-  "prop6": "res-all",
-  "par6": "",
-  "min6": 5,
-  "max6": 15,
+  "prop4": "res-all",
+  "par4": "",
+  "min4": 25,
+  "max4": 25,
 
 });
 
@@ -8470,28 +13342,28 @@ uniqueitems.rows.push({
 
   "prop1": "extra-cold",
   "par1": "",
-  "min1": 10,
+  "min1": 15,
   "max1": 20,
   
   "prop2": "extra-fire",
   "par2": "",
-  "min2": 10,
+  "min2": 15,
   "max2": 20,
 
   "prop3": "extra-pois",
   "par3": "",
-  "min3": 10,
+  "min3": 15,
   "max3": 20,
 
   "prop4": "extra-ltng",
   "par4": "",
-  "min4": 10,
+  "min4": 15,
   "max4": 20,
 
   "prop5": "cast1",
   "par5": "",
-  "min5": 25,
-  "max5": 25,
+  "min5": 20,
+  "max5": 20,
 
   "prop6": "mana%",
   "par6": "",
@@ -8543,27 +13415,20 @@ uniqueitems.rows.push({
   // Increase Maximum Life%
   "prop3": "hp%",
   "par3": "",
-  "min3": 15,
+  "min3": 20,
   "max3": 20,
 
-  // Attack Rating
-  "prop4": "att%",
+  // All Resistances +35
+  "prop4": "res-all",
   "par4": "",
-  "min4": 15,
-  "max4": 20,
+  "min4": 35,
+  "max4": 35,
 
   // 25% Chance of Crushing Blow
   "prop5": "crush",
   "par5": "",
-  "min5": 15,
+  "min5": 25,
   "max5": 25,
-
-  // all res
-  "prop6": "res-all",
-  "par6": "",
-  "min6": 15,
-  "max6": 30,
-    
 });
 // #endregion
 
@@ -8648,6 +13513,44 @@ itemNames.push(
     "ptBR": "Battleborn Heart",
     "ruRU": "Battleborn Heart",
     "zhCN": "Battleborn Heart"
+  });
+
+itemNames.push(
+  {
+    "id": 326,
+    "Key": "Tombcaller's Harvest",
+    "enUS": "Tombcaller's Harvest",
+    "zhTW": "Tombcaller's Harvest",
+    "deDE": "Tombcaller's Harvest",
+    "esES": "Tombcaller's Harvest",
+    "frFR": "Tombcaller's Harvest",
+    "itIT": "Tombcaller's Harvest",
+    "koKR": "Tombcaller's Harvest",
+    "plPL": "Tombcaller's Harvest",
+    "esMX": "Tombcaller's Harvest",
+    "jaJP": "Tombcaller's Harvest",
+    "ptBR": "Tombcaller's Harvest",
+    "ruRU": "Tombcaller's Harvest",
+    "zhCN": "Tombcaller's Harvest"
+  });
+
+itemNames.push(
+  {
+    "id": 179,
+    "Key": "Soliloquy",
+    "enUS": "Soliloquy",
+    "zhTW": "Soliloquy",
+    "deDE": "Soliloquy",
+    "esES": "Soliloquy",
+    "frFR": "Soliloquy",
+    "itIT": "Soliloquy",
+    "koKR": "Soliloquy",
+    "plPL": "Soliloquy",
+    "esMX": "Soliloquy",
+    "jaJP": "Soliloquy",
+    "ptBR": "Soliloquy",
+    "ruRU": "Soliloquy",
+    "zhCN": "Soliloquy"
   });
 
 D2RMM.writeJson(itemNamesFilename, itemNames);
