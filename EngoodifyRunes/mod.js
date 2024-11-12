@@ -166,42 +166,59 @@
 	D2RMM.writeTsv(runesFilename, runes);
 }
 
-//add better rune conversion recipes
+function push_downgrade_rune_recipe(recipes, tier, previousTier, outputA, outputB, outputC){
+	 recipes.rows.push({
+		description: 'Rune ' + tier + ' -> Rune ' + previousTier,
+		enabled: 1,
+		version: 100,
+		numinputs: 1,
+		'input 1': 'r' + tier.toString().padStart(2, '0'),
+		output: outputA,
+		'output b': outputB,
+		'output c': outputC,
+		'*eol': 0
+	 });
+}
+
 {
 	const cubemainFilename = 'global\\excel\\cubemain.txt';
 	const cubemain = D2RMM.readTsv(cubemainFilename);
-
-	//Note: we keep 3->1 lower runes, 2->1 high runes
+	
 	cubemain.rows.forEach(row => {
-		//TODO: modify description to remove gem
-		//removes gem requirement for upgrading runes
-		if(row["input 1"].startsWith('"r')){
-			row["numinputs"] = row["numinputs"] - 1;
-			row["input 2"] = "";
+		let input = row["input 1"];
+		
+		if(input.startsWith('"r1') || input.startsWith('"r2') || input.startsWith('"r3')){
+			//removes gem requirement for upgrading runes
+			if(row["input 2"].length > 0){
+				row["numinputs"] -= 1;
+				row["input 2"] = "";
+			}
+			
+			//change 3->1 to 2->1 rune upgrade if enabled
+			if(!config.classicConversionRates && input.endsWith("qty=3")){
+				row["input 1"] = row["input 1"].split('qty=3"').join('qty=2"');
+				row["numinputs"] -= 1;
+			}
+		}else if( //change 3->1 to 2->1 gem upgrade if enabled
+			!config.classicConversionRates
+			&& (input.startsWith('"g') || input.startsWith('"sk'))
+			&& input.endsWith('qty=3"')
+		){
+			row["numinputs"] -= 1;
+			row["input 1"] = row["input 1"].split('qty=3"').join('qty=2"');
 		}
 	});
 
+	//add downgrade rune recipes
 	for (let tier = 2; tier <= 33; ++tier){
 		let previousTier = tier - 1;
 		let output = 'r' + previousTier.toString().padStart(2, '0');
-
-		 let recipe = {
-			description: 'Rune ' + tier + ' -> Rune ' + previousTier,
-			enabled: 1,
-			version: 100,
-			numinputs: 1,
-			'input 1': 'r' + tier.toString().padStart(2, '0'),
-			output: output,
-			'output b': output,
-			'*eol': 0
-		 };
 		
-		//convert 3->1 runes back down to 3. Otherwise will convert 1->2
-		if(tier <= 20){
-			recipe['output c'] = output;
+		if(tier <= 21 && config.classicConversionRates){
+			push_downgrade_rune_recipe(cubemain, tier, previousTier, output, output, output);
+		}else{
+			push_downgrade_rune_recipe(cubemain, tier, previousTier, output, output, "");
 		}
-
-		cubemain.rows.push(recipe);
 	}
 
 	D2RMM.writeTsv(cubemainFilename, cubemain);
