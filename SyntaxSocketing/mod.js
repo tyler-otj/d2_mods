@@ -2,14 +2,9 @@ const weaponBehavior = 0;
 const armorBehavior = 1;
 const shieldBehavior = 2;
 
-function enable_socketing_item(item, numSockets){
+function enable_socketing_item_with_behavior(item, numSockets, applyType){
 	item.hasinv = 1;
 	item.gemsockets = numSockets;
-}
-
-
-function enable_socketing_item_with_behavior(item, numSockets, applyType){
-	enable_socketing_item(item, numSockets);
 	item.gemapplytype = applyType;
 }
 
@@ -18,10 +13,10 @@ function enable_socketing_item_with_behavior(item, numSockets, applyType){
 	const armor = D2RMM.readTsv(armorFilename);
 
 	armor.rows.forEach(row => { 
-		if(row.type == 'shie' || row.type == 'ashd'){
-			enable_socketing_item(row, 2);
+		if(row.type == 'shie' || row.type == 'ashd' || row.type == 'head'){
+			enable_socketing_item_with_behavior(row, 2, shieldBehavior);
 		}else{
-			enable_socketing_item(row, 1);
+			enable_socketing_item_with_behavior(row, 1, armorBehavior);
 		}
 	});
 
@@ -34,7 +29,7 @@ function enable_socketing_item_with_behavior(item, numSockets, applyType){
 
 	misc.rows.forEach(row => {
 		if(row.type == 'ring' || row.type == 'amul'){
-			enable_socketing_item(row, 1, armorBehavior);
+			enable_socketing_item_with_behavior(row, 1, armorBehavior);
 		}
 	});
 
@@ -62,11 +57,10 @@ function set_max_num_item_sockets(item, numSockets){
 	];
 
 	const fourSockItems = [
-		'staf','pole','spea', 'xbow', 'abow', 'bow'
+		'staf', 'pole', 'spea', 'xbow', 'abow', 'bow'
 	];
 
-	itemtypes.rows.forEach((row) => {
-		
+	itemtypes.rows.forEach(row => {
 		if(oneSockItems.includes(row.Code)){
 			set_max_num_item_sockets(row, 1)
 		}else if(twoSockItems.includes(row.Code)){
