@@ -75,51 +75,51 @@
 		}
 		
 		else if(row["name"] == "Thul Rune"){
-			set_weapon_properties(row, "dmg", 50, 50);
-			set_armor_properties(row, "ac", 100, 100);
-			set_shield_properties(row, "ac", 200, 200);
-		}
-		
-		else if(row["name"] == "Amn Rune"){
 			set_all_properties(row, "enr", 20, 20, 10, 10, 20, 20);
 		}
 		
-		else if(row["name"] == "Sol Rune"){
+		else if(row["name"] == "Amn Rune"){
 			set_all_properties(row, "vit", 20, 20, 10, 10, 20, 20);
 		}
 		
-		else if(row["name"] == "Shael Rune"){
+		else if(row["name"] == "Sol Rune"){
 			set_all_properties(row, "dex", 20, 20, 10, 10, 20, 20);	
 		}
 		
-		else if(row["name"] == "Dol Rune"){
+		else if(row["name"] == "Shael Rune"){
 			set_all_properties(row, "str", 20, 20, 10, 10, 20, 20);
 		}
 		
-		else if(row["name"] == "Hel Rune"){
+		else if(row["name"] == "Dol Rune"){
 			set_weapon_properties(row, "openwounds", 60, 60);
 			set_armor_properties(row, "block", 15, 15);
 			set_shield_properties(row, "block", 30, 30);
 		}
 		
-		else if(row["name"] == "Io Rune"){
+		else if(row["name"] == "Hel Rune"){
 			set_weapon_properties(row, "deadly", 60, 60);
 			set_armor_properties(row, "ac-miss", 25, 25);
 			set_shield_properties(row, "ac-miss", 50, 50);
 		}
 		
-		else if(row["name"] == "Lum Rune"){
+		else if(row["name"] == "Io Rune"){
 			set_weapon_properties(row, "crush", 60, 60);
 			set_armor_properties(row, "ac-hth", 25, 25);
 			set_shield_properties(row, "ac-hth", 50, 50);
 		}
 		
-		else if(row["name"] == "Ko Rune"){
+		else if(row["name"] == "Lum Rune"){
 			set_weapon_properties(row, "swing1", 30, 30);
 			set_armor_properties(row, "balance1", 20, 20);
 			set_shield_properties(row, "block1", 30, 30);
 		}
-		
+
+		else if(row["name"] == "Ko Rune"){
+			set_weapon_properties(row, "dmg", 50, 50);
+			set_armor_properties(row, "ac", 100, 100);
+			set_shield_properties(row, "ac", 200, 200);
+		}
+			
 		else if(row["name"] == "Fal Rune"){
 			set_all_properties(row, "cast1", 30, 30, 10, 10, 30, 30);
 		}
