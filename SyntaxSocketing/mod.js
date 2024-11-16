@@ -2,6 +2,19 @@ const weaponBehavior = 0;
 const armorBehavior = 1;
 const shieldBehavior = 2;
 
+const oneSockItems = [
+	'helm', 'tors', 'boot', 'glov', 'amul', 'ring', 'phlm', 'pelt', 'circ'
+];
+
+const twoSockItems = [
+	'shie', 'scep', 'wand', 'axe', 'club', 'swor', 'hamm', 'knif', 'mace',
+	'jave', 'orb', 'head', 'ashd', 'aspe', 'ajav'
+];
+
+const fourSockItems = [
+	'staf', 'pole', 'spea', 'xbow', 'abow', 'bow'
+];
+
 function enable_socketing_item_with_behavior(item, numSockets, applyType){
 	item.hasinv = 1;
 	item.gemsockets = numSockets;
@@ -46,20 +59,6 @@ function set_max_num_item_sockets(item, numSockets){
 	const itemtypesFilename = 'global\\excel\\itemtypes.txt';
 	const itemtypes = D2RMM.readTsv(itemtypesFilename);
 
-	const oneSockItems = [
-		'helm', 'tors', 'boot', 'glov', 'amul', 'ring', 'phlm', 'pelt', 'circ'
-	];
-	
-	const twoSockItems = [
-		'shie', 'scep', 'wand', 'axe', 'club', 'swor',
-		'hamm', 'knif', 'mace', 'jave', 'orb', 'head', 'ashd',
-		'aspe', 'ajav'
-	];
-
-	const fourSockItems = [
-		'staf', 'pole', 'spea', 'xbow', 'abow', 'bow'
-	];
-
 	itemtypes.rows.forEach(row => {
 		if(oneSockItems.includes(row.Code)){
 			set_max_num_item_sockets(row, 1)
@@ -73,15 +72,11 @@ function set_max_num_item_sockets(item, numSockets){
 	D2RMM.writeTsv(itemtypesFilename, itemtypes);
 }
 
-//TODO: Jewel seems a bit too cheap to add sockets to an item...
-//		Additionally, random num sockets may be a bit too harsh?
-//		Think of alternative recipes, maybe more expensive items can be sacrified for guaranteed higher sockets?
-//		Maybe unique jewel guarantees max sockets?
 const socketUnsocketReqItem = "jew";
 
-function add_empty_socket_recipe(recipes, code, name) {
+function add_empty_socket_recipe(recipes, code) {
 	recipes.rows.push({
-		description: `Empty Sockets On ${name}`,
+		description: `Empty Sockets On ${code}`,
 		enabled: 1,
 		version: 100,
 		numinputs: 2,
@@ -92,25 +87,28 @@ function add_empty_socket_recipe(recipes, code, name) {
 	});
 }
 
-function help_add_socket_recipe(recipes, descriptionText, code, itemType, minSockets, maxSockets){
+function help_add_socket_recipe(recipes, descriptionText, code, itemType, numSockets, reqType, reqQuantity){
 	recipes.rows.push({
 		description: descriptionText,
 		enabled: 1,
 		version: 100,
-		numinputs: 2,
+		numinputs: 1 + reqQuantity,
 		'input 1': `"${code},${itemType},nos"`,
-		'input 2': socketUnsocketReqItem,
+		'input 2': '"' + socketUnsocketReqItem + ',' + reqType + ',qty=' + reqQuantity + '"',
 		output: 'useitem',
 		'mod 1': 'sock',
-		'mod 1 min': minSockets,
-		'mod 1 max': maxSockets,
+		'mod 1 min': numSockets,
+		'mod 1 max': numSockets,
 		'*eol': 0,
 	});
 }
 
-function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
-	//note: we only allow socketing normal. Add recipe for hig(high quality)/eth(ethereal) items? Can just socket and then upgrade? Check upgrade recipe if this is allowed...
-	help_add_socket_recipe(recipes, `Add Sockets To ${name}`, code, "any", minSockets, maxSockets);
+function add_socket_item_recipe(recipes, code, numSockets){
+	//TODO: does normal socket recipe work for ethereal?
+	help_add_socket_recipe(recipes, `Add Sockets To ${code}`, code, "nor", numSockets, "mag", config.normJewels);
+	help_add_socket_recipe(recipes, `Add Sockets To ${code}`, code, "mag", numSockets, "mag", config.magJewels);
+	help_add_socket_recipe(recipes, `Add Sockets To ${code}`, code, "rar", numSockets, config.rareJewelType, config.rareJewels);
+	help_add_socket_recipe(recipes, `Add Sockets To ${code}`, code, "uni", numSockets, config.uniqJewelType, config.uniqJewels);
 }
 
 {
@@ -118,41 +116,23 @@ function add_socket_item_recipe(recipes, code, name, minSockets, maxSockets){
 	const cubemain = D2RMM.readTsv(cubemainFilename);
 
 	//Recipe to Unsocket Item in cube
-	add_empty_socket_recipe(cubemain, 'weap', 'Weapon');
-	add_empty_socket_recipe(cubemain, 'shie', 'Shield');
-	add_empty_socket_recipe(cubemain, 'armo', 'Armor');
-	add_empty_socket_recipe(cubemain, 'ring', 'Ring');
-	add_empty_socket_recipe(cubemain, 'amul', 'Amulet');
+	add_empty_socket_recipe(cubemain, 'weap');
+	add_empty_socket_recipe(cubemain, 'shie');
+	add_empty_socket_recipe(cubemain, 'armo');
+	add_empty_socket_recipe(cubemain, 'ring');
+	add_empty_socket_recipe(cubemain, 'amul');
 	
-	//4 Socket Recipes (2 Handed Weapons)
-	add_socket_item_recipe(cubemain, 'spea', 'Spear',   4, 4);
-	add_socket_item_recipe(cubemain, 'pole', 'Polearm', 4, 4);
-	add_socket_item_recipe(cubemain, 'staf', 'Staff',   4, 4);
-	add_socket_item_recipe(cubemain, 'bow',  'bow',     4, 4);
-	add_socket_item_recipe(cubemain, 'abow', 'abow',    4, 4);
-	add_socket_item_recipe(cubemain, 'xbow', 'xbow',    4, 4);
-
-	//2 Socket Recipes (Weapons/Shields)
-	add_socket_item_recipe(cubemain, 'scep', 'scep',    2, 2);
-	add_socket_item_recipe(cubemain, 'wand', 'wand',    2, 2);
-	add_socket_item_recipe(cubemain, 'axe',  'axe',     2, 2);
-	add_socket_item_recipe(cubemain, 'club', 'club',    2, 2);
-	add_socket_item_recipe(cubemain, 'swor', 'swor',    2, 2);
-	add_socket_item_recipe(cubemain, 'hamm', 'hamm',    2, 2);
-	add_socket_item_recipe(cubemain, 'knif', 'knif',    2, 2);
-	add_socket_item_recipe(cubemain, 'mace', 'mace',    2, 2);
-	add_socket_item_recipe(cubemain, 'jave', 'jave',    2, 2);
-	add_socket_item_recipe(cubemain, 'orb',  'orb',     2, 2);
-	add_socket_item_recipe(cubemain, 'head', 'head',    2, 2);
-	add_socket_item_recipe(cubemain, 'ajav', 'ajav',    2, 2);
-	add_socket_item_recipe(cubemain, 'aspe', 'aspe',    2, 2);
-	add_socket_item_recipe(cubemain, 'ashd', 'ashd',    2, 2);
-	add_socket_item_recipe(cubemain, 'shie', 'Shield',  2, 2);
-
-	//1 Socket Recipes (Armor/Jewlery)
-	add_socket_item_recipe(cubemain, 'armo', 'Armor',   1, 1);
-	add_socket_item_recipe(cubemain, 'ring', 'Ring',    1, 1);
-	add_socket_item_recipe(cubemain, 'amul', 'Amulet',  1, 1);
+	for(const item of oneSockItems){
+		add_socket_item_recipe(cubemain, item, 1);
+	}
+	
+	for(const item of twoSockItems){
+		add_socket_item_recipe(cubemain, item, 2);
+	}
+	
+	for(const item of fourSockItems){
+		add_socket_item_recipe(cubemain, item, 4);
+	}
 
 	D2RMM.writeTsv(cubemainFilename, cubemain);
 }

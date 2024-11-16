@@ -1,7 +1,86 @@
 {
-  "name": "Better Socketing",
-  "description": "Allows sockets in more gear, adds socketing recipes",
-  "author": "_syntax",
-  "version": "1.1.0",
-  "config": []
+	"name": "Better Socketing",
+	"description": "Allows sockets in more gear, adds socketing recipes",
+	"author": "_syntax",
+	"version": "1.2.0",
+	"config": [
+		{
+			"id": "normJewels",
+			"type": "number",
+			"name": "Normal Requirement",
+			"description": "Required Number Of Jewels To Socket Normal Item",
+			"defaultValue": 1,
+			"minValue": 1,
+			"maxValue": 4
+		},
+		{
+			"id": "magJewels",
+			"type": "number",
+			"name": "Magic Requirement",
+			"description": "Required Number Of Jewels To Socket Magic Item",
+			"defaultValue": 2,
+			"minValue": 1,
+			"maxValue": 4
+		},
+		{
+			"id": "rareJewels",
+			"type": "number",
+			"name": "Rare Requirement",
+			"description": "Required Number Of Jewels To Socket Rare Item",
+			"defaultValue": 4,
+			"minValue": 1,
+			"maxValue": 4
+		},
+		{
+			"id": "rareJewelType",
+			"type": "select",
+			"name": "Rare Requirement Type",
+			"description": "Type Of Required Jewel To Upgrade Rare Items",
+			"defaultValue": "rar",
+			"options": [
+				{
+					"value": "mag",
+					"label": "Magic"
+				},
+				{
+					"value": "rar",
+					"label": "Rare"
+				},
+				{
+					"value": "uni",
+					"label": "Unique"
+				}
+			]
+		},
+		{
+			"id": "uniqJewels",
+			"type": "number",
+			"name": "Unique Requirement",
+			"description": "Required Number Of Jewels To Socket Unique Item",
+			"defaultValue": 1,
+			"minValue": 1,
+			"maxValue": 4
+		},
+		{
+			"id": "uniqJewelType",
+			"type": "select",
+			"name": "Unique Requirement Type",
+			"description": "Type Of Required Jewel To Upgrade Unique Items",
+			"defaultValue": "uni",
+			"options": [
+				{
+					"value": "mag",
+					"label": "Magic"
+				},
+				{
+					"value": "rar",
+					"label": "Rare"
+				},
+				{
+					"value": "uni",
+					"label": "Unique"
+				}
+			]
+		}
+	]
 }
