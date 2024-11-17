@@ -160,11 +160,11 @@ uniqueitems.rows.forEach((row) => {
   // Undead Crown
   if (row["index"] === "Undead Crown") {
 
-    // +1 Necro Skills
-    row["prop1"] = "nec";
+    // +30 - 60% Enhanced Defense
+    row["prop1"] = "ac%";
     row["par1"] = "";
-    row["min1"] = 1;
-    row["max1"] = 1;
+    row["min1"] = "30";
+    row["max1"] = "60";
 
     // +2 - 4 to Skeleton Mastery
     row["prop2"] = "skill";
@@ -196,17 +196,17 @@ uniqueitems.rows.forEach((row) => {
     row["min6"] = 150;
     row["max6"] = 200;
 
-    // Remove Mods
-    row["prop7"] = "";
+    // Half Freeze Duration
+    row["prop7"] = "half-freeze";
     row["par7"] = "";
-    row["min7"] = "";
-    row["max7"] = "";
+    row["min7"] = "1";
+    row["max7"] = "1";
 
-    // Remove Mods
-    row["prop8"] = "";
+    // Poison Resist +50%
+    row["prop8"] = "res-pois";
     row["par8"] = "";
-    row["min8"] = "";
-    row["max8"] = "";
+    row["min8"] = "50";
+    row["max8"] = "50";
   }
 
   // Wormskull
@@ -230,18 +230,19 @@ uniqueitems.rows.forEach((row) => {
     row["min3"] = 2;
     row["max3"] = 4;
 
-    // +2 - 4 to Bone Spear ([Class] only)
-    row["prop4"] = "skill";
-    row["par4"] = "Bone Spear";
-    row["min4"] = 2;
-    row["max4"] = 4;
+    // Poison Resist +25%
+    row["prop4"] = "res-pois";
+    row["par4"] = "";
+    row["min4"] = 25;
+    row["max4"] = 25;
 
-    // +1,25 to Mana (Based on Character Level)
-    row["prop5"] = "mana/lvl";
-    row["par5"] = "10";
-    row["min5"] = "";
-    row["max5"] = "";
+    // +4 - 6 to Mana after each Kill
+    row["prop5"] = "mana-kill";
+    row["par5"] = "";
+    row["min5"] = 4;
+    row["max5"] = 6;
   }
+
 
   // Darksight Helm
   if (row["index"] === "Darksight Helm") {
@@ -408,7 +409,7 @@ uniqueitems.rows.forEach((row) => {
     row["min4"] = 160;
     row["max4"] = 200;
 
-    // 20% Deadly Strike
+    // 15% Deadly Strike
     row["prop5"] = "deadly";
     row["par5"] = "";
     row["min5"] = 15;
@@ -427,6 +428,68 @@ uniqueitems.rows.forEach((row) => {
     row["max7"] = 30; 
   }
 
+
+  // Midnight's Cowl
+  if (row["index"] === "Harlequin Crest") {
+    row["index"] = "Midnight's Cowl"
+    row["chrtransform"] = "blac";
+    row["invtransform"] = "blac";
+
+    // Level 5 Cloak of Shadows (30/30 Charges)
+    row["prop1"] = "oskill";
+    row["par1"] = "Cloak of Shadows";
+    row["min1"] = 5;
+    row["max1"] = 5;
+
+    // -4 to Light Radius
+    row["prop2"] = "light";
+    row["par2"] = "";
+    row["min2"] = -4;
+    row["max2"] = -4;
+
+    // +20 to Dexterity
+    row["prop3"] = "dex";
+    row["par3"] = "";
+    row["min3"] = 20;
+    row["max3"] = 20;
+
+    // 33% Deadly Strike
+    row["prop4"] = "deadly";
+    row["par4"] = "";
+    row["min4"] = 33;
+    row["max4"] = 33;
+
+    // 33% Chance of Open Wounds
+    row["prop5"] = "openwounds";
+    row["par5"] = "";
+    row["min5"] = 33;
+    row["max5"] = 33;
+
+    // +1 to All Skills
+    row["prop6"] = "allskills";
+    row["par6"] = "";
+    row["min6"] = 1;
+    row["max6"] = 1;
+
+    // Remove
+    row["prop7"] = "";
+    row["par7"] = "";
+    row["min7"] = "";
+    row["max7"] = "";
+
+    // Remove
+    row["prop8"] = "";
+    row["par8"] = "";
+    row["min8"] = "";
+    row["max8"] = "";
+
+    // Remove
+    row["prop9"] = "";
+    row["par9"] = "";
+    row["min9"] = "";
+    row["max9"] = "";
+  }
+
   // Steelshade
   if (row["index"] === "Steelshade") {
 
@@ -443,7 +506,7 @@ uniqueitems.rows.forEach((row) => {
     row["max2"] = 11;
 
     // 4 - 8% Mana stolen per hit
-    row["prop3"] = "manasteal";
+    row["prop3"] = "lifesteal";
     row["par3"] = "";
     row["min3"] = 4;
     row["max3"] = 8;
@@ -459,6 +522,59 @@ uniqueitems.rows.forEach((row) => {
     row["par5"] = "";
     row["min5"] = 25;
     row["max5"] = 25;
+
+    // +10 - 15 to Strength
+    row["prop6"] = "str";
+    row["par6"] = "";
+    row["min6"] = 10;
+    row["max6"] = 15;
+  }
+
+
+  // Veil of Steel
+  if (row["index"] === "Veil of Steel") {
+
+    // +60 - 100% Enhanced Defense
+    row["prop1"] = "ac%";
+    row["par1"] = "";
+    row["min1"] = 60;
+    row["max1"] = 100;
+
+    // +140 Defense
+    row["prop2"] = "ac";
+    row["par2"] = "";
+    row["min2"] = 140;
+    row["max2"] = 140;
+
+    // +15 - 25 to Strength
+    row["prop3"] = "str";
+    row["par3"] = "";
+    row["min3"] = 15;
+    row["max3"] = 25;
+
+    // +10 - 15 to Vitality
+    row["prop4"] = "vit";
+    row["par4"] = "";
+    row["min4"] = 10;
+    row["max4"] = 15;
+
+    // 25% Bonus to Attack Rating
+    row["prop5"] = "att%";
+    row["par5"] = "";
+    row["min5"] = 25;
+    row["max5"] = 25;
+
+    // All Resistances +50
+    row["prop6"] = "res-all";
+    row["par6"] = "";
+    row["min6"] = 50;
+    row["max6"] = 50;
+
+    // Requirements --20%
+    row["prop7"] = "ease";
+    row["par7"] = "";
+    row["min7"] = -20;
+    row["max7"] = -20;
   }
 
   // Halaberd's Reign
@@ -1129,57 +1245,53 @@ uniqueitems.rows.forEach((row) => {
   // Skin of the Flayerd One
   if (row["index"] === "Skin of the Flayerd One") {
 
-    //Change to Scarab Husk
-    row["code"] = "ula";
-    row["*ItemName"] = "Scarab Husk";
-
-    // +30 to Dexterity
+    // +25 to Dexterity
     row["prop1"] = "dex";
     row["par1"] = "";
-    row["min1"] = 30;
-    row["max1"] = 30;
+    row["min1"] = 25;
+    row["max1"] = 25;
 
-    // +65 - 85% Enhanced Defense
-    row["prop2"] = "ac%";
+    // +35% Faster Hit Recovery
+    row["prop2"] = "balance1";
     row["par2"] = "";
-    row["min2"] = 65;
-    row["max2"] = 85;
+    row["min2"] = 35;
+    row["max2"] = 35;
 
-    // +6 to Attack Rating (Based on Character Level)
-    row["prop3"] = "att/lvl";
-    row["par3"] = "12";
-    row["min3"] = "";
-    row["max3"] = "";
+    // +250 Defense
+    row["prop3"] = "ac";
+    row["par3"] = "";
+    row["min3"] = 250;
+    row["max3"] = 250;
 
-    // 7% Mana stolen per hit
-    row["prop4"] = "manasteal";
+    // +160 - 220% Enhanced Defense
+    row["prop4"] = "ac%";
     row["par4"] = "";
-    row["min4"] = 7;
-    row["max4"] = 7;
+    row["min4"] = 160;
+    row["max4"] = 220;
 
-    // 7% Life stolen per hit
-    row["prop5"] = "lifesteal";
+    // Damage Reduced by 15%
+    row["prop5"] = "red-dmg%";
     row["par5"] = "";
-    row["min5"] = 7;
-    row["max5"] = 7;
+    row["min5"] = 15;
+    row["max5"] = 15;
 
-    // 20 - 34% Deadly Strike
+    // 20% Deadly Strike
     row["prop6"] = "deadly";
     row["par6"] = "";
     row["min6"] = 20;
-    row["max6"] = 34;
+    row["max6"] = 20;
 
-    // 20 - 34% Chance of Open Wounds
-    row["prop7"] = "openwounds";
+    // +25% Increased Attack Speed
+    row["prop7"] = "swing1";
     row["par7"] = "";
-    row["min7"] = 20;
-    row["max7"] = 34;
+    row["min7"] = 25;
+    row["max7"] = 25;
 
-    // +20 - 34% Faster Hit Recovery
-    row["prop8"] = "balance1";
+    // All Resistances +20 - 30
+    row["prop8"] = "res-all";
     row["par8"] = "";
     row["min8"] = 20;
-    row["max8"] = 34;
+    row["max8"] = 30;
   }
 
   // Ironpelt
@@ -2350,8 +2462,8 @@ uniqueitems.rows.forEach((row) => {
     // 10% Chance of Crushing Blow
     row["prop4"] = "crush";
     row["par4"] = "";
-    row["min4"] = 10;
-    row["max4"] = 10;
+    row["min4"] = 25;
+    row["max4"] = 25;
 
     // Damage +20 - 30
     row["prop5"] = "dmg";
@@ -2366,7 +2478,7 @@ uniqueitems.rows.forEach((row) => {
     row["max6"] = 1;
 
     // 25% Deadly Strike
-    row["prop7"] = "deadly";
+    row["prop7"] = "openwounds";
     row["par7"] = "";
     row["min7"] = 25;
     row["max7"] = 25;
@@ -2408,11 +2520,11 @@ uniqueitems.rows.forEach((row) => {
     row["min3"] = 50;
     row["max3"] = 50;
 
-    // +10 to Life
-    row["prop4"] = "hp";
+    // Cold Resist +25%
+    row["prop4"] = "res-cold";
     row["par4"] = "";
-    row["min4"] = 10;
-    row["max4"] = 10;
+    row["min4"] = 25;
+    row["max4"] = 25;
 
     // +12 Defense
     row["prop5"] = "ac";
@@ -2564,11 +2676,11 @@ uniqueitems.rows.forEach((row) => {
     row["min1"] = 140;
     row["max1"] = 170;
 
-    // +20% Faster Run/Walk
+    // +35% Faster Run/Walk
     row["prop2"] = "move1";
     row["par2"] = "";
-    row["min2"] = 20;
-    row["max2"] = 20;
+    row["min2"] = 35;
+    row["max2"] = 35;
 
     // +20% Faster Hit Recovery
     row["prop3"] = "balance1";
@@ -2576,11 +2688,11 @@ uniqueitems.rows.forEach((row) => {
     row["min3"] = 20;
     row["max3"] = 20;
 
-    // +0 Maximum Stamina (Based on Character Level)
-    row["prop4"] = "stam/lvl";
-    row["par4"] = "8";
-    row["min4"] = "";
-    row["max4"] = "";
+    // 50% Slower Stamina Drain
+    row["prop4"] = "stamdrain";
+    row["par4"] = "";
+    row["min4"] = 50;
+    row["max4"] = 50;
 
     // 50% Slower Stamina Drain
     row["prop5"] = "stamdrain";
@@ -2594,29 +2706,23 @@ uniqueitems.rows.forEach((row) => {
     row["min6"] = 40;
     row["max6"] = 70;
 
-    // Repairs 1 durability in 20 seconds
-    row["prop7"] = "rep-dur";
-    row["par7"] = "5";
-    row["min7"] = "";
-    row["max7"] = "";
+    // 15 - 30% Deadly Strike
+    row["prop7"] = "deadly";
+    row["par7"] = "";
+    row["min7"] = 15;
+    row["max7"] = 30;
 
-    // +10 - 15 to Strength
-    row["prop8"] = "str";
+    // +15 - 25 to Dexterity
+    row["prop8"] = "dex";
     row["par8"] = "";
-    row["min8"] = 10;
-    row["max8"] = 15;
+    row["min8"] = 15;
+    row["max8"] = 25;
 
     // +10 - 15 to Vitality
     row["prop9"] = "vit";
     row["par9"] = "";
     row["min9"] = 10;
     row["max9"] = 15;
-
-    // Poison Length Reduced by 75%
-    row["prop10"] = "res-pois-len";
-    row["par10"] = "";
-    row["min10"] = 75;
-    row["max10"] = 75;
   }
 
   // Marrowwalk
@@ -2765,8 +2871,8 @@ uniqueitems.rows.forEach((row) => {
     // Cold Resist +15 - 20%
     row["prop7"] = "res-cold";
     row["par7"] = "";
-    row["min7"] = 15;
-    row["max7"] = 20;
+    row["min7"] = 25;
+    row["max7"] = 35;
     
     // +20% Faster Cast Rate
     row["prop8"] = "cast1";
@@ -2774,6 +2880,53 @@ uniqueitems.rows.forEach((row) => {
     row["min8"] = 20;
     row["max8"] = 20;
   }
+
+
+  // Gore Rider
+  if (row["index"] === "Gorerider") {
+
+    // +20% Faster Hit Recovery
+    row["prop1"] = "balance1";
+    row["par1"] = "";
+    row["min1"] = 20;
+    row["max1"] = 20;
+
+    // +160 - 200% Enhanced Defense
+    row["prop2"] = "ac%";
+    row["par2"] = "";
+    row["min2"] = 160;
+    row["max2"] = 200;
+
+    // 25% Chance of Crushing Blow
+    row["prop3"] = "crush";
+    row["par3"] = "";
+    row["min3"] = 35;
+    row["max3"] = 35;
+
+    // Damage Reduced by 10%
+    row["prop4"] = "red-dmg%";
+    row["par4"] = "";
+    row["min4"] = 10;
+    row["max4"] = 10;
+    
+    // +15 - 25 to Vitality
+    row["prop5"] = "vit";
+    row["par5"] = "";
+    row["min5"] = 15;
+    row["max5"] = 25;
+
+    // +15 - 25 to Strength
+    row["prop6"] = "str";
+    row["par6"] = "";
+    row["min6"] = 15;
+    row["max6"] = 25;
+
+    // requirement
+    row["prop7"] = "ease";
+    row["min7"] = -25;
+    row["max7"] = -25;
+  }
+
 // #endregion
 
 
@@ -2948,11 +3101,11 @@ uniqueitems.rows.forEach((row) => {
     row["min2"] = 20;
     row["max2"] = 20;
 
-    // +8 to Attack Rating against Undead (Based on Character Level)
-    row["prop3"] = "att-und/lvl";
-    row["par3"] = "16";
-    row["min3"] = "";
-    row["max3"] = "";
+    // +100 Defense
+    row["prop8"] = "ac";
+    row["par8"] = "";
+    row["min8"] = 100;
+    row["max8"] = 100;
 
     // +100 Defense vs. Missile
     row["prop4"] = "ac-miss";
@@ -2965,12 +3118,6 @@ uniqueitems.rows.forEach((row) => {
     row["par5"] = "";
     row["min5"] = 25;
     row["max5"] = 25;
-
-    // 25% Deadly Strike
-    row["prop6"] = "deadly";
-    row["par6"] = "";
-    row["min6"] = 25;
-    row["max6"] = 25;
   }
 
   // Atma's Scarab
@@ -3274,6 +3421,34 @@ uniqueitems.rows.forEach((row) => {
     row["max6"] = 1;
   }
 
+
+  // Bul Kathos' Wedding Band
+  if (row["index"] === "Bul Katho's Wedding Band") {
+
+    // +1 to All Skills
+    row["prop1"] = "allskills";
+    row["par1"] = "";
+    row["min1"] = 1;
+    row["max1"] = 1;
+
+    // +1 to Life (Based on Character Level)
+    row["prop2"] = "hp/lvl";
+    row["par2"] = "8";
+    row["min2"] = "";
+    row["max2"] = "";
+
+    // 4 - 6% Life stolen per hit
+    row["prop3"] = "lifesteal";
+    row["par3"] = "";
+    row["min3"] = 4;
+    row["max3"] = 6;
+
+    // +15 to Strength
+    row["prop4"] = "str";
+    row["par4"] = "";
+    row["min4"] = 15;
+    row["max4"] = 15;
+  }
 
   // Nature's Peace
   if (row["index"] === "Nature's Peace") {
@@ -4602,6 +4777,12 @@ uniqueitems.rows.forEach((row) => {
     row["par8"] = "";
     row["min8"] = 6;
     row["max8"] = 6;
+
+    // +2 to Curses [Class only] Skills
+    row["prop9"] = "skilltab";
+    row["par9"] = 6;
+    row["min9"] = 2;
+    row["max9"] = 2;
   }
 
   // Darkforge Spawn
@@ -14354,6 +14535,8 @@ uniqueitems.rows.push({
 });
 
 
+
+
 // #endregion
 
 
@@ -14479,21 +14662,43 @@ itemNames.push(
 
   itemNames.push(
     {
-      "id": 92038,
-      "Key": "Heartseeker",
-      "enUS": "Heartseeker",
-      "zhTW": "Heartseeker",
-      "deDE": "Heartseeker",
-      "esES": "Heartseeker",
-      "frFR": "Heartseeker",
-      "itIT": "Heartseeker",
-      "koKR": "Heartseeker",
-      "plPL": "Heartseeker",
-      "esMX": "Heartseeker",
-      "jaJP": "Heartseeker",
-      "ptBR": "Heartseeker",
-      "ruRU": "Heartseeker",
-      "zhCN": "Heartseeker"
+      "id": 248,
+      "Key": "Midnight's Cowl",
+      "enUS": "Midnight's Cowl",
+      "zhTW": "Midnight's Cowl",
+      "deDE": "Midnight's Cowl",
+      "esES": "Midnight's Cowl",
+      "frFR": "Midnight's Cowl",
+      "itIT": "Midnight's Cowl",
+      "koKR": "Midnight's Cowl",
+      "plPL": "Midnight's Cowl",
+      "esMX": "Midnight's Cowl",
+      "jaJP": "Midnight's Cowl",
+      "ptBR": "Midnight's Cowl",
+      "ruRU": "Midnight's Cowl",
+      "zhCN": "Midnight's Cowl"
     });
 
+itemNames.push(
+  {
+    "id": 92038,
+    "Key": "Heartseeker",
+    "enUS": "Heartseeker",
+    "zhTW": "Heartseeker",
+    "deDE": "Heartseeker",
+    "esES": "Heartseeker",
+    "frFR": "Heartseeker",
+    "itIT": "Heartseeker",
+    "koKR": "Heartseeker",
+    "plPL": "Heartseeker",
+    "esMX": "Heartseeker",
+    "jaJP": "Heartseeker",
+    "ptBR": "Heartseeker",
+    "ruRU": "Heartseeker",
+    "zhCN": "Heartseeker"
+  });
+
+
+
+    
 D2RMM.writeJson(itemNamesFilename, itemNames);
