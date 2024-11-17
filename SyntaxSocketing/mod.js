@@ -3,12 +3,12 @@ const armorBehavior = 1;
 const shieldBehavior = 2;
 
 const oneSockItems = [
-	'helm', 'tors', 'boot', 'glov', 'amul', 'ring', 'phlm', 'pelt', 'circ'
+	'helm', 'boot', 'glov', 'amul', 'ring', 'phlm', 'pelt', 'circ'
 ];
 
 const twoSockItems = [
 	'shie', 'scep', 'wand', 'axe', 'club', 'swor', 'hamm', 'knif', 'mace',
-	'jave', 'orb', 'head', 'ashd', 'aspe', 'ajav'
+	'jave', 'orb', 'head', 'ashd', 'aspe', 'tors', 'ajav'
 ];
 
 const fourSockItems = [
