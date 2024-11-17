@@ -660,35 +660,35 @@ uniqueitems.rows.forEach((row) => {
   // Griffon's Eye
   if (row["index"] === "Griffon's Eye") {
 
-    // +1 to Sorceress Skill Levels
+    // +2 to Sorceress Skill Levels
     row["prop1"] = "sor";
     row["par1"] = "";
     row["min1"] = 2;
     row["max1"] = 2;
 
     // +8 - 15% to Lightning Skill Damage
-    row["prop6"] = "extra-ltng";
-    row["par6"] = "";
-    row["min6"] = 8;
-    row["max6"] = 15;
+    row["prop2"] = "extra-ltng";
+    row["par2"] = "";
+    row["min2"] = 8;
+    row["max2"] = 15;
 
     // +8 - 15% to Lightning Skill Damage
-    row["prop6"] = "extra-cold";
-    row["par6"] = "";
-    row["min6"] = 8;
-    row["max6"] = 15;
+    row["prop3"] = "extra-cold";
+    row["par3"] = "";
+    row["min3"] = 8;
+    row["max3"] = 15;
     
-    // +8 - 15% to Lightning Skill Damage
-    row["prop6"] = "extra-fire";
-    row["par6"] = "";
-    row["min6"] = 8;
-    row["max6"] = 15;
+    // +8 - 15% to Fire Skill Damage
+    row["prop4"] = "extra-fire";
+    row["par4"] = "";
+    row["min4"] = 8;
+    row["max4"] = 15;
 
     // Increase Maximum Mana 25%
-    row["prop7"] = "mana%";
-    row["par7"] = "";
-    row["min7"] = 25;
-    row["max7"] = 25;
+    row["prop5"] = "mana%";
+    row["par5"] = "";
+    row["min5"] = 25;
+    row["max5"] = 25;
 
   }
 // #endregion
