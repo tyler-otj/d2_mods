@@ -1533,11 +1533,11 @@ uniqueitems.rows.forEach((row) => {
   // Corpsemourn
   if (row["index"] === "Corpsemourn") {
 
-    // +2 - 3 to Summoning Spells (Necro) [Class only] Skills
-    row["prop1"] = "skilltab";
-    row["par1"] = 8;
+    // +2 to Necromancer Skill Levels
+    row["prop1"] = "nec";
+    row["par1"] = "";
     row["min1"] = 2;
-    row["max1"] = 3;
+    row["max1"] = 2;
 
     // +30% Faster Hit Recovery
     row["prop2"] = "balance1";
