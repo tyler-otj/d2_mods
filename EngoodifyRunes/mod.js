@@ -339,7 +339,7 @@
 
 		//Um Rune
 		else if(row["name"] == "Um Rune"){
-			set_all_properties_same(row, "ease", 100, 100);
+			set_all_properties_same(row, "ease", -100, -100);
 			remove_all_secondary_properties(row);
 		}
 
