@@ -432,14 +432,14 @@ uniqueitems.rows.forEach((row) => {
   // Midnight's Cowl
   if (row["index"] === "Harlequin Crest") {
     row["index"] = "Midnight's Cowl"
-    row["chrtransform"] = "blac";
-    row["invtransform"] = "blac";
+    row["chrtransform"] = "dpur";
+    row["invtransform"] = "dpur";
 
     // Level 5 Cloak of Shadows (30/30 Charges)
-    row["prop1"] = "oskill";
-    row["par1"] = "Cloak of Shadows";
-    row["min1"] = 5;
-    row["max1"] = 5;
+    row["prop1"] = "";
+    row["par1"] = "";
+    row["min1"] = "";
+    row["max1"] = "";
 
     // -4 to Light Radius
     row["prop2"] = "light";
@@ -1837,6 +1837,9 @@ uniqueitems.rows.forEach((row) => {
   // Nightsmoke
   if (row["index"] === "Nightsmoke") {
 
+    row["chrtransform"] = "dpur";
+    row["invtransform"] = "dpur";
+
     // All Resistances +10
     row["prop1"] = "res-all";
     row["par1"] = "";
@@ -1873,11 +1876,51 @@ uniqueitems.rows.forEach((row) => {
     row["min6"] = 30;
     row["max6"] = 50;
 
+    // Level 5 Cloak of Shadows (30/30 Charges)
+    row["prop7"] = "oskill";
+    row["par7"] = "Cloak of Shadows";
+    row["min7"] = 5;
+    row["max7"] = 5;
+  }
+
+  // Goldwrap
+  if (row["index"] === "Goldwrap") {
+
+    // 15% Bonus to Attack Rating
+    row["prop1"] = "att%";
+    row["par1"] = "";
+    row["min1"] = 15;
+    row["max1"] = 15;
+
+    // +15% Increased Attack Speed
+    row["prop2"] = "swing1";
+    row["par2"] = "";
+    row["min2"] = 15;
+    row["max2"] = 15;
+
+    // +15 Defense
+    row["prop3"] = "ac";
+    row["par3"] = "";
+    row["min3"] = 25;
+    row["max3"] = 25;
+
+    // +30 - 50% Enhanced Defense
+    row["prop4"] = "ac%";
+    row["par4"] = "";
+    row["min4"] = 40;
+    row["max4"] = 60;
+
     // 10 - 15% Better Chance of Getting Magic Items
-    row["prop7"] = "mag%";
-    row["par7"] = "";
-    row["min7"] = 10;
-    row["max7"] = 15;
+    row["prop5"] = "mag%";
+    row["par5"] = "";
+    row["min5"] = 30;
+    row["max5"] = 30;
+
+    // -3 to Light Radius
+    row["prop6"] = "light";
+    row["par6"] = "";
+    row["min6"] = 2;
+    row["max6"] = 2;
   }
 
   // Bladebuckle
@@ -2146,14 +2189,14 @@ uniqueitems.rows.forEach((row) => {
     // +10% Increased Attack Speed
     row["prop6"] = "swing1";
     row["par6"] = "";
-    row["min6"] = 10;
-    row["max6"] = 10;
+    row["min6"] = 15;
+    row["max6"] = 15;
 
-    // 3% Life stolen per hit
+    // 6% Life stolen per hit
     row["prop7"] = "lifesteal";
     row["par7"] = "";
-    row["min7"] = 3;
-    row["max7"] = 3;
+    row["min7"] = 6;
+    row["max7"] = 6;
   }
 
   // Venom Grip
@@ -3837,11 +3880,11 @@ uniqueitems.rows.forEach((row) => {
     row["min3"] = 50;
     row["max3"] = 50;
 
-    // Level 5 Thorns Aura When Equipped
+    // Level 10 Thorns Aura When Equipped
     row["prop4"] = "aura";
     row["par4"] = "Thorns";
-    row["min4"] = 5;
-    row["max4"] = 5;
+    row["min4"] = 10;
+    row["max4"] = 10;
 
     // +30 - 60% Enhanced Defense
     row["prop5"] = "ac%";
@@ -8166,6 +8209,12 @@ uniqueitems.rows.forEach((row) => {
     row["par8"] = "";
     row["min8"] = 8;
     row["max8"] = 12;
+
+    // +35% Faster Cast Rate
+    row["prop9"] = "cast1";
+    row["par9"] = "";
+    row["min9"] = 35;
+    row["max9"] = 35;
   }
 
   // Blade of Ali Baba
@@ -13623,43 +13672,43 @@ uniqueitems.rows.forEach((row) => {
     row["*ItemName"] = "Shillelagh";
 
     // Teleport
-    row["prop11"] = "oskill";
-    row["par11"] = "Teleport";
-    row["min11"] = 1;
-    row["max11"] = 1;
+    row["prop1"] = "oskill";
+    row["par1"] = "Teleport";
+    row["min1"] = 10;
+    row["max1"] = 10;
 
     // +107% Faster Cast Rate
-    row["prop3"] = "cast1";
-    row["par3"] = "";
-    row["min3"] = 107;
-    row["max3"] = 107;
+    row["prop2"] = "cast1";
+    row["par2"] = "";
+    row["min2"] = 107;
+    row["max2"] = 107;
 
     // +17 - 27 to Energy
-    row["prop6"] = "enr";
-    row["par6"] = "";
-    row["min6"] = 17;
-    row["max6"] = 27;
+    row["prop3"] = "enr";
+    row["par3"] = "";
+    row["min3"] = 17;
+    row["max3"] = 27;
 
     // Increase Maximum Mana 24%
-    row["prop3"] = "mana%";
-    row["par3"] = "";
-    row["min3"] = 24;
-    row["max3"] = 24;
+    row["prop4"] = "mana%";
+    row["par4"] = "";
+    row["min4"] = 24;
+    row["max4"] = 24;
 
     // Regenerate Mana 24%
-    row["prop3"] = "regen-mana";
-    row["par3"] = "";
-    row["min3"] = 24;
-    row["max3"] = 24;
+    row["prop5"] = "regen-mana";
+    row["par5"] = "";
+    row["min5"] = 24;
+    row["max5"] = 24;
 
     // 25% Damage Taken Goes To Mana
-    row["prop3"] = "dmg-to-mana";
-    row["par3"] = "";
-    row["min3"] = 25;
-    row["max3"] = 25;
+    row["prop6"] = "dmg-to-mana";
+    row["par6"] = "";
+    row["min6"] = 25;
+    row["max6"] = 25;
   }
 
-  // Skullcollector
+  // Skull Collector
   if (row["index"] === "Skullcollector") {
 
     // Increase Maximum Mana 30%
@@ -13691,6 +13740,12 @@ uniqueitems.rows.forEach((row) => {
     row["par5"] = "";
     row["min5"] = 55;
     row["max5"] = 55;
+
+    // Socketed 4
+    row["prop6"] = "sock";
+    row["par6"] = "";
+    row["min6"] = 4;
+    row["max6"] = 4;
   }
 
   // Ondal's Wisdom
@@ -13703,8 +13758,8 @@ uniqueitems.rows.forEach((row) => {
     // +65% Faster Cast Rate
     row["prop1"] = "cast1";
     row["par1"] = "";
-    row["min1"] = 65;
-    row["max1"] = 65;
+    row["min1"] = 75;
+    row["max1"] = 75;
 
     // +55 - 77 to Energy
     row["prop2"] = "enr";
